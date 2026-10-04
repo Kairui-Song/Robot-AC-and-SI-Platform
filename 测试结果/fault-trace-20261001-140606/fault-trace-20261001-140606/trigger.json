@@ -1,0 +1,7 @@
+{
+  "reason": "launch_fault",
+  "line": "[ros2_control_node-2] [ERROR] [1790835339.795491249] [linglong_control]: MOCK fault latched, code=5; restart after correcting the cause",
+  "detected_wall": 1790835339.80774,
+  "detected_monotonic": 4309.596830839,
+  "frozen_wall": 1790835339.8135674
+}

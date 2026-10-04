@@ -1,0 +1,28 @@
+header:
+  stamp:
+    sec: 1790761563
+    nanosec: 284661535
+  frame_id: ''
+status:
+- level: "\0"
+  name: linglong/control
+  message: MOCK control running (no physical feedback)
+  hardware_id: MOCK_ONLY
+  values:
+  - key: mock
+    value: '1.0'
+  - key: active
+    value: '1.0'
+  - key: cycles
+    value: '51070.0'
+  - key: period_seconds
+    value: '0.010046616'
+  - key: max_period_seconds
+    value: '0.068184496'
+  - key: deadline_misses
+    value: '31.0'
+  - key: fault_code
+    value: '0.0'
+  - key: feedback_age_seconds
+    value: '0.0'
+---

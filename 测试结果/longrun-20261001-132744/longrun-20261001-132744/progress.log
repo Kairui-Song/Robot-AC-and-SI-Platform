@@ -1,0 +1,57 @@
+开始两小时 MOCK 测试：2026-10-01T13:27:44+08:00
+输出目录：verification/longrun-20261001-132744
+cycles=1792, deadline_misses=0, max_period_ms=12.205
+第 1 轮通过，已运行 8 秒
+cycles=3112, deadline_misses=0, max_period_ms=13.046
+第 2 轮通过，已运行 22 秒
+cycles=4612, deadline_misses=0, max_period_ms=13.046
+第 3 轮通过，已运行 37 秒
+cycles=6112, deadline_misses=0, max_period_ms=13.046
+第 4 轮通过，已运行 52 秒
+cycles=7292, deadline_misses=0, max_period_ms=13.046
+第 5 轮通过，已运行 63 秒
+cycles=8432, deadline_misses=0, max_period_ms=13.046
+第 6 轮通过，已运行 75 秒
+cycles=9712, deadline_misses=0, max_period_ms=13.046
+第 7 轮通过，已运行 88 秒
+cycles=11212, deadline_misses=0, max_period_ms=13.046
+第 8 轮通过，已运行 103 秒
+cycles=12592, deadline_misses=0, max_period_ms=13.046
+第 9 轮通过，已运行 116 秒
+cycles=13792, deadline_misses=0, max_period_ms=13.046
+第 10 轮通过，已运行 129 秒
+cycles=15412, deadline_misses=0, max_period_ms=13.046
+第 11 轮通过，已运行 145 秒
+cycles=16912, deadline_misses=0, max_period_ms=13.046
+第 12 轮通过，已运行 160 秒
+cycles=18412, deadline_misses=0, max_period_ms=13.046
+第 13 轮通过，已运行 175 秒
+cycles=19792, deadline_misses=0, max_period_ms=13.046
+第 14 轮通过，已运行 188 秒
+cycles=21112, deadline_misses=0, max_period_ms=13.046
+第 15 轮通过，已运行 202 秒
+cycles=22312, deadline_misses=0, max_period_ms=13.046
+第 16 轮通过，已运行 214 秒
+cycles=23512, deadline_misses=0, max_period_ms=13.046
+第 17 轮通过，已运行 226 秒
+cycles=24752, deadline_misses=0, max_period_ms=13.046
+第 18 轮通过，已运行 238 秒
+cycles=26092, deadline_misses=0, max_period_ms=13.046
+第 19 轮通过，已运行 252 秒
+cycles=27592, deadline_misses=0, max_period_ms=13.046
+第 20 轮通过，已运行 266 秒
+cycles=28912, deadline_misses=0, max_period_ms=13.046
+第 21 轮通过，已运行 280 秒
+cycles=30112, deadline_misses=0, max_period_ms=13.046
+第 22 轮通过，已运行 292 秒
+FAIL：第 23 轮轨迹失败或超时
+Traceback (most recent call last):
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/linglong_control/trajectory_demo", line 5, in <module>
+    main()
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 155, in main
+    run(node, cancel=options.cancel)
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 75, in run
+    raise RuntimeError('healthy active MOCK feedback required before sending motion')
+RuntimeError: healthy active MOCK feedback required before sending motion
+[ros2run]: Process exited with failure 1
+结果目录：verification/longrun-20261001-132744

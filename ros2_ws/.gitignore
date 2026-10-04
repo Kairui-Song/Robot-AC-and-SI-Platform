@@ -1,0 +1,10 @@
+build/
+install/
+log/
+build-core*/
+build-validation/
+.test-deps/
+verification/
+__pycache__/
+.pytest_cache/
+*.pyc

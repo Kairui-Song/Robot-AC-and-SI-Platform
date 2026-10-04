@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="top-bar">
+    <div>
+        <h2>JE 主控程序接入测试</h2>
+    </div>
+</header>
+
+<section class="alert-banner">
+    当前页面调用恩菲特主控上的 `je_single_motor_test_v1`。按你给出的 V1 源码，它会激活 Master 并持续收发 PDO，但仍保持 `Controlword=0`、`Mode=0`，不会使能电机。
+</section>
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div><h3>计算资源与实时环境</h3></div>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                <span class="status-tag" id="controllerInfoState">待检测</span>
+                <button class="btn-secondary" id="startControllerBenchmark">启动 JE 主控测试</button>
+                <button class="btn-outline" id="stopControllerBenchmark" disabled>停止测试</button>
+            </div>
+        </div>
+        <div class="status-list">
+            <div class="status-item"><strong>处理器</strong><span id="controllerCpu">—</span></div>
+            <div class="status-item"><strong>内存</strong><span id="controllerMemory">—</span></div>
+            <div class="status-item"><strong>系统负载</strong><span id="controllerLoad">—</span></div>
+            <div class="status-item"><strong>系统运行时间</strong><span id="controllerUptime">—</span></div>
+            <div class="status-item"><strong>实时内核</strong><span id="controllerRealtime">—</span></div>
+            <div class="status-item"><strong>Test Client 调度</strong><span id="controllerScheduler">—</span></div>
+            <div class="status-item"><strong>Test Client 进程</strong><span id="controllerPid">—</span></div>
+        </div>
+        <div style="display:none;">
+            <span id="controllerModel">—</span>
+            <span id="controllerHostname">—</span>
+            <span id="controllerHardware">—</span>
+            <span id="controllerOs">—</span>
+            <span id="controllerKernel">—</span>
+            <span id="controllerArchitecture">—</span>
+            <span id="controllerMasterVersion">—</span>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>执行入口</h3>
+            </div>
+            <span class="status-tag warning" id="benchmarkState">待测试</span>
+        </div>
+        <div class="form-grid" id="benchmarkForm">
+            <div class="control-block"><span>固定目标</span><strong>Master 0 / Slave 0 / JE DS402 Motor</strong></div>
+            <div class="control-block"><span>程序类型</span><strong>IgH ecrt 周期监测</strong></div>
+            <div class="control-block"><span>动作权限</span><strong>保持禁用</strong></div>
+            <div class="control-block"><span>前置条件</span><strong>远端已编译并配置程序路径</strong></div>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header"><div><h3>实时测试进度</h3></div></div>
+        <div class="log-panel" id="benchmarkLog" style="height:220px; overflow:auto;"></div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header"><div><h3>测试结果</h3></div></div>
+        <div class="summary-grid">
+            <div class="summary-card"><p>状态字</p><p class="summary-value" id="metricSuccess">{{ benchmark.statusword_hex if benchmark else '待测试' }}</p></div>
+            <div class="summary-card"><p>实际位置</p><p class="summary-value" id="metricResponse">{{ benchmark.actual_position if benchmark and benchmark.actual_position is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>实际速度</p><p class="summary-value" id="metricClosedLoop">{{ benchmark.actual_velocity if benchmark and benchmark.actual_velocity is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>实际转矩</p><p class="summary-value" id="metricJitter">{{ benchmark.actual_torque if benchmark and benchmark.actual_torque is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>AL 状态</p><p class="summary-value" id="metricRate">{{ benchmark.al_state_hex if benchmark else '待测试' }}</p></div>
+            <div class="summary-card"><p>链路</p><p class="summary-value" id="metricCpu">{{ 'UP' if benchmark and benchmark.link_up else '待测试' }}</p></div>
+        </div>
+        <div class="log-table report-table" style="margin-top:18px;">
+            <table>
+                <thead><tr><th>字段</th><th>值1</th><th>值2</th><th>值3</th><th>值4</th></tr></thead>
+                <tbody id="benchmarkMetricRows"><tr><td colspan="5">请先运行测试</td></tr></tbody>
+            </table>
+        </div>
+    </article>
+</section>
+{% endblock %}

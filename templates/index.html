@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="overview-hero">
+
+    <div class="hero-copy">
+        <h1 class="hero-split-title">
+            <span class="hero-title-line"><b>机器人主控</b></span>
+            <span class="hero-title-line"><strong>测试与验证平台</strong></span>
+        </h1>
+        <div class="hero-actions">
+            <a href="{{ url_for('controller_benchmark') }}" class="hero-primary">进入主控性能测试 <span>↘</span></a>
+            <a href="{{ url_for('single_motor_test') }}" class="hero-ghost">主控通信与实时环境测试</a>
+        </div>
+    </div>
+
+</section>
+
+<div id="overview-details" class="overview-details-anchor"></div>
+<header class="top-bar">
+    <div>
+        <h2>主控真实测试总览</h2>
+    </div>
+    <a class="btn-primary" href="{{ url_for('controller_benchmark') }}">启动闭环基准测试</a>
+</header>
+
+{% if not benchmark %}
+<section class="notice-banner">
+    <strong>等待实测数据</strong>
+    <span>当前没有主控闭环测试记录。请先完成主控配置，再运行首次低幅度闭环基准。</span>
+</section>
+{% else %}
+<section class="notice-banner">
+    <strong>最近测试说明</strong>
+    <span>{{ benchmark.measurement_note }}</span>
+</section>
+{% endif %}
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>最近一次主控闭环基准</h3>
+            </div>
+            <span class="status-tag {{ 'normal' if benchmark and benchmark.ok else 'neutral' }}">{{ '测试通过' if benchmark and benchmark.ok else '尚未测试' }}</span>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card"><p>控制成功率</p><p class="summary-value">{{ benchmark.success_rate_percent ~ '%' if benchmark else '—' }}</p></div>
+            <div class="summary-card"><p>响应延迟 P99</p><p class="summary-value">{{ benchmark.response_latency_ms.p99 ~ ' ms' if benchmark and benchmark.response_latency_ms.p99 is defined else '—' }}</p></div>
+            <div class="summary-card"><p>闭环延迟 P99</p><p class="summary-value">{{ benchmark.closed_loop_latency_ms.p99 ~ ' ms' if benchmark and benchmark.closed_loop_latency_ms.p99 is defined else '—' }}</p></div>
+            <div class="summary-card"><p>周期抖动 P99</p><p class="summary-value">{{ benchmark.schedule_jitter_ms.p99 ~ ' ms' if benchmark and benchmark.schedule_jitter_ms.p99 is defined else '—' }}</p></div>
+            <div class="summary-card"><p>请求 / 实际频率</p><p class="summary-value">{{ benchmark.requested_frequency_hz ~ ' / ' ~ benchmark.actual_rate_hz ~ ' Hz' if benchmark else '—' }}</p></div>
+            <div class="summary-card"><p>系统 CPU</p><p class="summary-value">{{ benchmark.system_cpu_percent ~ '%' if benchmark else '—' }}</p></div>
+        </div>
+    </article>
+
+    <article class="glass-card card-large">
+        <div class="card-header">
+            <div>
+                <h3>真实控制闭环</h3>
+            </div>
+        </div>
+        <div class="status-list">
+            <div class="status-item"><span><b>Web → 主控 Test Client</b></span><span class="protocol" id="webClientState">连接检测中</span></div>
+            <div class="status-item"><span><b>测试终端 → 被测主控</b></span><span class="protocol">{{ '通信正常' if controller_test and controller_test.ok else '检测异常' if controller_test else '未检测' }}</span></div>
+            <div class="status-item"><span><b>被测主控 → EtherCAT Master → 外部负载</b></span><span class="protocol">{{ '已识别从站' if controller_test and controller_test.inventory and controller_test.inventory.slave_count else '未识别从站' if controller_test else '未检测' }}</span></div>
+            <div class="status-item"><span><b>实时内核</b></span><span class="status-dot {{ 'normal' if controller_test and controller_test.controller_info and controller_test.controller_info.realtime_kernel else 'neutral' }}">{{ '已检测' if controller_test and controller_test.controller_info and controller_test.controller_info.realtime_kernel else '未检测' }}</span></div>
+        </div>
+    </article>
+
+    <article class="glass-card card-medium">
+        <div class="card-header">
+            <div>
+                <h3>主控测试范围</h3>
+            </div>
+        </div>
+        <div class="status-list">
+            <div class="status-item"><span><b>端到端运动延迟</b></span><span class="status-dot normal">核心</span></div>
+            <div class="status-item"><span><b>控制周期稳定性</b></span><span class="status-dot normal">核心</span></div>
+            <div class="status-item"><span><b>CPU 与调度压力</b></span><span class="status-dot warning">扩展</span></div>
+            <div class="status-item"><span><b>网络与总线通信</b></span><span class="status-dot normal">核心</span></div>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div><h3>实时性能曲线</h3></div>
+            <button class="btn-secondary" id="openCurve">查看曲线</button>
+        </div>
+        <div class="chart-panel compact">
+            <div class="line-panel small">
+                <div class="chart-label">闭环延迟</div>
+                <div class="curve-graph" data-metric="closed_loop_latency_ms" data-unit=" ms" data-live-metric="actual_position" data-live-unit="" data-live-label="实际位置"></div>
+            </div>
+            <div class="line-panel small">
+                <div class="chart-label">周期抖动</div>
+                <div class="curve-graph" data-metric="schedule_jitter_ms" data-unit=" ms" data-live-metric="actual_velocity" data-live-unit="" data-live-label="实际速度"></div>
+            </div>
+        </div>
+    </article>
+</section>
+<script id="overviewCurveData" type="application/json">{{ (benchmark.samples if benchmark and benchmark.samples else []) | tojson }}</script>
+{% endblock %}

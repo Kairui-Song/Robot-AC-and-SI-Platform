@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="top-bar controller-test-header"><div><h2>主控通信与实时环境测试</h2></div><span class="status-tag" id="selectedControllerBadge">自动识别</span></header>
+<section class="content-grid" id="motor-control-panel">
+  <article class="glass-card card-wide controller-info-card">
+    <div class="card-header"><div><h3>主控基本信息</h3></div><span class="status-tag" id="controllerInfoState">待检测</span></div>
+    <div class="controller-model-picker">
+      <label for="controllerProfileSelect">主控型号</label>
+      <select id="controllerProfileSelect">
+        <option value="auto" selected>自动识别</option>
+        <option value="ep_h507a1">EP-H507A1（项目设备）</option>
+      </select>
+    </div>
+    <div class="controller-info-grid">
+      <div class="controller-info-tile primary"><span>设备型号</span><strong id="controllerModel">—</strong></div>
+      <div class="controller-info-tile"><span>主机名称</span><strong id="controllerHostname">—</strong></div>
+      <div class="controller-info-tile"><span>硬件平台</span><strong id="controllerHardware">—</strong></div>
+      <div class="controller-info-tile"><span>操作系统</span><strong id="controllerOs">—</strong></div>
+      <div class="controller-info-tile"><span>内核版本</span><strong id="controllerKernel">—</strong></div>
+      <div class="controller-info-tile"><span>处理器架构</span><strong id="controllerArchitecture">—</strong></div>
+    </div>
+  </article>
+  <article class="glass-card card-wide">
+    <div class="card-header"><div><h3>计算资源与实时环境</h3></div></div>
+    <div class="status-list">
+      <div class="status-item"><strong>处理器</strong><span id="controllerCpu">—</span></div>
+      <div class="status-item"><strong>内存</strong><span id="controllerMemory">—</span></div>
+      <div class="status-item"><strong>系统负载</strong><span id="controllerLoad">—</span></div>
+      <div class="status-item"><strong>系统运行时间</strong><span id="controllerUptime">—</span></div>
+      <div class="status-item"><strong>实时内核</strong><span id="controllerRealtime">—</span></div>
+      <div class="status-item"><strong>Test Client 调度</strong><span id="controllerScheduler">—</span></div>
+      <div class="status-item"><strong>Test Client 进程</strong><span id="controllerPid">—</span></div>
+    </div>
+  </article>
+  <article class="glass-card card-wide">
+    <div class="card-header"><div><h3>测试任务配置</h3></div><span class="status-tag" id="motorSafetyState">只读诊断</span></div>
+    <div class="form-grid">
+      <div class="control-block"><span>外部测试负载 · 厂商 / 型号</span><select id="motorProfileSelect">
+        {% for profile_id, profile in motor_profiles.items() %}
+        <option value="{{ profile_id }}" data-supply="{{ profile.supply }}" data-vendor="{{ '0x%08X'|format(profile.vendor_id) if profile.vendor_id is not none else '待识别' }}" data-product="{{ '0x%08X'|format(profile.product_code) if profile.product_code is not none else '待识别' }}" data-pdo="{{ profile.pdo_status }}">{{ profile.manufacturer }} · {{ profile.model }}</option>
+        {% endfor %}
+      </select></div>
+      <div class="control-block"><span>供电信息</span><strong id="motorSupply">-</strong></div>
+      <div class="control-block"><span>Vendor ID</span><strong id="motorVendor">-</strong></div>
+      <div class="control-block"><span>Product Code</span><strong id="motorProduct">-</strong></div>
+      <div class="control-block"><span>PDO 资料</span><strong id="motorPdo">-</strong></div>
+    </div>
+    <div class="control-actions"><button class="btn-primary" id="singleMotorPreflightBtn" type="button">启动主控统一预检</button><a class="btn-secondary" href="{{ url_for('system_config') }}">配置恩菲特主控</a></div>
+  </article>
+  <article class="glass-card card-wide">
+    <div class="card-header"><div><h3>通信基础分级测试结果</h3></div><span class="status-tag" id="preflightState">待测试</span></div>
+    <div class="status-list">
+      <div class="status-item"><strong>SSH / 本机进程</strong><span id="preflightTransport">待检查</span></div>
+      <div class="status-item"><strong>IgH Master</strong><span id="preflightMaster">待检查</span></div>
+      <div class="status-item"><strong>IgH Master 版本</strong><span id="controllerMasterVersion">待检测</span></div>
+      <div class="status-item"><strong>物理链路</strong><span id="preflightLink">待检查</span></div>
+      <div class="status-item"><strong>从站数量</strong><span id="preflightSlaveCount">待检查</span></div>
+      <div class="status-item"><strong>控制权限</strong><span>只读</span></div>
+      <div class="status-item"><strong>检测耗时</strong><span id="controllerTestDuration">待检测</span></div>
+      <div class="status-item"><strong>L1 Test Client</strong><span id="levelL1">未检测</span></div>
+      <div class="status-item"><strong>L2 EtherCAT Master</strong><span id="levelL2">未检测</span></div>
+      <div class="status-item"><strong>L3 物理链路</strong><span id="levelL3">未检测</span></div>
+      <div class="status-item"><strong>L4 期望拓扑</strong><span id="levelL4">未检测</span></div>
+      <div class="status-item"><strong>L5 设备身份</strong><span id="levelL5">未检测</span></div>
+    </div>
+  </article>
+  <article class="glass-card card-wide"><div class="card-header"><div><h3>EtherCAT 从站信息</h3></div></div><div class="status-list" id="slaveInventory"><div class="status-item"><span>尚未执行测试</span></div></div></article>
+  <article class="glass-card card-wide"><div class="card-header"><div><h3>测试日志</h3></div></div><div class="log-panel" id="pytestLogs" style="height:240px;overflow:auto;background:#0b0b0b;color:#e6e6e6;padding:8px;font-family:monospace;font-size:12px;"></div></article>
+</section>
+{% endblock %}

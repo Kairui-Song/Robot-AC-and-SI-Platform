@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="top-bar">
+    <div>
+        <h2>测试报告</h2>
+    </div>
+</header>
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div><h3>主控闭环性能</h3></div>
+            <span class="status-tag {{ 'normal' if benchmark and benchmark.ok else 'warning' if benchmark else 'neutral' }}">{{ '通过' if benchmark and benchmark.ok else '异常' if benchmark else '未测试' }}</span>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card"><p>成功率</p><p class="summary-value">{{ benchmark.success_rate_percent ~ '%' if benchmark else '待测试' }}</p></div>
+            <div class="summary-card"><p>响应延迟 P99</p><p class="summary-value">{{ benchmark.response_latency_ms.p99 ~ ' ms' if benchmark and benchmark.response_latency_ms.p99 is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>闭环延迟 P99</p><p class="summary-value">{{ benchmark.closed_loop_latency_ms.p99 ~ ' ms' if benchmark and benchmark.closed_loop_latency_ms.p99 is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>周期抖动 P99</p><p class="summary-value">{{ benchmark.schedule_jitter_ms.p99 ~ ' ms' if benchmark and benchmark.schedule_jitter_ms.p99 is defined else '待测试' }}</p></div>
+            <div class="summary-card"><p>请求 / 实际频率</p><p class="summary-value">{{ benchmark.requested_frequency_hz ~ ' / ' ~ benchmark.actual_rate_hz ~ ' Hz' if benchmark else '待测试' }}</p></div>
+            <div class="summary-card"><p>系统 CPU</p><p class="summary-value">{{ benchmark.system_cpu_percent ~ '%' if benchmark else '待测试' }}</p></div>
+        </div>
+    </article>
+    <article class="glass-card card-half">
+        <div class="card-header">
+            <div>
+                <h3>测试结果概览</h3>
+            </div>
+            <span class="status-tag {{ 'neutral' if report.summary.total == 0 else 'normal' if report.summary.fail == 0 else 'warning' if report.summary.fail == 1 else 'critical' }}">
+                {{ '未测试' if report.summary.total == 0 else '稳定' if report.summary.fail == 0 else '需关注' if report.summary.fail == 1 else '异常' }}
+            </span>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <p>总通过率</p>
+                <p class="summary-value">{{ report.summary.pass_rate ~ '%' if report.summary.pass_rate is not none else '—' }}</p>
+            </div>
+            <div class="summary-card">
+                <p>平均响应</p>
+                <p class="summary-value">{{ report.summary.avg_response }}{{ ' ms' if report.summary.avg_response != '—' else '' }}</p>
+            </div>
+            <div class="summary-card">
+                <p>过往故障数</p>
+                <p class="summary-value warning">{{ report.summary.faults }}</p>
+            </div>
+            <div class="summary-card">
+                <p>数据更新时间</p>
+                <p class="summary-value">{{ report.updated }}</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="glass-card card-half">
+        <div class="card-header">
+            <div>
+                <h3>报告摘要</h3>
+            </div>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <p>建议操作</p>
+                <p class="summary-value">{{ report.summary.recommendation }}</p>
+            </div>
+            <div class="summary-card">
+                <p>综合结论</p>
+                <p class="summary-value">{{ report.summary.health_rating }}</p>
+            </div>
+            <div class="summary-card">
+                <p>复核状态</p>
+                <p class="summary-value {{ 'warning' if report.summary.risk == '中' else 'critical' if report.summary.risk == '高' else 'normal' }}">
+                    {{ report.summary.risk }}
+                </p>
+            </div>
+            <div class="summary-card">
+                <p>总测试模块</p>
+                <p class="summary-value">{{ report.summary.total }}</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>模块测试详情</h3>
+            </div>
+        </div>
+        <div class="log-table report-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>模块</th>
+                        <th>测试项</th>
+                        <th>结果</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if report.rows %}
+                        {% for row in report.rows %}
+                            <tr>
+                                <td>{{ row.module }}</td>
+                                <td>{{ row.test_item }}</td>
+                                <td>{{ row.result }}</td>
+                                <td>{{ row.remark }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4">暂无测试结果，请先执行测试。</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>通讯日志记录</h3>
+            </div>
+        </div>
+        <div class="log-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>模块</th>
+                        <th>事件</th>
+                        <th>级别</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if comm_entries %}
+                        {% for entry in comm_entries %}
+                            <tr>
+                                <td>{{ entry.time }}</td>
+                                <td>{{ entry.target }}</td>
+                                <td>{{ entry.event }}</td>
+                                <td><span class="status-dot {{ 'warning' if entry.level != '正常' else 'normal' }}">{{ entry.level }}</span></td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4">暂无通讯日志</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>
+{% endblock %}

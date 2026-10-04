@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/linglong_control/trajectory_demo", line 5, in <module>
+    main()
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 155, in main
+    run(node, cancel=options.cancel)
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 75, in run
+    raise RuntimeError('healthy active MOCK feedback required before sending motion')
+RuntimeError: healthy active MOCK feedback required before sending motion
+[ros2run]: Process exited with failure 1

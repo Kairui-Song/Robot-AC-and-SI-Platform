@@ -1,0 +1,196 @@
+[INFO] [launch]: All log files can be found below /home/skr/.ros/log/2026-10-01-13-38-55-527018-skr-VMware-Virtual-Platform-8393
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [8399]
+[INFO] [ros2_control_node-2]: process started with pid [8400]
+[INFO] [spawner-3]: process started with pid [8401]
+[INFO] [control_diagnostics-4]: process started with pid [8402]
+[ros2_control_node-2] [INFO] [1790833135.744031065] [controller_manager]: Using Steady (Monotonic) clock for triggering controller manager cycles.
+[ros2_control_node-2] [INFO] [1790833135.753294247] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[ros2_control_node-2] [INFO] [1790833135.753423909] [controller_manager]: update rate is 100 Hz
+[ros2_control_node-2] [INFO] [1790833135.753432872] [controller_manager]: Overruns handling is : enabled
+[ros2_control_node-2] [INFO] [1790833135.753439281] [controller_manager]: Spawning controller_manager RT thread with scheduler priority: 50
+[ros2_control_node-2] [INFO] [1790833135.753674665] [controller_manager]: Successful set up FIFO RT scheduling policy with priority 50.
+[robot_state_publisher-1] [INFO] [1790833135.804480246] [robot_state_publisher]: Robot initialized
+[ros2_control_node-2] [INFO] [1790833136.014006692] [controller_manager]: Received robot description from topic.
+[ros2_control_node-2] [INFO] [1790833136.014308248] [controller_manager]: Enforcing command limits is disabled. Command limits from URDF will be ignored.
+[ros2_control_node-2] [INFO] [1790833136.028527022] [controller_manager]: Loading hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790833136.036929238] [controller_manager]: Loaded hardware 'LinglongSimSystem' from plugin 'linglong_control/SimSystem'
+[ros2_control_node-2] [INFO] [1790833136.037847716] [controller_manager]: Initialize hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790833136.105394436] [controller_manager]: Successful initialization of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790833136.106393799] [controller_manager]: Activating component 'LinglongSimSystem'.
+[ros2_control_node-2] [INFO] [1790833136.106434349] [resource_manager]: 'configure' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790833136.106474286] [resource_manager]: Successful 'configure' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790833136.106480757] [resource_manager]: 'activate' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790833136.106493728] [resource_manager]: Successful 'activate' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790833136.106547925] [controller_manager]: Registering statistics for : LinglongSimSystem
+[ros2_control_node-2] [INFO] [1790833136.106617524] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[spawner-3] [INFO] [1790833136.462965445] [spawner_joint_state_broadcaster]: waiting for service /controller_manager/list_controllers to become available...
+[ros2_control_node-2] [INFO] [1790833139.801192687] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[ros2_control_node-2] [INFO] [1790833139.801244709] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790833139.805452636] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/share/linglong_control/config/controllers.yaml --params-file /tmp/launch_params_jfdau240 
+[spawner-3] [INFO] [1790833139.835457262] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[ros2_control_node-2] [INFO] [1790833139.841974743] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790833139.842145988] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[ros2_control_node-2] [INFO] [1790833139.860207227] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790833139.864314515] [controller_manager]: Successfully switched controllers!
+[spawner-3] [INFO] [1790833139.878292560] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[INFO] [spawner-3]: process has finished cleanly [pid 8401]
+[INFO] [spawner-5]: process started with pid [8465]
+[spawner-5] [INFO] [1790833140.491590452] [spawner_arm_trajectory_controller]: waiting for service /controller_manager/list_controllers to become available...
+[ros2_control_node-2] [INFO] [1790833142.746888983] [controller_manager]: Loading controller : 'arm_trajectory_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+[ros2_control_node-2] [INFO] [1790833142.746994181] [controller_manager]: Loading controller 'arm_trajectory_controller'
+[ros2_control_node-2] [INFO] [1790833142.751182956] [controller_manager]: Controller 'arm_trajectory_controller' node arguments: --ros-args --params-file /home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/share/linglong_control/config/controllers.yaml --params-file /tmp/launch_params_jfdau240 
+[spawner-5] [INFO] [1790833142.796363293] [spawner_arm_trajectory_controller]: Loaded arm_trajectory_controller
+[ros2_control_node-2] [INFO] [1790833142.799864346] [controller_manager]: Configuring controller: 'arm_trajectory_controller'
+[ros2_control_node-2] [INFO] [1790833142.800118602] [arm_trajectory_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-2] [INFO] [1790833142.800164467] [arm_trajectory_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[ros2_control_node-2] [INFO] [1790833142.800194960] [arm_trajectory_controller]: Using 'splines' interpolation method.
+[ros2_control_node-2] [INFO] [1790833142.805846490] [arm_trajectory_controller]: Action status changes will be monitored at 20.00 Hz.
+[ros2_control_node-2] [INFO] [1790833142.820203922] [arm_trajectory_controller]: Setting initial scaling factor to 1.000000
+[ros2_control_node-2] [INFO] [1790833142.820244111] [arm_trajectory_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+[ros2_control_node-2] [INFO] [1790833142.828969742] [controller_manager]: Activating controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [INFO] [1790833142.835202871] [controller_manager]: Successfully switched controllers!
+[spawner-5] [INFO] [1790833142.846251880] [spawner_arm_trajectory_controller]: Configured and activated arm_trajectory_controller
+[INFO] [spawner-5]: process has finished cleanly [pid 8465]
+[INFO] [launch.user]: mock control ready: /arm_trajectory_controller/follow_joint_trajectory
+[ros2_control_node-2] [INFO] [1790833163.948967656] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833163.949029885] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833167.944199144] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833178.591734738] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833178.591800733] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833182.594159422] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833193.883462357] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833193.883516285] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833197.874221097] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833209.996533824] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833209.996597178] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833214.004167000] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833221.469293302] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833221.469335594] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833225.464166819] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833233.354324184] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833233.355092813] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833237.364214590] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833245.343430309] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833245.343486527] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833249.344139914] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833250.970105365] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 16.009499 ms (missed cycles : 2).
+[ros2_control_node-2] [INFO] [1790833257.093692592] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833257.093759134] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833261.084189528] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833265.994565817] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 40.470050 ms (missed cycles : 5).
+[ros2_control_node-2] [INFO] [1790833272.094432844] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833272.094475627] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [WARN] [1790833275.967229793] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 23.134137 ms (missed cycles : 3).
+[ros2_control_node-2] [INFO] [1790833276.104167883] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833280.970878543] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 16.782841 ms (missed cycles : 2).
+[ros2_control_node-2] [INFO] [1790833286.504265024] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833286.504344270] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833290.514216266] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833301.782963599] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833301.783033932] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833305.774194854] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833313.977345040] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833313.977768816] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833317.984162142] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833328.597409530] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833328.597466849] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833332.604187411] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833343.879707705] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833343.880182544] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833347.874255895] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833358.534464031] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833358.534573398] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833362.544229011] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833370.256844090] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833370.256888099] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833374.254196429] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833386.004622249] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833386.005147117] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833390.014200405] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833400.777454684] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833400.777955570] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833404.774220132] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833416.065202645] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833416.065259628] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833420.074259439] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833430.760024474] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833430.760066932] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833434.764143578] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833442.470493331] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833442.470880801] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833446.464207377] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833456.094795369] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833456.094840825] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833460.104181473] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833461.225538153] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 11.442256 ms (missed cycles : 2).
+[ros2_control_node-2] [INFO] [1790833473.031744177] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833473.031824995] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833477.034152059] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833485.159836230] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833485.159890324] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833489.164152012] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833499.621627143] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833499.621678981] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833503.614204033] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833511.241056383] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833511.241119674] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833515.244158321] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833526.658310174] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833526.658359731] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833530.654201444] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833538.484167999] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833538.484900185] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833542.494164751] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833554.050290000] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833554.050363284] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833558.054160437] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833561.470455908] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 16.360172 ms (missed cycles : 2).
+[ros2_control_node-2] [INFO] [1790833566.627576491] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833566.627633821] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833570.634172614] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833571.536419608] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 22.323740 ms (missed cycles : 3).
+[ros2_control_node-2] [INFO] [1790833578.513817837] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833578.513859120] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833582.514258315] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833592.869657454] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833592.869724919] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833596.874262897] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833608.031063365] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833608.031114169] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833612.034156082] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833620.345423862] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833620.345474278] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833624.354183434] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833634.547181616] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833634.547234104] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833638.554193985] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833649.561308014] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833649.561871618] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833653.564157207] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833661.157158968] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 13.063394 ms (missed cycles : 2).
+[ros2_control_node-2] [INFO] [1790833661.758883497] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833661.758957469] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833665.764161528] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833673.430118827] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833673.430188737] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833677.434177357] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833685.218896246] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833685.218949814] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833689.224167742] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833701.056683699] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833701.056761648] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833705.064190617] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833715.774400341] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833715.774446706] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833719.784159672] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833729.373719039] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833729.373782561] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833733.364177662] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833741.048848893] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833741.049294204] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833745.044193925] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [INFO] [1790833752.661765078] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790833752.661828263] [arm_trajectory_controller]: Accepted new action goal
+[ros2_control_node-2] [INFO] [1790833756.664156214] [arm_trajectory_controller]: Goal reached, success!
+[ros2_control_node-2] [WARN] [1790833826.960035453] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 25.939767 ms (missed cycles : 3).

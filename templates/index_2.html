@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="overview-hero">
+    <div class="hero-stars"></div>
+    <div class="hero-orbit orbit-one"></div>
+    <div class="hero-orbit orbit-two"></div>
+    <div class="hero-light-beam beam-horizontal"></div>
+    <div class="hero-light-beam beam-diagonal"></div>
+    <div class="hero-core"><span></span></div>
+
+    <div class="hero-copy">
+        <div class="hero-eyebrow"><i></i> LINGLONG 1025 · ONLINE</div>
+        <h1 class="hero-split-title">
+            <span class="hero-title-line"><b>1025</b><strong>专项</strong></span>
+            <span class="hero-title-line"><b>主控</b><strong>测试平台</strong></span>
+        </h1>
+        <p>LINGLONG 1025 专项主控 · 通信链路与性能测试系统</p>
+        <div class="hero-actions">
+            <a href="#overview-details" class="hero-primary">查看实时数据 <span>↘</span></a>
+            <button type="button" class="hero-ghost" id="heroCurveButton">打开动态曲线</button>
+        </div>
+    </div>
+
+    <a class="hero-scroll" href="#overview-details"><span></span>SCROLL TO EXPLORE</a>
+</section>
+
+<div id="overview-details" class="overview-details-anchor"></div>
+<header class="top-bar">
+    <div>
+        <h2>整机通讯总览</h2>
+        <p>“整机通讯总览”和“电机在线状态”清晰呈现。</p>
+    </div>
+    <div class="top-controls">
+        <label class="refresh-control">
+            <span>自动刷新</span>
+            <label class="switch small">
+                <input type="checkbox" checked id="autoRefresh" />
+                <span class="slider"></span>
+            </label>
+        </label>
+        <button class="btn-outline">导出日志</button>
+    </div>
+</header>
+
+<section class="alert-banner critical-banner">
+    <span class="alert-dot"></span>
+    【告警】当前 2 台电机脱机、3 台电机丢包率＞0.5%，请查看日志。
+</section>
+
+<section class="robot-command-deck" aria-label="机器人测试状态指挥舱">
+    <article class="command-widget robot-health-widget">
+        <div class="command-widget-head">
+            <div><span class="widget-index">01</span><h3>关节健康矩阵</h3></div>
+            <span class="live-pill"><i></i> LIVE</span>
+        </div>
+        <div class="robot-health-body">
+            <div class="robot-silhouette" aria-hidden="true">
+                <span class="robot-head-node"></span>
+                <span class="robot-torso-node"></span>
+                <span class="robot-limb arm-left"></span>
+                <span class="robot-limb arm-right"></span>
+                <span class="robot-limb leg-left"></span>
+                <span class="robot-limb leg-right"></span>
+                <i class="joint-dot joint-1"></i><i class="joint-dot joint-2"></i>
+                <i class="joint-dot joint-3"></i><i class="joint-dot joint-4 warning"></i>
+            </div>
+            <div class="health-score"><strong>92</strong><span>HEALTH SCORE</span><small>5 / 6 模块在线</small></div>
+        </div>
+    </article>
+
+    <article class="command-widget bus-widget">
+        <div class="command-widget-head">
+            <div><span class="widget-index">02</span><h3>总线实时负载</h3></div>
+            <span class="widget-meta">CAN · 1 KHZ</span>
+        </div>
+        <div class="bus-list">
+            <div class="bus-row"><span>左腿 CAN</span><div><i style="--load: 72%"></i></div><b>72%</b></div>
+            <div class="bus-row"><span>右腿 CAN</span><div><i style="--load: 64%"></i></div><b>64%</b></div>
+            <div class="bus-row"><span>双臂 CAN</span><div><i style="--load: 48%"></i></div><b>48%</b></div>
+            <div class="bus-row"><span>头部 CAN</span><div><i style="--load: 31%"></i></div><b>31%</b></div>
+        </div>
+    </article>
+
+    <article class="command-widget stability-widget">
+        <div class="command-widget-head">
+            <div><span class="widget-index">03</span><h3>姿态稳定度</h3></div>
+            <span class="widget-meta">IMU · USB</span>
+        </div>
+        <div class="stability-ring" style="--score: 87"><strong>87<small>%</small></strong><span>STABLE</span></div>
+        <div class="axis-values"><span>ROLL <b>+0.8°</b></span><span>PITCH <b>-1.2°</b></span><span>YAW <b>+0.3°</b></span></div>
+    </article>
+
+    <article class="command-widget safety-widget">
+        <div class="command-widget-head">
+            <div><span class="widget-index">04</span><h3>安全与能源</h3></div>
+            <span class="safe-state">INTERLOCK ON</span>
+        </div>
+        <div class="metric-pair"><span>母线电压<strong>48.2 V</strong></span><span>峰值温度<strong>43.6 °C</strong></span></div>
+        <div class="safety-checks"><span><i></i>急停回路</span><span><i></i>限位保护</span><span><i></i>过流保护</span></div>
+    </article>
+</section>
+
+<section class="content-grid">
+    <article class="glass-card card-large">
+        <div class="card-header">
+            <div>
+                <h2>整机通讯总览</h2>
+                <p>通信频率与延迟信息综合呈现</p>
+            </div>
+            <span class="status-tag warning">重要</span>
+        </div>
+        <div class="hero-status-card overview-system-status">
+            <div class="hero-status-title"><span>系统状态</span><i>LIVE</i></div>
+            <div class="hero-status-row"><span>控制频率</span><strong>1 kHz</strong></div>
+            <div class="hero-status-row"><span>通信延迟</span><strong>&lt; 500 μs</strong></div>
+            <div class="hero-status-row"><span>在线链路</span><strong class="online-value">04 / 05</strong></div>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <p>控制频率</p>
+                <p class="summary-value">1 kHz</p>
+            </div>
+            <div class="summary-card">
+                <p>通信延迟</p>
+                <p class="summary-value">< 500 μs</p>
+            </div>
+            <div class="summary-card">
+                <p>OTA 时间</p>
+                <p class="summary-value">10 s</p>
+            </div>
+            <div class="summary-card">
+                <p>跟踪时延</p>
+                <p class="summary-value">< 10 ms</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="glass-card card-medium">
+        <div class="card-header">
+            <div>
+                <h3>电机在线状态</h3>
+                <p>分组在线 / 离线统计</p>
+            </div>
+            <span class="status-tag normal">正常</span>
+        </div>
+        <div class="status-list">
+            <div class="status-item">
+                <span>左机械臂</span>
+                <span class="status-dot normal">在线</span>
+            </div>
+            <div class="status-item">
+                <span>右机械臂</span>
+                <span class="status-dot normal">在线</span>
+            </div>
+            <div class="status-item">
+                <span>左机械腿</span>
+                <span class="status-dot warning">丢包</span>
+            </div>
+            <div class="status-item">
+                <span>右机械腿</span>
+                <span class="status-dot critical">脱机</span>
+            </div>
+            <div class="status-item">
+                <span>机械头</span>
+                <span class="status-dot warning">丢包</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide overview-curves-card">
+        <div class="card-header">
+            <div>
+                <h3>实时曲线监控</h3>
+                <p>查看跟踪延迟与瞬时丢包率趋势，超过阈值即触发告警。</p>
+            </div>
+            <button class="btn-secondary" id="openCurve">查看曲线</button>
+        </div>
+        <div class="chart-panel compact">
+            <div class="line-panel small">
+                <div class="chart-label">跟踪延迟</div>
+                <div class="curve-graph"></div>
+            </div>
+            <div class="line-panel small">
+                <div class="chart-label">瞬时丢包率</div>
+                <div class="curve-graph"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}

@@ -1,0 +1,88 @@
+开始两小时 MOCK 测试：2026-10-01T14:06:11+08:00
+输出目录：verification/longrun-20261001-140611
+cycles=2082, deadline_misses=0, max_period_ms=10.248
+第 1 轮通过，已运行 7 秒
+cycles=3242, deadline_misses=0, max_period_ms=10.248
+第 2 轮通过，已运行 18 秒
+cycles=4482, deadline_misses=1, max_period_ms=15.737
+第 3 轮通过，已运行 31 秒
+cycles=5802, deadline_misses=1, max_period_ms=15.737
+第 4 轮通过，已运行 44 秒
+cycles=7302, deadline_misses=1, max_period_ms=15.737
+第 5 轮通过，已运行 59 秒
+cycles=8702, deadline_misses=1, max_period_ms=15.737
+第 6 轮通过，已运行 73 秒
+cycles=9862, deadline_misses=1, max_period_ms=15.737
+第 7 轮通过，已运行 85 秒
+cycles=11062, deadline_misses=1, max_period_ms=15.737
+第 8 轮通过，已运行 97 秒
+cycles=12402, deadline_misses=1, max_period_ms=15.737
+第 9 轮通过，已运行 110 秒
+cycles=13536, deadline_misses=3, max_period_ms=67.327
+第 10 轮通过，已运行 121 秒
+cycles=14796, deadline_misses=3, max_period_ms=67.327
+第 11 轮通过，已运行 134 秒
+cycles=16176, deadline_misses=3, max_period_ms=67.327
+第 12 轮通过，已运行 148 秒
+cycles=17496, deadline_misses=3, max_period_ms=67.327
+第 13 轮通过，已运行 161 秒
+cycles=18696, deadline_misses=3, max_period_ms=67.327
+第 14 轮通过，已运行 173 秒
+cycles=20196, deadline_misses=3, max_period_ms=67.327
+第 15 轮通过，已运行 188 秒
+cycles=21696, deadline_misses=3, max_period_ms=67.327
+第 16 轮通过，已运行 203 秒
+cycles=23196, deadline_misses=3, max_period_ms=67.327
+第 17 轮通过，已运行 218 秒
+cycles=24556, deadline_misses=3, max_period_ms=67.327
+第 18 轮通过，已运行 232 秒
+cycles=25895, deadline_misses=3, max_period_ms=67.327
+第 19 轮通过，已运行 245 秒
+cycles=27396, deadline_misses=3, max_period_ms=67.327
+第 20 轮通过，已运行 260 秒
+cycles=28596, deadline_misses=4, max_period_ms=67.327
+第 21 轮通过，已运行 272 秒
+cycles=30096, deadline_misses=4, max_period_ms=67.327
+第 22 轮通过，已运行 287 秒
+cycles=31476, deadline_misses=4, max_period_ms=67.327
+第 23 轮通过，已运行 301 秒
+cycles=32796, deadline_misses=4, max_period_ms=67.327
+第 24 轮通过，已运行 314 秒
+cycles=33936, deadline_misses=4, max_period_ms=67.327
+第 25 轮通过，已运行 325 秒
+cycles=35376, deadline_misses=4, max_period_ms=67.327
+第 26 轮通过，已运行 340 秒
+cycles=36616, deadline_misses=4, max_period_ms=67.327
+第 27 轮通过，已运行 352 秒
+cycles=37896, deadline_misses=4, max_period_ms=67.327
+第 28 轮通过，已运行 365 秒
+cycles=39136, deadline_misses=4, max_period_ms=67.327
+第 29 轮通过，已运行 377 秒
+cycles=40596, deadline_misses=4, max_period_ms=67.327
+第 30 轮通过，已运行 392 秒
+cycles=41796, deadline_misses=4, max_period_ms=67.327
+第 31 轮通过，已运行 404 秒
+cycles=42996, deadline_misses=4, max_period_ms=67.327
+第 32 轮通过，已运行 416 秒
+cycles=44496, deadline_misses=4, max_period_ms=67.327
+第 33 轮通过，已运行 431 秒
+cycles=45696, deadline_misses=4, max_period_ms=67.327
+第 34 轮通过，已运行 443 秒
+cycles=47196, deadline_misses=4, max_period_ms=67.327
+第 35 轮通过，已运行 458 秒
+cycles=48396, deadline_misses=4, max_period_ms=67.327
+第 36 轮通过，已运行 470 秒
+cycles=49596, deadline_misses=4, max_period_ms=67.327
+第 37 轮通过，已运行 482 秒
+cycles=51096, deadline_misses=5, max_period_ms=67.327
+第 38 轮通过，已运行 497 秒
+cycles=52296, deadline_misses=5, max_period_ms=67.327
+第 39 轮通过，已运行 509 秒
+cycles=53796, deadline_misses=5, max_period_ms=67.327
+第 40 轮通过，已运行 524 秒
+cycles=55296, deadline_misses=5, max_period_ms=67.327
+第 41 轮通过，已运行 539 秒
+cycles=56696, deadline_misses=5, max_period_ms=67.327
+第 42 轮通过，已运行 553 秒
+cycles=57996, deadline_misses=5, max_period_ms=67.327
+第 43 轮通过，已运行 566 秒

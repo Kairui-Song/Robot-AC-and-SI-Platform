@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="top-bar">
+    <div>
+        <h2>系统配置</h2>
+        <p>为不同机器人主控预留连接测试与系统状态管理。</p>
+    </div>
+    <div class="top-controls">
+        <button class="btn-outline">配置模板</button>
+        <button class="btn-secondary">应用设置</button>
+    </div>
+</header>
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>主控连接测试</h3>
+                <p>选择主控型号、连接方式，并执行链路检测。</p>
+            </div>
+            <button class="btn-secondary">开始测试</button>
+        </div>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <p>当前主控</p>
+                <p class="summary-value">主控 A</p>
+            </div>
+            <div class="summary-card">
+                <p>连接方式</p>
+                <p class="summary-value">以太网</p>
+            </div>
+            <div class="summary-card">
+                <p>最近测试</p>
+                <p class="summary-value">09:54</p>
+            </div>
+            <div class="summary-card">
+                <p>测试结果</p>
+                <p class="summary-value normal">已通过</p>
+            </div>
+        </div>
+
+        <div class="form-grid">
+            <div class="control-block">
+                <span>主控型号</span>
+                <select>
+                    <option>主控 A</option>
+                    <option>主控 B</option>
+                    <option>主控 C</option>
+                </select>
+            </div>
+            <div class="control-block">
+                <span>连接方式</span>
+                <select>
+                    <option>以太网</option>
+                    <option>CAN</option>
+                    <option>串口</option>
+                </select>
+            </div>
+            <div class="control-block">
+                <span>主控 IP</span>
+                <input type="text" value="192.168.1.10" />
+            </div>
+            <div class="control-block">
+                <span>端口 / 波特率</span>
+                <input type="text" value="115200" />
+            </div>
+        </div>
+
+        <div class="control-actions">
+            <button class="btn-secondary">测试连接</button>
+            <button class="btn-outline">保存配置</button>
+        </div>
+    </article>
+
+    <article class="glass-card card-half">
+        <div class="card-header">
+            <div>
+                <h3>连接健康</h3>
+                <p>实时查看主控与机器人总线的状态。</p>
+            </div>
+            <span class="status-tag normal">稳定</span>
+        </div>
+        <div class="status-list">
+            <div class="status-item">
+                <div>
+                    <strong>主控 A</strong>
+                    <p>IP 192.168.1.10</p>
+                </div>
+                <span class="status-dot normal">已连接</span>
+            </div>
+            <div class="status-item">
+                <div>
+                    <strong>主控 B</strong>
+                    <p>CAN 总线</p>
+                </div>
+                <span class="status-dot warning">待测试</span>
+            </div>
+            <div class="status-item">
+                <div>
+                    <strong>主控 C</strong>
+                    <p>串口 115200</p>
+                </div>
+                <span class="status-dot normal">已连接</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="glass-card card-half">
+        <div class="card-header">
+            <div>
+                <h3>测试详情</h3>
+                <p>显示最近连接测试中的关键参数与建议。</p>
+            </div>
+        </div>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <p>链路延迟</p>
+                <p class="summary-value">420 μs</p>
+            </div>
+            <div class="summary-card">
+                <p>数据吞吐</p>
+                <p class="summary-value">8.2 MB/s</p>
+            </div>
+            <div class="summary-card">
+                <p>信号强度</p>
+                <p class="summary-value">良好</p>
+            </div>
+            <div class="summary-card">
+                <p>建议</p>
+                <p class="summary-value warning">检查 B 主控连线</p>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}

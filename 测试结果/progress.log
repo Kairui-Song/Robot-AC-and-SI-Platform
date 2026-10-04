@@ -1,0 +1,13 @@
+开始两小时 MOCK 测试：2026-09-30T17:33:24+08:00
+输出目录：verification/longrun-20260930-173324
+FAIL：第 1 轮轨迹失败或超时
+Traceback (most recent call last):
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/linglong_control/trajectory_demo", line 5, in <module>
+    main()
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 155, in main
+    run(node, cancel=options.cancel)
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 68, in run
+    raise RuntimeError('trajectory action server unavailable')
+RuntimeError: trajectory action server unavailable
+[ros2run]: Process exited with failure 1
+结果目录：verification/longrun-20260930-173324

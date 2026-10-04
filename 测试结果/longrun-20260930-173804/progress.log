@@ -1,0 +1,149 @@
+开始两小时 MOCK 测试：2026-09-30T17:38:04+08:00
+输出目录：verification/longrun-20260930-173804
+cycles=3999, deadline_misses=3, max_period_ms=17.533
+第 1 轮通过，已运行 8 秒
+cycles=5493, deadline_misses=6, max_period_ms=34.577
+第 2 轮通过，已运行 23 秒
+cycles=6988, deadline_misses=7, max_period_ms=68.184
+第 3 轮通过，已运行 38 秒
+cycles=8348, deadline_misses=7, max_period_ms=68.184
+第 4 轮通过，已运行 52 秒
+cycles=9986, deadline_misses=8, max_period_ms=68.184
+第 5 轮通过，已运行 68 秒
+cycles=11485, deadline_misses=10, max_period_ms=68.184
+第 6 轮通过，已运行 83 秒
+cycles=12985, deadline_misses=11, max_period_ms=68.184
+第 7 轮通过，已运行 98 秒
+cycles=14485, deadline_misses=11, max_period_ms=68.184
+第 8 轮通过，已运行 113 秒
+cycles=15965, deadline_misses=11, max_period_ms=68.184
+第 9 轮通过，已运行 128 秒
+cycles=17485, deadline_misses=12, max_period_ms=68.184
+第 10 轮通过，已运行 144 秒
+cycles=18925, deadline_misses=13, max_period_ms=68.184
+第 11 轮通过，已运行 158 秒
+cycles=20465, deadline_misses=14, max_period_ms=68.184
+第 12 轮通过，已运行 173 秒
+cycles=21985, deadline_misses=14, max_period_ms=68.184
+第 13 轮通过，已运行 188 秒
+cycles=23485, deadline_misses=15, max_period_ms=68.184
+第 14 轮通过，已运行 203 秒
+cycles=24845, deadline_misses=16, max_period_ms=68.184
+第 15 轮通过，已运行 217 秒
+cycles=26185, deadline_misses=17, max_period_ms=68.184
+第 16 轮通过，已运行 230 秒
+cycles=27685, deadline_misses=18, max_period_ms=68.184
+第 17 轮通过，已运行 245 秒
+cycles=28964, deadline_misses=19, max_period_ms=68.184
+第 18 轮通过，已运行 258 秒
+cycles=30372, deadline_misses=19, max_period_ms=68.184
+第 19 轮通过，已运行 273 秒
+cycles=31873, deadline_misses=19, max_period_ms=68.184
+第 20 轮通过，已运行 288 秒
+cycles=33404, deadline_misses=19, max_period_ms=68.184
+第 21 轮通过，已运行 302 秒
+cycles=34903, deadline_misses=22, max_period_ms=68.184
+第 22 轮通过，已运行 317 秒
+cycles=36372, deadline_misses=22, max_period_ms=68.184
+第 23 轮通过，已运行 333 秒
+cycles=37883, deadline_misses=22, max_period_ms=68.184
+第 24 轮通过，已运行 347 秒
+cycles=39322, deadline_misses=23, max_period_ms=68.184
+第 25 轮通过，已运行 361 秒
+cycles=40833, deadline_misses=26, max_period_ms=68.184
+第 26 轮通过，已运行 377 秒
+cycles=42360, deadline_misses=28, max_period_ms=68.184
+第 27 轮通过，已运行 392 秒
+cycles=43570, deadline_misses=28, max_period_ms=68.184
+第 28 轮通过，已运行 404 秒
+cycles=45060, deadline_misses=29, max_period_ms=68.184
+第 29 轮通过，已运行 419 秒
+cycles=46570, deadline_misses=31, max_period_ms=68.184
+第 30 轮通过，已运行 435 秒
+cycles=47970, deadline_misses=31, max_period_ms=68.184
+第 31 轮通过，已运行 448 秒
+cycles=49560, deadline_misses=31, max_period_ms=68.184
+第 32 轮通过，已运行 464 秒
+cycles=51070, deadline_misses=31, max_period_ms=68.184
+第 33 轮通过，已运行 480 秒
+cycles=52510, deadline_misses=31, max_period_ms=68.184
+第 34 轮通过，已运行 494 秒
+cycles=54110, deadline_misses=32, max_period_ms=68.184
+第 35 轮通过，已运行 510 秒
+cycles=55570, deadline_misses=32, max_period_ms=68.184
+第 36 轮通过，已运行 524 秒
+cycles=56910, deadline_misses=33, max_period_ms=68.184
+第 37 轮通过，已运行 538 秒
+cycles=58610, deadline_misses=33, max_period_ms=68.184
+第 38 轮通过，已运行 555 秒
+cycles=60070, deadline_misses=33, max_period_ms=68.184
+第 39 轮通过，已运行 569 秒
+cycles=61490, deadline_misses=33, max_period_ms=68.184
+第 40 轮通过，已运行 583 秒
+cycles=62808, deadline_misses=34, max_period_ms=68.184
+第 41 轮通过，已运行 596 秒
+cycles=64040, deadline_misses=36, max_period_ms=68.184
+第 42 轮通过，已运行 609 秒
+cycles=65340, deadline_misses=36, max_period_ms=68.184
+第 43 轮通过，已运行 622 秒
+cycles=66660, deadline_misses=36, max_period_ms=68.184
+第 44 轮通过，已运行 635 秒
+cycles=68060, deadline_misses=36, max_period_ms=68.184
+第 45 轮通过，已运行 649 秒
+cycles=69351, deadline_misses=36, max_period_ms=68.184
+第 46 轮通过，已运行 662 秒
+cycles=70759, deadline_misses=40, max_period_ms=68.184
+第 47 轮通过，已运行 676 秒
+cycles=72050, deadline_misses=40, max_period_ms=68.184
+第 48 轮通过，已运行 689 秒
+cycles=73559, deadline_misses=40, max_period_ms=68.184
+第 49 轮通过，已运行 704 秒
+cycles=74799, deadline_misses=40, max_period_ms=68.184
+第 50 轮通过，已运行 716 秒
+cycles=76299, deadline_misses=40, max_period_ms=68.184
+第 51 轮通过，已运行 731 秒
+cycles=77759, deadline_misses=40, max_period_ms=68.184
+第 52 轮通过，已运行 746 秒
+cycles=79259, deadline_misses=41, max_period_ms=68.184
+第 53 轮通过，已运行 761 秒
+cycles=80579, deadline_misses=41, max_period_ms=68.184
+第 54 轮通过，已运行 775 秒
+cycles=81839, deadline_misses=41, max_period_ms=68.184
+第 55 轮通过，已运行 787 秒
+cycles=83079, deadline_misses=43, max_period_ms=68.184
+第 56 轮通过，已运行 800 秒
+cycles=84399, deadline_misses=43, max_period_ms=68.184
+第 57 轮通过，已运行 812 秒
+cycles=85859, deadline_misses=43, max_period_ms=68.184
+第 58 轮通过，已运行 827 秒
+cycles=87359, deadline_misses=43, max_period_ms=68.184
+第 59 轮通过，已运行 842 秒
+cycles=88839, deadline_misses=43, max_period_ms=68.184
+第 60 轮通过，已运行 857 秒
+cycles=90279, deadline_misses=43, max_period_ms=68.184
+第 61 轮通过，已运行 871 秒
+cycles=91559, deadline_misses=43, max_period_ms=68.184
+第 62 轮通过，已运行 884 秒
+cycles=92776, deadline_misses=44, max_period_ms=68.184
+第 63 轮通过，已运行 896 秒
+cycles=94247, deadline_misses=45, max_period_ms=95.433
+第 64 轮通过，已运行 911 秒
+cycles=95647, deadline_misses=45, max_period_ms=95.433
+第 65 轮通过，已运行 925 秒
+cycles=96827, deadline_misses=45, max_period_ms=95.433
+第 66 轮通过，已运行 937 秒
+cycles=98067, deadline_misses=45, max_period_ms=95.433
+第 67 轮通过，已运行 949 秒
+cycles=99647, deadline_misses=45, max_period_ms=95.433
+第 68 轮通过，已运行 965 秒
+FAIL：第 69 轮轨迹失败或超时
+Traceback (most recent call last):
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/linglong_control/trajectory_demo", line 5, in <module>
+    main()
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 155, in main
+    run(node, cancel=options.cancel)
+  File "/home/skr/linglong_1025_2/ros2_ws/install-ubuntu/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 118, in run
+    raise RuntimeError(f'trajectory failed: {result.result.error_code} {result.result.error_string}')
+RuntimeError: trajectory failed: -1 Current goal cancelled during deactivate transition.
+[ros2run]: Process exited with failure 1
+结果目录：verification/longrun-20260930-173804

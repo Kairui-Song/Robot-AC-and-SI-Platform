@@ -1,0 +1,20 @@
+/joint_states: &state
+  history: keep_last
+  depth: 100
+  reliability: best_effort
+  durability: volatile
+/dynamic_joint_states: *state
+/arm_trajectory_controller/controller_state: *state
+/arm_trajectory_controller/follow_joint_trajectory/_action/feedback: *state
+/tf: *state
+/diagnostics:
+  history: keep_last
+  depth: 100
+  reliability: reliable
+  durability: volatile
+/tf_static: &retained
+  history: keep_last
+  depth: 100
+  reliability: reliable
+  durability: transient_local
+/arm_trajectory_controller/follow_joint_trajectory/_action/status: *retained

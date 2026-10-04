@@ -1,0 +1,3 @@
+[INFO] [1790762066.164851796] [_ros2cli_34280]: waiting for service /controller_manager/list_controllers to become available...
+arm_trajectory_controller joint_trajectory_controller/JointTrajectoryController  inactive
+joint_state_broadcaster   joint_state_broadcaster/JointStateBroadcaster          inactive

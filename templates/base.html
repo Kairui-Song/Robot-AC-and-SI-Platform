@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>机器人主控测试平台</title>
+    <meta name="theme-color" content="#050d1a" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <strong>主控测试平台</strong>
+            </div>
+            <nav class="nav-icons">
+                <a class="nav-item {% if page == 'overview' %}active{% endif %}" href="{{ url_for('index') }}">
+                    <span class="nav-icon">⌂</span>
+                    <span>整机总览</span>
+                </a>
+                <a class="nav-item {% if page == 'single-motor-test' %}active{% endif %}" href="{{ url_for('single_motor_test') }}">
+                    <span class="nav-icon">⚡</span>
+                    <span>主控通信与环境</span>
+                </a>
+                <a class="nav-item {% if page == 'comm-log' %}active{% endif %}" href="{{ url_for('comm_log') }}">
+                    <span class="nav-icon">📡</span>
+                    <span>通讯日志</span>
+                </a>
+                <a class="nav-item {% if page == 'test-report' %}active{% endif %}" href="{{ url_for('test_report') }}">
+                    <span class="nav-icon">📊</span>
+                    <span>测试报告</span>
+                </a>
+                <a class="nav-item {% if page == 'system-config' %}active{% endif %}" href="{{ url_for('system_config') }}">
+                    <span class="nav-icon">⚙</span>
+                    <span>系统配置</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="emergency-button" title="仅停止当前软件测试任务，不替代硬件急停">■ 停止测试任务</button>
+            </div>
+        </aside>
+
+        <main class="main-panel">
+            <div class="app-header">
+                <div>
+                    <div class="app-label">机器人主控测试与验证平台</div>
+                </div>
+                <div class="sys-status">Web服务连接中</div>
+            </div>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal-backdrop" id="curveModal">
+        <div class="modal-card curve-modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3>实时性能曲线</h3>
+                </div>
+                <button class="close-btn" id="closeModal" style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(0,240,255,0.1); background: rgba(0,240,255,0.02); color: rgba(0,240,255,0.5); font-size: 20px; cursor: pointer; transition: all 0.3s ease;">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="chart-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+                    <div class="line-panel">
+                        <div class="chart-label">闭环延迟</div>
+                        <div class="curve-graph" data-metric="closed_loop_latency_ms" data-unit=" ms" data-live-metric="actual_position" data-live-unit="" data-live-label="实际位置"></div>
+                    </div>
+                    <div class="line-panel">
+                        <div class="chart-label">周期抖动</div>
+                        <div class="curve-graph" data-metric="schedule_jitter_ms" data-unit=" ms" data-live-metric="actual_velocity" data-live-unit="" data-live-label="实际速度"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

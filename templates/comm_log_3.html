@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="top-bar">
+    <div>
+        <h2>通讯日志</h2>
+        <p>通讯日志：对各个单独电机的记录，及故障报告汇总</p>
+    </div>
+</header>
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3 id="commLogTitle">{{ comm_title }}</h3>
+                <p>按电机模块筛选、排序与导出</p>
+            </div>
+            <a class="btn-secondary" href="{{ url_for('export_comm_log_pdf') }}">导出日志</a>
+        </div>
+        <div class="log-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>电机</th>
+                        <th>事件</th>
+                        <th>级别</th>
+                    </tr>
+                </thead>
+                <tbody id="commLogBody">
+                    {% if comm_entries %}
+                        {% for entry in comm_entries %}
+                            <tr>
+                                <td>{{ entry.time }}</td>
+                                <td>{{ entry.target }}</td>
+                                <td>{{ entry.event }}</td>
+                                <td><span class="status-dot {{ 'warning' if entry.level != '正常' else 'normal' }}">{{ entry.level }}</span></td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr class="no-entry">
+                            <td colspan="4">暂无通讯日志</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>故障报告</h3>
+                <p>问题描述和推荐处理</p>
+            </div>
+            {% if comm_alerts %}
+                <span class="status-tag critical">最新异常</span>
+            {% else %}
+                <span class="status-tag normal">暂无异常</span>
+            {% endif %}
+        </div>
+        <div class="alert-list">
+            {% if comm_alerts %}
+                {% for alert in comm_alerts %}
+                    <div class="alert-item">
+                        <span>{{ alert.summary }}</span>
+                        <span class="status-dot {{ alert.status }}">{{ '立即检查' if alert.status == 'critical' else '监视中' }}</span>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert-item">
+                    <span>当前未检测到异常通讯事件</span>
+                    <span class="status-dot normal">正常</span>
+                </div>
+            {% endif %}
+        </div>
+    </article>
+</section>
+{% endblock %}

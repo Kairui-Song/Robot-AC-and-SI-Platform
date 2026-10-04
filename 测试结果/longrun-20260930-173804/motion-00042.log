@@ -1,0 +1,2 @@
+[INFO] [1790761691.841676906] [linglong_trajectory_demo]: MOCK Action and final feedback verified; errors(rad)=[2.8756641401450622e-08, 2.875664148471735e-08, 2.875664151941182e-08, 2.8756641474309008e-08]
+{"scenario": "trajectory", "passed": true, "initial": [0.15, -0.1, 0.05, 0.02], "final_errors_rad": [2.8756641401450622e-08, 2.875664148471735e-08, 2.875664151941182e-08, 2.8756641474309008e-08]}

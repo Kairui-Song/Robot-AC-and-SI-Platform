@@ -1,0 +1,6 @@
+2026-10-01T14:06:09+08:00
+Linux skr-VMware-Virtual-Platform 7.0.0-34-generic #34~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 15:38:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+2
+0-1
+5c2a7024a23fbf744c0419c4fa3a20e9210d30361187a7fdbccff8c3b913ae0b  /home/skr/linglong_1025_2/ros2_ws/fault-trace/freeze_on_fault.py
+480e438285d1bd6508509ed73253cdcc283968898a919eac8075572d70a20fc7  tools/longrun_vm.sh

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="top-bar">
+    <div>
+        <h2>系统配置</h2>
+    </div>
+</header>
+
+<section class="content-grid">
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>被测主控连接</h3>
+            </div>
+            <span class="status-tag neutral" id="configStatus">最小权限模式</span>
+        </div>
+
+        <form id="ethercatConfigForm" class="form-grid">
+            <div class="control-block">
+                <span>运行模式</span>
+                <select name="mode">
+                    <option value="ssh" {{ 'selected' if ethercat_config.mode == 'ssh' else '' }}>Ubuntu 网页主机 · SSH</option>
+                    <option value="local" {{ 'selected' if ethercat_config.mode == 'local' else '' }}>Ubuntu 主控本机运行</option>
+                </select>
+            </div>
+            <div class="control-block">
+                <span>主控 IP</span>
+                <input name="host" type="text" value="{{ ethercat_config.host }}" />
+            </div>
+            <div class="control-block">
+                <span>SSH 用户</span>
+                <input name="user" type="text" value="{{ ethercat_config.user }}" />
+            </div>
+            <div class="control-block">
+                <span>SSH 私钥路径</span>
+                <input name="ssh_key" type="text" value="{{ ethercat_config.ssh_key }}" />
+            </div>
+            <div class="control-block">
+                <span>SSH 主机指纹文件</span>
+                <input name="known_hosts" type="text" value="{{ ethercat_config.known_hosts }}" />
+            </div>
+            <div class="control-block">
+                <span>主控端只读预检程序</span>
+                <input name="remote_preflight" type="text" value="{{ ethercat_config.remote_preflight }}" />
+            </div>
+            <div class="control-block">
+                <span>主控端 JE 测试程序</span>
+                <input name="remote_controller_test" type="text" value="{{ ethercat_config.remote_controller_test }}" />
+            </div>
+            <div class="control-block">
+                <span>EtherCAT Master 编号</span>
+                <input name="master_index" type="number" min="0" max="255" value="{{ ethercat_config.master_index }}" />
+            </div>
+            <div class="control-block">
+                <span>期望从站数量</span>
+                <input name="expected_slave_count" type="number" min="1" max="255" value="{{ ethercat_config.expected_slave_count }}" />
+            </div>
+            <div class="control-block">
+                <span>SSH 连接超时（秒）</span>
+                <input name="connect_timeout" type="number" min="1" value="{{ ethercat_config.connect_timeout }}" />
+            </div>
+        </form>
+
+        <div class="control-actions">
+            <button class="btn-secondary" id="saveEthercatConfig" type="button">保存 EtherCAT 配置</button>
+        </div>
+        <div class="log-panel" id="configMessage" style="min-height:48px; margin-top:14px;"></div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header">
+            <div>
+                <h3>部署前检查</h3>
+            </div>
+        </div>
+        <div class="status-list">
+            <div class="status-item"><strong>1. SSH 连接</strong><span>{{ ethercat_config.user }}@{{ ethercat_config.host }}，严格校验主机指纹</span></div>
+            <div class="status-item"><strong>2. Test Client</strong><span>{{ ethercat_config.remote_preflight }}</span></div>
+            <div class="status-item"><strong>3. JE Test</strong><span>{{ ethercat_config.remote_controller_test }}</span></div>
+            <div class="status-item"><strong>4. EtherCAT</strong><span>Master {{ ethercat_config.master_index }}，期望 {{ ethercat_config.expected_slave_count }} 个从站</span></div>
+            <div class="status-item"><strong>5. 权限边界</strong><span>仅允许固定命令免密执行；若程序后续改为使能/运动，必须复核安全边界</span></div>
+        </div>
+    </article>
+
+    <article class="glass-card card-wide">
+        <div class="card-header"><div><h3>运动测试解锁条件</h3></div><span class="status-tag warning">未满足</span></div>
+        <div class="status-list">
+            <div class="status-item"><strong>独立硬件安全回路</strong><span>待现场确认；网页“停止测试任务”不替代硬件急停或STO</span></div>
+            <div class="status-item"><strong>电气接口</strong><span>待取得厂家正式引脚定义并完成接线复核</span></div>
+            <div class="status-item"><strong>从站配置</strong><span>待确认ESI、PDO映射、状态机、单位与限位</span></div>
+            <div class="status-item"><strong>软件权限</strong><span>旧运动接口已禁用；闭环运动测试保持服务端锁定</span></div>
+            <div class="status-item"><strong>网络发布</strong><span>默认仅监听本机；发布到局域网前必须配置认证、来源限制与操作审计</span></div>
+        </div>
+    </article>
+</section>
+{% endblock %}
