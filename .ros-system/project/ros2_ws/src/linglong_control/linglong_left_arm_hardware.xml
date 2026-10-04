@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<library path="linglong_left_arm_system">
+  <class name="linglong_control/LeftArmSystem" type="linglong_control::LeftArmSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Four-joint EYOU left arm, IgH PDO domain at slave positions 1,2,3,5.</description>
+  </class>
+</library>

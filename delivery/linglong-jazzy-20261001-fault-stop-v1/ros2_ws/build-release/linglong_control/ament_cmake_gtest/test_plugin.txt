@@ -1,0 +1,31 @@
+-- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':
+ - /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_plugin --gtest_output=xml:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml
+
+Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from SimPlugin
+[ RUN      ] SimPlugin.DiscoveredViaPluginlib
+[       OK ] SimPlugin.DiscoveredViaPluginlib (40 ms)
+[ RUN      ] SimPlugin.HardwareBackendNeverFallsBackToMock
+[ERROR] [1790849898.670302330] [linglong_control]: Configuration rejected: SimSystem only supports backend=mock; no EtherCAT driver installed
+[       OK ] SimPlugin.HardwareBackendNeverFallsBackToMock (1 ms)
+[ RUN      ] SimPlugin.InterfacesActivationAndFaultLatch
+[ERROR] [1790849898.671410779] [linglong_control]: MOCK fault latched, code=2; motion blocked; explicit recovery required
+[ERROR] [1790849898.671455603] [linglong_control]: MOCK fault latched, code=2; restart after correcting the cause
+[       OK ] SimPlugin.InterfacesActivationAndFaultLatch (1 ms)
+[ RUN      ] SimPlugin.StateGuardsOwnershipAndTerminalShutdown
+[       OK ] SimPlugin.StateGuardsOwnershipAndTerminalShutdown (0 ms)
+[ RUN      ] SimPlugin.SupervisedFaultPublishesLatchUntilOrderedRelease
+[ERROR] [1790849898.671938150] [linglong_control]: MOCK fault latched, code=7; motion blocked; explicit recovery required
+[       OK ] SimPlugin.SupervisedFaultPublishesLatchUntilOrderedRelease (0 ms)
+[----------] 5 tests from SimPlugin (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (43 ms total)
+[  PASSED  ] 5 tests.
+
+
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml'
+-- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml'

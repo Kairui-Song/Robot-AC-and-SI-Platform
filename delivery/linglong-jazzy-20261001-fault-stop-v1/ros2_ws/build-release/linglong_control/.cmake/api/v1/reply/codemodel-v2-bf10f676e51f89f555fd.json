@@ -1,0 +1,193 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-87c9923fcc1497e0e55d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "gtest",
+					"jsonFile" : "directory-gtest-Debug-0908a8c91ddba5d6c989.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/opt/ros/jazzy/src/gtest_vendor",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "linglong_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "gtest",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_linglong_control_tools_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_linglong_control_tools_egg-Debug-00ca04990fb735740aea.json",
+					"name" : "ament_cmake_python_build_linglong_control_tools_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_linglong_control_tools::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_linglong_control_tools-Debug-ad213b8ec55ddc68c967.json",
+					"name" : "ament_cmake_python_copy_linglong_control_tools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest-Debug-1263bb34ad4478fd540c.json",
+					"name" : "gtest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest_main::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest_main-Debug-14d6fb1efa989f33db21.json",
+					"name" : "gtest_main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linglong_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linglong_control_uninstall-Debug-59c75a543a18769a3129.json",
+					"name" : "linglong_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linglong_sim_system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linglong_sim_system-Debug-bbe5e6e7ba9701e4f0d2.json",
+					"name" : "linglong_sim_system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sim_validation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sim_validation-Debug-6330c7089c9a4a09cbd5.json",
+					"name" : "sim_validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_hardware_state::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_hardware_state-Debug-86ea86d668ee080dd9a2.json",
+					"name" : "test_hardware_state",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_left_arm_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_left_arm_core-Debug-05002d6bc0c0698f2071.json",
+					"name" : "test_left_arm_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_plugin-Debug-8faa38a8fb293163dbdf.json",
+					"name" : "test_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_sim_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_sim_core-Debug-01646ff2882da85ca876.json",
+					"name" : "test_sim_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-4b191fbd3e4046ecac8e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control",
+		"source" : "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

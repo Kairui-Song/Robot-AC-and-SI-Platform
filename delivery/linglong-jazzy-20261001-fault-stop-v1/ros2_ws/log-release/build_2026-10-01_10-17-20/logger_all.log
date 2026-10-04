@@ -1,0 +1,219 @@
+[0.299s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', '--log-base', 'log-release', 'build', '--build-base', 'build-release', '--install-base', 'install-release', '--packages-up-to', 'linglong_control', '--cmake-args', '-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug']
+[0.299s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base='log-release', log_level=None, verb_name='build', build_base='/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release', install_base='/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['linglong_control'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=['-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x757ac1a2be30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x757ac1b70290>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x757ac1b70290>>)
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.382s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.382s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) by extensions ['ignore', 'ignore_ament_install']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) ignored
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) by extensions ['ignore', 'ignore_ament_install']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) ignored
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) by extensions ['ignore', 'ignore_ament_install']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) by extension 'ignore'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) ignored
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['ignore', 'ignore_ament_install']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ignore'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ignore_ament_install'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['colcon_pkg']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'colcon_pkg'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['colcon_meta']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'colcon_meta'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['ros']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ros'
+[0.466s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_control' with type 'ros.ament_python' and name 'arm_control'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ros'
+[0.491s] DEBUG:colcon.colcon_core.package_identification:Package 'src/linglong_control' with type 'ros.ament_cmake' and name 'linglong_control'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore_ament_install'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_pkg']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_pkg'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_meta']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_meta'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ros']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ros'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['cmake', 'python']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'cmake'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['python_setup_py']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python_setup_py'
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_args' from command line to '['-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug']'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_target' from command line to 'None'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.537s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.538s] DEBUG:colcon.colcon_core.verb:Building package 'arm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control', 'merge_install': False, 'path': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control', 'symlink_install': False, 'test_result_base': None}
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_args' from command line to '['-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug']'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_target' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.540s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.540s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.540s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.540s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.540s] DEBUG:colcon.colcon_core.verb:Building package 'linglong_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DLINGLONG_CORE_ONLY=OFF', '-DCMAKE_BUILD_TYPE=Debug'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control', 'merge_install': False, 'path': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control', 'symlink_install': False, 'test_result_base': None}
+[0.541s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.542s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.543s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control' with build type 'ament_python'
+[0.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control', 'ament_prefix_path')
+[0.549s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/ament_prefix_path.ps1'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/ament_prefix_path.dsv'
+[0.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/ament_prefix_path.sh'
+[0.583s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.583s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.814s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control'
+[0.815s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.815s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.252s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: build_py, saveopts, setopt, egg_info, register, install_data, bdist_rpm, sdist, install, clean, bdist_dumb, dist_info, editable_wheel, build_ext, upload, upload_docs, build_clib, build_scripts, easy_install, develop, bdist, install_headers, bdist_egg, install_lib, rotate, install_egg_info, build, symlink_data, install_scripts, check, test, alias
+[2.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control': PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build-release/arm_control build --build-base /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build install --record /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log --install-scripts $base/lib/arm_control --single-version-externally-managed install_data
+[4.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control' returned '0': PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build-release/arm_control build --build-base /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build install --record /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log --install-scripts $base/lib/arm_control --single-version-externally-managed install_data
+[4.194s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control' for CMake module files
+[4.247s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control' for CMake config files
+[4.344s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib'
+[4.348s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/bin'
+[4.350s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/pkgconfig/arm_control.pc'
+[4.352s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages'
+[4.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control', 'pythonpath')
+[4.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/pythonpath.ps1'
+[4.366s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/pythonpath.dsv'
+[4.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/hook/pythonpath.sh'
+[4.389s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/bin'
+[4.390s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_control)
+[4.391s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/package.ps1'
+[4.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/package.dsv'
+[4.411s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/package.sh'
+[4.422s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/package.bash'
+[4.431s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/package.zsh'
+[4.442s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/colcon-core/packages/arm_control)
+[4.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control' with build type 'ament_cmake'
+[4.450s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control'
+[4.451s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.451s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.508s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control -- -j8 -l8
+[41.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control -- -j8 -l8
+[41.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control
+[45.524s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(linglong_control)
+[45.525s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control' for CMake module files
+[45.525s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control
+[45.641s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control' for CMake config files
+[45.740s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'cmake_prefix_path')
+[45.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.ps1'
+[45.755s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.dsv'
+[45.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.sh'
+[45.786s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib'
+[45.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'ld_library_path_lib')
+[45.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.ps1'
+[45.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.dsv'
+[45.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.sh'
+[45.839s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/bin'
+[45.841s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/pkgconfig/linglong_control.pc'
+[45.843s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages'
+[45.845s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'pythonpath')
+[45.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.ps1'
+[45.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.dsv'
+[45.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.sh'
+[45.888s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/bin'
+[45.890s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.ps1'
+[45.903s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.dsv'
+[45.916s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.sh'
+[45.928s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.bash'
+[45.940s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.zsh'
+[45.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/colcon-core/packages/linglong_control)
+[45.971s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(linglong_control)
+[45.971s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control' for CMake module files
+[46.080s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control' for CMake config files
+[46.186s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'cmake_prefix_path')
+[46.187s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.ps1'
+[46.198s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.dsv'
+[46.211s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/cmake_prefix_path.sh'
+[46.227s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib'
+[46.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'ld_library_path_lib')
+[46.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.ps1'
+[46.243s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.dsv'
+[46.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/ld_library_path_lib.sh'
+[46.270s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/bin'
+[46.272s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/pkgconfig/linglong_control.pc'
+[46.273s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages'
+[46.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('linglong_control', 'pythonpath')
+[46.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.ps1'
+[46.287s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.dsv'
+[46.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/hook/pythonpath.sh'
+[46.312s] Level 1:colcon.colcon_core.environment:checking '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/bin'
+[46.313s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.ps1'
+[46.324s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.dsv'
+[46.335s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.sh'
+[46.345s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.bash'
+[46.356s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.zsh'
+[46.366s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/colcon-core/packages/linglong_control)
+[46.374s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[46.374s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[46.375s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[46.375s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[46.404s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[46.405s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[46.405s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[46.405s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[46.406s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[46.406s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[46.406s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/local_setup.ps1'
+[46.412s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/_local_setup_util_ps1.py'
+[46.418s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/setup.ps1'
+[46.423s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/local_setup.sh'
+[46.428s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/_local_setup_util_sh.py'
+[46.433s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/setup.sh'
+[46.439s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/local_setup.bash'
+[46.445s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/setup.bash'
+[46.451s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/local_setup.zsh'
+[46.456s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/setup.zsh'

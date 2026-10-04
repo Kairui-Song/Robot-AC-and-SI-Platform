@@ -1,0 +1,107 @@
+[
+  {
+    "path": "ros2_ws\\src\\linglong_control\\CMakeLists.txt",
+    "before": "2A02AD2D1CD5696C30340BDB352F669EBD682E346F9A3D0A5F707366C3E534B4",
+    "after": "6AA23976767B646844519522DB978A07976F3AE66950CF3BEDEC8F9F0904DAE6"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_left_arm_hardware.xml",
+    "before": null,
+    "after": "18C812CFE8C12496DA4A88F4964123CA687D75CDFD3D063A89C34341B11E8595"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\package.xml",
+    "before": "C94DFF632AF9CCC29B8BFEBE0DDB60F9FF467E5C678BAAEDDB72B9517215A289",
+    "after": "26A7288E0093FEF8B5EF85D9A1F3D43E2936A8AA76B3A99A607867901913B9A5"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\config\\left_arm_hardware.yaml",
+    "before": null,
+    "after": "EFC1503508FF14FA757B038EBDC1EB38C37ABF35629D213DBBA9EF351C6400DD"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_bus.hpp",
+    "before": null,
+    "after": "0913DF741F71345E381202DFF5F12709C53C8579E88DA08CCBFE2EA1413A9127"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_core.hpp",
+    "before": null,
+    "after": "322EBF3A41E26C7E8CA9F7F80D726A03F9E95A13DB21FCBF3A4133FE3CEFECC7"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_system.hpp",
+    "before": null,
+    "after": "2BFDB84FF93EED1FA13E5A10EF2B3A62A78EEFF12ED54A32DB1EF31247180EDA"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\launch\\control.launch.py",
+    "before": "198EB30348B364494A403F8DE80D754D6A479A629B7E3F8842B4F2EA8D8F7488",
+    "after": "0944A10FC6381723F1D7E5C7AB0FB9C16442A14FE9CC3F02D4EFA81BDA41C1BD"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\diagnostics.py",
+    "before": "8F19B31291689AB628EE660EF2342AFF3EEAE6DD7F7EE7857AD9EDFBBC738FB5",
+    "after": "869AA1116AB441F9A3B699B0F0F539DAB0C3D98C59235A7640ED4C11A4593D9F"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\evidence.py",
+    "before": "C31E8432A8299E4113A4AA5100E77EF2F656E4271181CA3A080C9ACF1334D659",
+    "after": "8ECB28502CB31AC25DB23159177FE45642EF88DA486303715B2F690E20838BFA"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\fault_snapshot.py",
+    "before": "0EF96AE4A91D7F628A768096C742192FACAB1E9F2DCFBFD6FCA60D1344350C01",
+    "after": "238E5B7A89D89A61D1E688E20BFDB8A2057181FA1D76D3668832EA0720BBA6F6"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\health.py",
+    "before": "588652093B42634542744BCC0F838EAAFD0767247666666FBF0335F21B731D66",
+    "after": "15463EC599A51677E464CDAF36A4CB1F32FA0E2A0C5D62E8F7F2D22B47632DF7"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\left_arm_configuration.py",
+    "before": null,
+    "after": "CAE440671FF6820EF46DD7CBEF1253638F180C1A0E1FEA7BA36C2CF9E1731DC9"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\src\\left_arm_system.cpp",
+    "before": null,
+    "after": "C3054F839C4040C4A350AC755D6A72853D961BA43998E9E10334C4CCA44D75CB"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_bus.cpp",
+    "before": null,
+    "after": "36C22F2867B4BAE090DF3A4F7FAB66C7D8346B295820E6C54B388C77BE0C6173"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_configuration.py",
+    "before": null,
+    "after": "5563A65A9B94A3B3F94ED75E0BA117052B150F47BC4EBB0DC17532CFF5D605A1"
+  },
+  {
+    "path": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_core.cpp",
+    "before": null,
+    "after": "F7D414F05BB7297A5E9996657FA23E2D71D001606A09196F7CD4A3EBC01C3E18"
+  },
+  {
+    "path": "ros2_ws\\LEFT_ARM_HARDWARE.md",
+    "before": null,
+    "after": "5776B02896F4D87B0B678E95DD2AA56F22CDB69D37D52B111C1B8FE85B79D4ED"
+  },
+  {
+    "path": "ros2_ws\\README.md",
+    "before": "C3A2C5F0F0DE4844A89E47D9345BEED8D453C36B5D5873EFBC83010B1F0D3C10",
+    "after": "7C42771052B9870A113427742B77E0348E4C454EAF8AAED857FA402287B50F6D"
+  },
+  {
+    "path": "ros2_ws\\ROS2_CONTROL.md",
+    "before": "26779ACB8730FBB0A4B8005675C3994FA12A6A265D99037B25CB159AF81C5F45",
+    "after": "39DA95C5FA3E7BB904848D190A584DA131AA08D622469A9003A6A47EBD79B429"
+  },
+  {
+    "path": "ros2_ws\\VERIFICATION.md",
+    "before": "24FDF936D1B686BB6DD10092356E6FA4BC2972A52F3BCD046B3620489819FB64",
+    "after": "6A86EF00268F196205FE0BA5C8C2A4454C56ADBAA2025C92CADC2E3E79211D7C"
+  }
+]

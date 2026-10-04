@@ -1,0 +1,747 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"pluginlib_export_plugin_description_file",
+			"ament_environment_hooks",
+			"_ament_cmake_python_register_environment_hook",
+			"ament_python_install_package",
+			"_ament_cmake_python_install_package",
+			"_ament_cmake_export_libraries_register_environment_hook",
+			"ament_export_targets",
+			"ament_index_register_resource",
+			"ament_cmake_environment_generate_package_run_dependencies_marker",
+			"include",
+			"ament_execute_extensions",
+			"ament_package",
+			"ament_cmake_environment_generate_parent_prefix_path_marker",
+			"ament_generate_package_environment",
+			"ament_index_register_package",
+			"_ament_package"
+		],
+		"files" : 
+		[
+			"/opt/ros/jazzy/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_environment_hooks.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_python/cmake/ament_cmake_python-extras.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_export_targets/cmake/ament_export_targets.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_generate_package_environment.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake",
+			"/opt/ros/jazzy/share/pluginlib/cmake/pluginlib_package_hook.cmake",
+			"/opt/ros/jazzy/share/ament_cmake_export_targets/cmake/ament_cmake_export_targets_package_hook.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 75,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 38,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 36,
+				"parent" : 8
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 70,
+				"parent" : 9
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 87,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 39,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 157,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 184,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 194,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 107,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 59,
+				"parent" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 25,
+				"parent" : 18
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 70,
+				"parent" : 19
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 87,
+				"parent" : 19
+			},
+			{
+				"command" : 12,
+				"file" : 1,
+				"line" : 109,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 10,
+				"line" : 66,
+				"parent" : 22
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 48,
+				"parent" : 23
+			},
+			{
+				"file" : 8,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 47,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 29,
+				"parent" : 26
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 105,
+				"parent" : 27
+			},
+			{
+				"command" : 13,
+				"file" : 8,
+				"line" : 48,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 43,
+				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 105,
+				"parent" : 30
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 48,
+				"parent" : 23
+			},
+			{
+				"file" : 11,
+				"parent" : 32
+			},
+			{
+				"command" : 2,
+				"file" : 11,
+				"line" : 20,
+				"parent" : 33
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 70,
+				"parent" : 34
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 87,
+				"parent" : 34
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 70,
+				"parent" : 34
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 87,
+				"parent" : 34
+			},
+			{
+				"command" : 14,
+				"file" : 11,
+				"line" : 26,
+				"parent" : 33
+			},
+			{
+				"command" : 0,
+				"file" : 12,
+				"line" : 91,
+				"parent" : 39
+			},
+			{
+				"command" : 0,
+				"file" : 12,
+				"line" : 91,
+				"parent" : 39
+			},
+			{
+				"command" : 0,
+				"file" : 12,
+				"line" : 91,
+				"parent" : 39
+			},
+			{
+				"command" : 0,
+				"file" : 12,
+				"line" : 107,
+				"parent" : 39
+			},
+			{
+				"command" : 0,
+				"file" : 12,
+				"line" : 120,
+				"parent" : 39
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 48,
+				"parent" : 23
+			},
+			{
+				"file" : 14,
+				"parent" : 45
+			},
+			{
+				"command" : 15,
+				"file" : 14,
+				"line" : 16,
+				"parent" : 46
+			},
+			{
+				"command" : 8,
+				"file" : 13,
+				"line" : 29,
+				"parent" : 47
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 105,
+				"parent" : 48
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 48,
+				"parent" : 23
+			},
+			{
+				"file" : 15,
+				"parent" : 50
+			},
+			{
+				"command" : 8,
+				"file" : 15,
+				"line" : 22,
+				"parent" : 51
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 105,
+				"parent" : 52
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 48,
+				"parent" : 23
+			},
+			{
+				"file" : 16,
+				"parent" : 54
+			},
+			{
+				"command" : 0,
+				"file" : 16,
+				"line" : 28,
+				"parent" : 55
+			},
+			{
+				"command" : 16,
+				"file" : 10,
+				"line" : 68,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 10,
+				"line" : 122,
+				"parent" : 57
+			},
+			{
+				"command" : 0,
+				"file" : 10,
+				"line" : 122,
+				"parent" : 57
+			},
+			{
+				"command" : 0,
+				"file" : 10,
+				"line" : 150,
+				"parent" : 57
+			},
+			{
+				"command" : 0,
+				"file" : 10,
+				"line" : 157,
+				"parent" : 57
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"linglong_hardware.xml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"liblinglong_sim_system.so"
+			],
+			"targetId" : "linglong_sim_system::@6890427a1f51a3e7e1df",
+			"targetIndex" : 5,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"config",
+				"launch",
+				"urdf"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"RELEASE_ID"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/pythonpath.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/pythonpath.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info",
+			"paths" : 
+			[
+				{
+					"from" : "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_python/linglong_control_tools/linglong_control_tools.egg-info",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.12/site-packages/linglong_control_tools",
+			"paths" : 
+			[
+				{
+					"from" : "linglong_control_tools",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Unspecified",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "lib/linglong_control",
+			"paths" : 
+			[
+				"scripts/control_diagnostics",
+				"scripts/trajectory_demo",
+				"scripts/architecture_probe",
+				"scripts/fault_snapshot",
+				"scripts/system_manager",
+				"scripts/system_transition"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/library_path.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/package_run_dependencies",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/linglong_control"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 31,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/parent_prefix_path",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/linglong_control"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 35,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 36,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/ament_prefix_path.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 37,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 38,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/environment",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/path.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 40,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/local_setup.bash"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 41,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/local_setup.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 42,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/local_setup.zsh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 43,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/local_setup.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 44,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_environment_hooks/package.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 49,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/packages",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_index/share/ament_index/resource_index/packages/linglong_control"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 53,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/hardware_interface__pluginlib__plugin",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/linglong_control"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 56,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/cmake",
+			"exportName" : "export_linglong_control",
+			"exportTargets" : 
+			[
+				{
+					"id" : "linglong_sim_system::@6890427a1f51a3e7e1df",
+					"index" : 5
+				}
+			],
+			"paths" : 
+			[
+				"CMakeFiles/Export/e194fde726a73f43d8191ca2beaa33a8/export_linglong_controlExport.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 58,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/cmake",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 59,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/cmake",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 60,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control/cmake",
+			"paths" : 
+			[
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_core/linglong_controlConfig.cmake",
+				"/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_core/linglong_controlConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 61,
+			"component" : "Unspecified",
+			"destination" : "share/linglong_control",
+			"paths" : 
+			[
+				"package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

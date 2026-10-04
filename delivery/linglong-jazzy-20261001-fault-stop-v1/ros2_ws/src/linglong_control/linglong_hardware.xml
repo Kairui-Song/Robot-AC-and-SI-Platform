@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<library path="linglong_sim_system">
+  <class name="linglong_control/SimSystem" type="linglong_control::SimSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Mock-only four-joint system. Does not communicate with EtherCAT.</description>
+  </class>
+</library>

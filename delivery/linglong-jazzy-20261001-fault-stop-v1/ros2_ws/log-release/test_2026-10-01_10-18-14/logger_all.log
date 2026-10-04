@@ -1,0 +1,128 @@
+[0.607s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', '--log-base', 'log-release', 'test', '--build-base', 'build-release', '--install-base', 'install-release', '--packages-select', 'linglong_control', 'arm_control']
+[0.607s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base='log-release', log_level=None, verb_name='test', build_base='/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release', install_base='/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release', merge_install=False, test_result_base=None, retest_until_fail=0, retest_until_pass=0, abort_on_error=False, return_code_on_test_failure=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['linglong_control', 'arm_control'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, ctest_args=None, python_testing=None, pytest_args=None, pytest_with_coverage=False, unittest_args=None, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75d4fd31d400>, verb_extension=<colcon_core.verb.test.TestVerb object at 0x75d4fd4ac6e0>, main=<bound method TestVerb.main of <colcon_core.verb.test.TestVerb object at 0x75d4fd4ac6e0>>)
+[0.690s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.692s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) by extensions ['ignore', 'ignore_ament_install']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) by extension 'ignore'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(build-release) ignored
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) by extensions ['ignore', 'ignore_ament_install']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) by extension 'ignore'
+[0.745s] Level 1:colcon.colcon_core.package_identification:_identify(install-release) ignored
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) by extensions ['ignore', 'ignore_ament_install']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(log-release) ignored
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['ignore', 'ignore_ament_install']
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ignore'
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ignore_ament_install'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['colcon_pkg']
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'colcon_pkg'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['colcon_meta']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'colcon_meta'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extensions ['ros']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control) by extension 'ros'
+[0.797s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_control' with type 'ros.ament_python' and name 'arm_control'
+[0.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['ignore', 'ignore_ament_install']
+[0.802s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ignore'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ignore_ament_install'
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['colcon_pkg']
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'colcon_pkg'
+[0.811s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['colcon_meta']
+[0.812s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'colcon_meta'
+[0.814s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extensions ['ros']
+[0.815s] Level 1:colcon.colcon_core.package_identification:_identify(src/linglong_control) by extension 'ros'
+[0.831s] DEBUG:colcon.colcon_core.package_identification:Package 'src/linglong_control' with type 'ros.ament_cmake' and name 'linglong_control'
+[0.833s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ignore', 'ignore_ament_install']
+[0.834s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore'
+[0.834s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore_ament_install'
+[0.835s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_pkg']
+[0.835s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_pkg'
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_meta']
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_meta'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ros']
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ros'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['cmake', 'python']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'cmake'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python'
+[0.842s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['python_setup_py']
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python_setup_py'
+[0.844s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.845s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.845s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.845s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.845s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.865s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'ctest_args' from command line to 'None'
+[0.866s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'python_testing' from command line to 'None'
+[0.866s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'pytest_args' from command line to 'None'
+[0.866s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'pytest_with_coverage' from command line to 'False'
+[0.866s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'unittest_args' from command line to 'None'
+[0.866s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'retest_until_pass' from command line to '0'
+[0.867s] Level 5:colcon.colcon_core.verb:set package 'arm_control' test argument 'retest_until_fail' from command line to '0'
+[0.867s] DEBUG:colcon.colcon_core.verb.test:Testing package 'arm_control' with the following arguments: {'build_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control', 'ctest_args': None, 'install_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control', 'path': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[0.868s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'ctest_args' from command line to 'None'
+[0.868s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'python_testing' from command line to 'None'
+[0.868s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'pytest_args' from command line to 'None'
+[0.869s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'pytest_with_coverage' from command line to 'False'
+[0.869s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'unittest_args' from command line to 'None'
+[0.869s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'retest_until_pass' from command line to '0'
+[0.869s] Level 5:colcon.colcon_core.verb:set package 'linglong_control' test argument 'retest_until_fail' from command line to '0'
+[0.869s] DEBUG:colcon.colcon_core.verb.test:Testing package 'linglong_control' with the following arguments: {'build_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'ctest_args': None, 'install_base': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control', 'path': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[0.870s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.873s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.874s] INFO:colcon.colcon_ros.task.ament_python.test:Testing ROS package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control' with build type'ament_python'
+[0.874s] INFO:colcon.colcon_core.task.python.test:Testing Python package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control'
+[0.890s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.890s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.893s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.949s] Level 1:colcon.colcon_core.task.python.test:test() by extension 'pytest'
+[1.950s] Level 1:colcon.colcon_core.task.python.test:test.step() by extension 'pytest'
+[1.969s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy PYTEST_ADDOPTS=--tb=short --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/pytest.xml --junit-prefix=arm_control -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -m pytest
+[3.623s] INFO:colcon.colcon_ros.task.ament_cmake.test:Testing ROS package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control' with build type 'ament_cmake'
+[3.623s] INFO:colcon.colcon_cmake.task.cmake.test:Testing CMake package in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control'
+[3.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy PYTEST_ADDOPTS=--tb=short --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/pytest.xml --junit-prefix=arm_control -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -m pytest
+[3.625s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.625s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy /usr/bin/ctest -C Debug -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[21.994s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[21.994s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[21.995s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[21.995s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[21.995s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy /usr/bin/ctest -C Debug -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[22.026s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[22.026s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[22.027s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[22.027s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[22.027s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[22.027s] DEBUG:colcon.colcon_core.event_reactor:joined thread

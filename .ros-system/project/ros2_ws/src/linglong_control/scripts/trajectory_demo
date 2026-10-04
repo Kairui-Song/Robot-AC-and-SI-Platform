@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from linglong_control_tools.trajectory_demo import main
+
+if __name__ == '__main__':
+    main()

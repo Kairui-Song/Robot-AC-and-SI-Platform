@@ -1,0 +1,1 @@
+{"scenario": "cancel", "passed": true, "pre_cancel_displacement_rad": 0.014999484480000103, "samples": 62, "duration": 0.6100122380000244, "reference": [0.1649994844800001, -0.08500051551999992, 0.06499948448000008, 0.0349994844800001], "max_error_rad": 0.0}

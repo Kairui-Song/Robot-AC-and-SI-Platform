@@ -1,0 +1,4 @@
+source;share/linglong_control/local_setup.bash
+source;share/linglong_control/local_setup.dsv
+source;share/linglong_control/local_setup.sh
+source;share/linglong_control/local_setup.zsh

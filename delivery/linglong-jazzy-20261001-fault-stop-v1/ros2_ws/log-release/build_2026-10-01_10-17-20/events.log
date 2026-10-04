@@ -1,0 +1,743 @@
+[0.000000] (-) TimerEvent: {}
+[0.000467] (arm_control) JobQueued: {'identifier': 'arm_control', 'dependencies': OrderedDict()}
+[0.000662] (linglong_control) JobQueued: {'identifier': 'linglong_control', 'dependencies': OrderedDict({'arm_control': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control'})}
+[0.000897] (arm_control) JobStarted: {'identifier': 'arm_control'}
+[0.098154] (-) TimerEvent: {}
+[0.198568] (-) TimerEvent: {}
+[0.299016] (-) TimerEvent: {}
+[0.399549] (-) TimerEvent: {}
+[0.500018] (-) TimerEvent: {}
+[0.600556] (-) TimerEvent: {}
+[0.701136] (-) TimerEvent: {}
+[0.801750] (-) TimerEvent: {}
+[0.902387] (-) TimerEvent: {}
+[1.003019] (-) TimerEvent: {}
+[1.103756] (-) TimerEvent: {}
+[1.204757] (-) TimerEvent: {}
+[1.305248] (-) TimerEvent: {}
+[1.405857] (-) TimerEvent: {}
+[1.506346] (-) TimerEvent: {}
+[1.606847] (-) TimerEvent: {}
+[1.708591] (-) TimerEvent: {}
+[1.722408] (arm_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build-release/arm_control', 'build', '--build-base', '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build', 'install', '--record', '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log', '--install-scripts', '$base/lib/arm_control', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control', 'env': OrderedDict({'LINGLONG_CLEAN_BUILD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control', 'PYTHONPATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[1.808776] (-) TimerEvent: {}
+[1.909414] (-) TimerEvent: {}
+[2.009943] (-) TimerEvent: {}
+[2.110442] (-) TimerEvent: {}
+[2.210964] (-) TimerEvent: {}
+[2.290027] (arm_control) StdoutLine: {'line': b'running egg_info\n'}
+[2.311147] (-) TimerEvent: {}
+[2.311468] (arm_control) StdoutLine: {'line': b'writing ../../build-release/arm_control/arm_control.egg-info/PKG-INFO\n'}
+[2.317198] (arm_control) StdoutLine: {'line': b'writing dependency_links to ../../build-release/arm_control/arm_control.egg-info/dependency_links.txt\n'}
+[2.320750] (arm_control) StdoutLine: {'line': b'writing entry points to ../../build-release/arm_control/arm_control.egg-info/entry_points.txt\n'}
+[2.325058] (arm_control) StdoutLine: {'line': b'writing requirements to ../../build-release/arm_control/arm_control.egg-info/requires.txt\n'}
+[2.327893] (arm_control) StdoutLine: {'line': b'writing top-level names to ../../build-release/arm_control/arm_control.egg-info/top_level.txt\n'}
+[2.398192] (arm_control) StdoutLine: {'line': b"reading manifest file '../../build-release/arm_control/arm_control.egg-info/SOURCES.txt'\n"}
+[2.411304] (-) TimerEvent: {}
+[2.456491] (arm_control) StdoutLine: {'line': b"writing manifest file '../../build-release/arm_control/arm_control.egg-info/SOURCES.txt'\n"}
+[2.460397] (arm_control) StdoutLine: {'line': b'running build\n'}
+[2.461251] (arm_control) StdoutLine: {'line': b'running build_py\n'}
+[2.471916] (arm_control) StdoutLine: {'line': b'copying arm_control/backend.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control\n'}
+[2.494519] (arm_control) StdoutLine: {'line': b'copying arm_control/node.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control\n'}
+[2.511467] (-) TimerEvent: {}
+[2.518831] (arm_control) StdoutLine: {'line': b'copying arm_control/__init__.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control\n'}
+[2.534855] (arm_control) StdoutLine: {'line': b'running install\n'}
+[2.546154] (arm_control) StdoutLine: {'line': b'running install_lib\n'}
+[2.602684] (arm_control) StdoutLine: {'line': b'copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/backend.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control\n'}
+[2.611623] (-) TimerEvent: {}
+[2.641775] (arm_control) StdoutLine: {'line': b'copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/node.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control\n'}
+[2.681230] (arm_control) StdoutLine: {'line': b'copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/__init__.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control\n'}
+[2.711816] (-) TimerEvent: {}
+[2.718827] (arm_control) StdoutLine: {'line': b'byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/backend.py to backend.cpython-312.pyc\n'}
+[2.768132] (arm_control) StdoutLine: {'line': b'byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/node.py to node.cpython-312.pyc\n'}
+[2.811981] (-) TimerEvent: {}
+[2.814944] (arm_control) StdoutLine: {'line': b'byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/__init__.py to __init__.cpython-312.pyc\n'}
+[2.843475] (arm_control) StdoutLine: {'line': b'running install_data\n'}
+[2.855582] (arm_control) StdoutLine: {'line': b'copying resource/arm_control -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/ament_index/resource_index/packages\n'}
+[2.878959] (arm_control) StdoutLine: {'line': b'copying package.xml -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control\n'}
+[2.905371] (arm_control) StdoutLine: {'line': b'copying launch/arm_control.launch.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/launch\n'}
+[2.912187] (-) TimerEvent: {}
+[2.936661] (arm_control) StdoutLine: {'line': b'copying config/arm_control.yaml -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/config\n'}
+[2.968319] (arm_control) StdoutLine: {'line': b'copying urdf/arm.urdf -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/urdf\n'}
+[2.997985] (arm_control) StdoutLine: {'line': b'copying rviz/arm.rviz -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/rviz\n'}
+[3.012303] (-) TimerEvent: {}
+[3.014710] (arm_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.050196] (arm_control) StdoutLine: {'line': b"removing '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control-0.1.0-py3.12.egg-info' (and everything under it)\n"}
+[3.112509] (-) TimerEvent: {}
+[3.127160] (arm_control) StdoutLine: {'line': b'Copying ../../build-release/arm_control/arm_control.egg-info to /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control-0.1.0-py3.12.egg-info\n'}
+[3.212681] (-) TimerEvent: {}
+[3.313196] (-) TimerEvent: {}
+[3.373420] (arm_control) StdoutLine: {'line': b'running install_scripts\n'}
+[3.413370] (-) TimerEvent: {}
+[3.513952] (-) TimerEvent: {}
+[3.581736] (arm_control) StdoutLine: {'line': b'Installing arm_control_node script to /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/arm_control\n'}
+[3.592362] (arm_control) StdoutLine: {'line': b"writing list of installed files to '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log'\n"}
+[3.614120] (-) TimerEvent: {}
+[3.637779] (arm_control) CommandEnded: {'returncode': 0}
+[3.714324] (-) TimerEvent: {}
+[3.814815] (-) TimerEvent: {}
+[3.906372] (arm_control) JobEnded: {'identifier': 'arm_control', 'rc': 0}
+[3.914012] (linglong_control) JobStarted: {'identifier': 'linglong_control'}
+[3.914872] (-) TimerEvent: {}
+[3.932024] (linglong_control) JobProgress: {'identifier': 'linglong_control', 'progress': 'cmake'}
+[3.949018] (linglong_control) JobProgress: {'identifier': 'linglong_control', 'progress': 'build'}
+[3.953825] (linglong_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', '--', '-j8', '-l8'], 'cwd': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'env': OrderedDict({'LINGLONG_CLEAN_BUILD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'PYTHONPATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.015081] (-) TimerEvent: {}
+[4.115679] (-) TimerEvent: {}
+[4.193526] (linglong_control) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[4.215797] (-) TimerEvent: {}
+[4.316120] (-) TimerEvent: {}
+[4.416534] (-) TimerEvent: {}
+[4.517359] (-) TimerEvent: {}
+[4.618030] (-) TimerEvent: {}
+[4.718770] (-) TimerEvent: {}
+[4.820773] (-) TimerEvent: {}
+[4.921305] (-) TimerEvent: {}
+[5.021882] (-) TimerEvent: {}
+[5.071697] (linglong_control) StdoutLine: {'line': b'-- Found hardware_interface: 4.48.0 (/opt/ros/jazzy/share/hardware_interface/cmake)\n'}
+[5.122070] (-) TimerEvent: {}
+[5.197000] (linglong_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[5.222250] (-) TimerEvent: {}
+[5.242682] (linglong_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[5.294835] (linglong_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.322452] (-) TimerEvent: {}
+[5.356472] (linglong_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.422677] (-) TimerEvent: {}
+[5.523169] (-) TimerEvent: {}
+[5.623925] (-) TimerEvent: {}
+[5.714953] (linglong_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.724105] (-) TimerEvent: {}
+[5.799120] (linglong_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[5.813200] (linglong_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.824344] (-) TimerEvent: {}
+[5.871061] (linglong_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.900714] (linglong_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.924614] (-) TimerEvent: {}
+[5.937268] (linglong_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.960406] (linglong_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.982051] (linglong_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.024825] (-) TimerEvent: {}
+[6.125370] (-) TimerEvent: {}
+[6.226069] (-) TimerEvent: {}
+[6.326623] (-) TimerEvent: {}
+[6.427095] (-) TimerEvent: {}
+[6.527600] (-) TimerEvent: {}
+[6.580674] (linglong_control) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)\n'}
+[6.585399] (linglong_control) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)\n'}
+[6.588777] (linglong_control) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[6.627844] (-) TimerEvent: {}
+[6.728320] (-) TimerEvent: {}
+[6.828858] (-) TimerEvent: {}
+[6.929387] (-) TimerEvent: {}
+[7.029878] (-) TimerEvent: {}
+[7.130292] (-) TimerEvent: {}
+[7.230736] (-) TimerEvent: {}
+[7.331129] (-) TimerEvent: {}
+[7.431554] (-) TimerEvent: {}
+[7.531941] (-) TimerEvent: {}
+[7.632246] (-) TimerEvent: {}
+[7.732633] (-) TimerEvent: {}
+[7.832971] (-) TimerEvent: {}
+[7.933410] (-) TimerEvent: {}
+[8.033832] (-) TimerEvent: {}
+[8.134394] (-) TimerEvent: {}
+[8.234773] (-) TimerEvent: {}
+[8.335336] (-) TimerEvent: {}
+[8.435891] (-) TimerEvent: {}
+[8.536459] (-) TimerEvent: {}
+[8.637015] (-) TimerEvent: {}
+[8.737648] (-) TimerEvent: {}
+[8.838335] (-) TimerEvent: {}
+[8.942203] (-) TimerEvent: {}
+[9.042764] (-) TimerEvent: {}
+[9.143344] (-) TimerEvent: {}
+[9.243817] (-) TimerEvent: {}
+[9.344350] (-) TimerEvent: {}
+[9.444952] (-) TimerEvent: {}
+[9.545847] (-) TimerEvent: {}
+[9.646442] (-) TimerEvent: {}
+[9.747000] (-) TimerEvent: {}
+[9.847534] (-) TimerEvent: {}
+[9.948063] (-) TimerEvent: {}
+[10.048670] (-) TimerEvent: {}
+[10.149156] (-) TimerEvent: {}
+[10.249741] (-) TimerEvent: {}
+[10.350371] (-) TimerEvent: {}
+[10.450828] (-) TimerEvent: {}
+[10.551286] (-) TimerEvent: {}
+[10.651838] (-) TimerEvent: {}
+[10.752329] (-) TimerEvent: {}
+[10.852880] (-) TimerEvent: {}
+[10.953719] (-) TimerEvent: {}
+[11.054163] (-) TimerEvent: {}
+[11.154702] (-) TimerEvent: {}
+[11.255261] (-) TimerEvent: {}
+[11.355870] (-) TimerEvent: {}
+[11.456555] (-) TimerEvent: {}
+[11.557226] (-) TimerEvent: {}
+[11.657908] (-) TimerEvent: {}
+[11.758476] (-) TimerEvent: {}
+[11.859063] (-) TimerEvent: {}
+[11.959754] (-) TimerEvent: {}
+[12.060375] (-) TimerEvent: {}
+[12.160800] (-) TimerEvent: {}
+[12.261299] (-) TimerEvent: {}
+[12.361906] (-) TimerEvent: {}
+[12.462249] (-) TimerEvent: {}
+[12.562663] (-) TimerEvent: {}
+[12.663050] (-) TimerEvent: {}
+[12.763415] (-) TimerEvent: {}
+[12.863822] (-) TimerEvent: {}
+[12.964221] (-) TimerEvent: {}
+[13.064575] (-) TimerEvent: {}
+[13.164936] (-) TimerEvent: {}
+[13.262824] (linglong_control) StdoutLine: {'line': b'-- Configuring done (9.1s)\n'}
+[13.265050] (-) TimerEvent: {}
+[13.365419] (-) TimerEvent: {}
+[13.465840] (-) TimerEvent: {}
+[13.566218] (-) TimerEvent: {}
+[13.666634] (-) TimerEvent: {}
+[13.766964] (-) TimerEvent: {}
+[13.867410] (-) TimerEvent: {}
+[13.967864] (-) TimerEvent: {}
+[14.068446] (-) TimerEvent: {}
+[14.152904] (linglong_control) StdoutLine: {'line': b'-- Generating done (0.8s)\n'}
+[14.168604] (-) TimerEvent: {}
+[14.269083] (-) TimerEvent: {}
+[14.369498] (-) TimerEvent: {}
+[14.469916] (-) TimerEvent: {}
+[14.570406] (-) TimerEvent: {}
+[14.670925] (-) TimerEvent: {}
+[14.771493] (-) TimerEvent: {}
+[14.822734] (linglong_control) StdoutLine: {'line': b'-- Build files have been written to: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[14.871740] (-) TimerEvent: {}
+[14.972926] (-) TimerEvent: {}
+[15.078168] (-) TimerEvent: {}
+[15.178878] (-) TimerEvent: {}
+[15.280135] (-) TimerEvent: {}
+[15.381143] (-) TimerEvent: {}
+[15.485790] (-) TimerEvent: {}
+[15.511019] (linglong_control) StdoutLine: {'line': b'[  6%] Building CXX object CMakeFiles/test_hardware_state.dir/test/test_hardware_state.cpp.o\n'}
+[15.539081] (linglong_control) StdoutLine: {'line': b'[ 12%] Building CXX object CMakeFiles/test_left_arm_core.dir/test/test_left_arm_core.cpp.o\n'}
+[15.558285] (linglong_control) StdoutLine: {'line': b'[ 18%] Building CXX object CMakeFiles/test_sim_core.dir/test/test_sim_core.cpp.o\n'}
+[15.585947] (-) TimerEvent: {}
+[15.595133] (linglong_control) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/sim_validation.dir/test/sim_validation.cpp.o\n'}
+[15.686387] (-) TimerEvent: {}
+[15.704187] (linglong_control) StdoutLine: {'line': b'[ 37%] Built target gtest_main\n'}
+[15.787119] (-) TimerEvent: {}
+[15.845473] (linglong_control) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[15.888007] (-) TimerEvent: {}
+[15.988699] (-) TimerEvent: {}
+[16.038984] (linglong_control) StdoutLine: {'line': b'[ 50%] Built target ament_cmake_python_copy_linglong_control_tools\n'}
+[16.089066] (-) TimerEvent: {}
+[16.189684] (-) TimerEvent: {}
+[16.293696] (-) TimerEvent: {}
+[16.350650] (linglong_control) StdoutLine: {'line': b'[ 56%] Building CXX object CMakeFiles/linglong_sim_system.dir/src/sim_system.cpp.o\n'}
+[16.394027] (-) TimerEvent: {}
+[16.494935] (-) TimerEvent: {}
+[16.597126] (-) TimerEvent: {}
+[16.697728] (-) TimerEvent: {}
+[16.786068] (linglong_control) StdoutLine: {'line': b'[ 62%] Linking CXX executable test_hardware_state\n'}
+[16.797959] (-) TimerEvent: {}
+[16.898555] (-) TimerEvent: {}
+[16.999564] (-) TimerEvent: {}
+[17.109943] (-) TimerEvent: {}
+[17.118243] (linglong_control) StdoutLine: {'line': b'[ 62%] Built target test_hardware_state\n'}
+[17.126716] (linglong_control) StdoutLine: {'line': b'[ 68%] Linking CXX executable test_left_arm_core\n'}
+[17.158424] (linglong_control) StdoutLine: {'line': b'running egg_info\n'}
+[17.194949] (linglong_control) StdoutLine: {'line': b'writing linglong_control_tools.egg-info/PKG-INFO\n'}
+[17.201157] (linglong_control) StdoutLine: {'line': b'writing dependency_links to linglong_control_tools.egg-info/dependency_links.txt\n'}
+[17.210107] (-) TimerEvent: {}
+[17.212657] (linglong_control) StdoutLine: {'line': b'writing top-level names to linglong_control_tools.egg-info/top_level.txt\n'}
+[17.310285] (-) TimerEvent: {}
+[17.384936] (linglong_control) StdoutLine: {'line': b"reading manifest file 'linglong_control_tools.egg-info/SOURCES.txt'\n"}
+[17.410465] (-) TimerEvent: {}
+[17.432973] (linglong_control) StdoutLine: {'line': b'[ 68%] Built target test_left_arm_core\n'}
+[17.500131] (linglong_control) StdoutLine: {'line': b"writing manifest file 'linglong_control_tools.egg-info/SOURCES.txt'\n"}
+[17.510658] (-) TimerEvent: {}
+[17.577232] (linglong_control) StdoutLine: {'line': b'[ 75%] Linking CXX executable test_sim_core\n'}
+[17.604873] (linglong_control) StdoutLine: {'line': b'[ 75%] Built target ament_cmake_python_build_linglong_control_tools_egg\n'}
+[17.610860] (-) TimerEvent: {}
+[17.711567] (-) TimerEvent: {}
+[17.812444] (-) TimerEvent: {}
+[17.913712] (-) TimerEvent: {}
+[17.978206] (linglong_control) StdoutLine: {'line': b'[ 75%] Built target test_sim_core\n'}
+[18.013878] (-) TimerEvent: {}
+[18.114419] (-) TimerEvent: {}
+[18.222479] (-) TimerEvent: {}
+[18.329016] (-) TimerEvent: {}
+[18.432015] (-) TimerEvent: {}
+[18.532474] (-) TimerEvent: {}
+[18.633002] (-) TimerEvent: {}
+[18.733520] (-) TimerEvent: {}
+[18.834289] (-) TimerEvent: {}
+[18.893907] (linglong_control) StdoutLine: {'line': b'[ 81%] Linking CXX executable sim_validation\n'}
+[18.934423] (-) TimerEvent: {}
+[19.035055] (-) TimerEvent: {}
+[19.135694] (-) TimerEvent: {}
+[19.207883] (linglong_control) StdoutLine: {'line': b'[ 81%] Built target sim_validation\n'}
+[19.235773] (-) TimerEvent: {}
+[19.336243] (-) TimerEvent: {}
+[19.436752] (-) TimerEvent: {}
+[19.537200] (-) TimerEvent: {}
+[19.637713] (-) TimerEvent: {}
+[19.738366] (-) TimerEvent: {}
+[19.838947] (-) TimerEvent: {}
+[19.939615] (-) TimerEvent: {}
+[20.040315] (-) TimerEvent: {}
+[20.140979] (-) TimerEvent: {}
+[20.241777] (-) TimerEvent: {}
+[20.342432] (-) TimerEvent: {}
+[20.443302] (-) TimerEvent: {}
+[20.544037] (-) TimerEvent: {}
+[20.644761] (-) TimerEvent: {}
+[20.745634] (-) TimerEvent: {}
+[20.846445] (-) TimerEvent: {}
+[20.947054] (-) TimerEvent: {}
+[21.047777] (-) TimerEvent: {}
+[21.148390] (-) TimerEvent: {}
+[21.249013] (-) TimerEvent: {}
+[21.349492] (-) TimerEvent: {}
+[21.450102] (-) TimerEvent: {}
+[21.550733] (-) TimerEvent: {}
+[21.651468] (-) TimerEvent: {}
+[21.752187] (-) TimerEvent: {}
+[21.852790] (-) TimerEvent: {}
+[21.953320] (-) TimerEvent: {}
+[22.054005] (-) TimerEvent: {}
+[22.155930] (-) TimerEvent: {}
+[22.259102] (-) TimerEvent: {}
+[22.359749] (-) TimerEvent: {}
+[22.460378] (-) TimerEvent: {}
+[22.560976] (-) TimerEvent: {}
+[22.661556] (-) TimerEvent: {}
+[22.678263] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp: In member function \xe2\x80\x98virtual hardware_interface::CallbackReturn linglong_control::SimSystem::on_init(const hardware_interface::HardwareInfo&)\xe2\x80\x99:\n'}
+[22.679380] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp:39:31: warning: \xe2\x80\x98virtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::on_init(const hardware_interface::HardwareInfo&)\xe2\x80\x99 is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [-Wdeprecated-declarations]\n'}
+[22.680090] (linglong_control) StderrLine: {'line': b'   39 |   if (SystemInterface::on_init(info) != hardware_interface::CallbackReturn::SUCCESS) {\n'}
+[22.681170] (linglong_control) StderrLine: {'line': b'      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\n'}
+[22.681987] (linglong_control) StderrLine: {'line': b'In file included from /opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18,\n'}
+[22.682779] (linglong_control) StderrLine: {'line': b'                 from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/include/linglong_control/sim_system.hpp:7,\n'}
+[22.683452] (linglong_control) StderrLine: {'line': b'                 from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp:1:\n'}
+[22.684041] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26: note: declared here\n'}
+[22.684646] (linglong_control) StderrLine: {'line': b'  140 |   virtual CallbackReturn on_init(const HardwareInfo & hardware_info);\n'}
+[22.685161] (linglong_control) StderrLine: {'line': b'      |                          ^~~~~~~\n'}
+[22.761717] (-) TimerEvent: {}
+[22.862315] (-) TimerEvent: {}
+[22.963043] (-) TimerEvent: {}
+[23.063745] (-) TimerEvent: {}
+[23.164420] (-) TimerEvent: {}
+[23.265102] (-) TimerEvent: {}
+[23.365694] (-) TimerEvent: {}
+[23.466342] (-) TimerEvent: {}
+[23.566911] (-) TimerEvent: {}
+[23.667525] (-) TimerEvent: {}
+[23.768135] (-) TimerEvent: {}
+[23.868617] (-) TimerEvent: {}
+[23.969180] (-) TimerEvent: {}
+[24.069668] (-) TimerEvent: {}
+[24.170248] (-) TimerEvent: {}
+[24.270790] (-) TimerEvent: {}
+[24.371641] (-) TimerEvent: {}
+[24.472436] (-) TimerEvent: {}
+[24.573155] (-) TimerEvent: {}
+[24.673910] (-) TimerEvent: {}
+[24.775106] (-) TimerEvent: {}
+[24.876017] (-) TimerEvent: {}
+[24.978155] (-) TimerEvent: {}
+[25.078931] (-) TimerEvent: {}
+[25.179587] (-) TimerEvent: {}
+[25.280443] (-) TimerEvent: {}
+[25.381174] (-) TimerEvent: {}
+[25.482003] (-) TimerEvent: {}
+[25.582678] (-) TimerEvent: {}
+[25.683145] (-) TimerEvent: {}
+[25.783701] (-) TimerEvent: {}
+[25.884242] (-) TimerEvent: {}
+[25.978935] (linglong_control) StdoutLine: {'line': b'[ 87%] Linking CXX shared library liblinglong_sim_system.so\n'}
+[25.984391] (-) TimerEvent: {}
+[26.084934] (-) TimerEvent: {}
+[26.185443] (-) TimerEvent: {}
+[26.286150] (-) TimerEvent: {}
+[26.387255] (-) TimerEvent: {}
+[26.487927] (-) TimerEvent: {}
+[26.588369] (-) TimerEvent: {}
+[26.689124] (-) TimerEvent: {}
+[26.787812] (linglong_control) StdoutLine: {'line': b'[ 87%] Built target linglong_sim_system\n'}
+[26.789162] (-) TimerEvent: {}
+[26.889602] (-) TimerEvent: {}
+[26.990435] (-) TimerEvent: {}
+[27.090993] (-) TimerEvent: {}
+[27.192088] (-) TimerEvent: {}
+[27.292715] (-) TimerEvent: {}
+[27.328460] (linglong_control) StdoutLine: {'line': b'[ 93%] Building CXX object CMakeFiles/test_plugin.dir/test/test_plugin.cpp.o\n'}
+[27.392938] (-) TimerEvent: {}
+[27.493514] (-) TimerEvent: {}
+[27.594038] (-) TimerEvent: {}
+[27.703589] (-) TimerEvent: {}
+[27.804147] (-) TimerEvent: {}
+[27.904638] (-) TimerEvent: {}
+[28.005141] (-) TimerEvent: {}
+[28.105808] (-) TimerEvent: {}
+[28.206506] (-) TimerEvent: {}
+[28.307343] (-) TimerEvent: {}
+[28.407906] (-) TimerEvent: {}
+[28.576491] (-) TimerEvent: {}
+[28.676989] (-) TimerEvent: {}
+[28.777696] (-) TimerEvent: {}
+[28.878244] (-) TimerEvent: {}
+[28.978715] (-) TimerEvent: {}
+[29.079187] (-) TimerEvent: {}
+[29.179707] (-) TimerEvent: {}
+[29.280232] (-) TimerEvent: {}
+[29.380622] (-) TimerEvent: {}
+[29.481019] (-) TimerEvent: {}
+[29.581757] (-) TimerEvent: {}
+[29.682652] (-) TimerEvent: {}
+[29.783191] (-) TimerEvent: {}
+[29.883764] (-) TimerEvent: {}
+[29.984468] (-) TimerEvent: {}
+[30.085124] (-) TimerEvent: {}
+[30.185996] (-) TimerEvent: {}
+[30.286755] (-) TimerEvent: {}
+[30.387453] (-) TimerEvent: {}
+[30.488092] (-) TimerEvent: {}
+[30.588629] (-) TimerEvent: {}
+[30.689186] (-) TimerEvent: {}
+[30.789648] (-) TimerEvent: {}
+[30.890300] (-) TimerEvent: {}
+[30.991234] (-) TimerEvent: {}
+[31.092455] (-) TimerEvent: {}
+[31.193243] (-) TimerEvent: {}
+[31.293956] (-) TimerEvent: {}
+[31.394694] (-) TimerEvent: {}
+[31.495361] (-) TimerEvent: {}
+[31.595942] (-) TimerEvent: {}
+[31.696522] (-) TimerEvent: {}
+[31.797148] (-) TimerEvent: {}
+[31.897864] (-) TimerEvent: {}
+[31.998500] (-) TimerEvent: {}
+[32.099102] (-) TimerEvent: {}
+[32.199999] (-) TimerEvent: {}
+[32.300749] (-) TimerEvent: {}
+[32.401482] (-) TimerEvent: {}
+[32.502103] (-) TimerEvent: {}
+[32.602710] (-) TimerEvent: {}
+[32.703444] (-) TimerEvent: {}
+[32.804217] (-) TimerEvent: {}
+[32.904884] (-) TimerEvent: {}
+[33.005432] (-) TimerEvent: {}
+[33.105946] (-) TimerEvent: {}
+[33.206558] (-) TimerEvent: {}
+[33.307383] (-) TimerEvent: {}
+[33.408864] (-) TimerEvent: {}
+[33.509539] (-) TimerEvent: {}
+[33.610623] (-) TimerEvent: {}
+[33.680140] (linglong_control) StderrLine: {'line': b'In file included from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest.h:72,\n'}
+[33.680852] (linglong_control) StderrLine: {'line': b'                 from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:1:\n'}
+[33.681320] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function \xe2\x80\x98virtual void SimPlugin_InterfacesActivationAndFaultLatch_Test::TestBody()\xe2\x80\x99:\n'}
+[33.681998] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:72:70: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.682432] (linglong_control) StderrLine: {'line': b'   72 |   for (auto & command : commands) {EXPECT_DOUBLE_EQ(command.get_value(), 0.2);}\n'}
+[33.683011] (linglong_control) StderrLine: {'line': b'      |                                                     ~~~~~~~~~~~~~~~~~^~\n'}
+[33.683513] (linglong_control) StderrLine: {'line': b'In file included from /opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:28,\n'}
+[33.683964] (linglong_control) StderrLine: {'line': b'                 from /opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18,\n'}
+[33.684601] (linglong_control) StderrLine: {'line': b'                 from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/include/linglong_control/sim_system.hpp:7,\n'}
+[33.685116] (linglong_control) StderrLine: {'line': b'                 from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:2:\n'}
+[33.685546] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.686097] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.686608] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.687056] (linglong_control) StderrLine: {'line': b'In file included from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-printers.h:122,\n'}
+[33.687555] (linglong_control) StderrLine: {'line': b'                 from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-matchers.h:49,\n'}
+[33.688114] (linglong_control) StderrLine: {'line': b'                 from /opt/ros/jazzy/src/gtest_vendor/include/gtest/internal/gtest-death-test-internal.h:47,\n'}
+[33.688601] (linglong_control) StderrLine: {'line': b'                 from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-death-test.h:43,\n'}
+[33.689091] (linglong_control) StderrLine: {'line': b'                 from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest.h:65:\n'}
+[33.689701] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:83:45: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.691187] (linglong_control) StderrLine: {'line': b'   83 |   EXPECT_TRUE(std::isnan(states[0].get_value()));\n'}
+[33.692428] (linglong_control) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.693458] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.694356] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.695099] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.695671] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In lambda function:\n'}
+[33.696398] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:99:62: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.696985] (linglong_control) StderrLine: {'line': b'   99 |   const auto phase = [&states]() {return states[16].get_value();};\n'}
+[33.697555] (linglong_control) StderrLine: {'line': b'      |                                          ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.698217] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.698921] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.699593] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.700310] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function \xe2\x80\x98virtual void SimPlugin_StateGuardsOwnershipAndTerminalShutdown_Test::TestBody()\xe2\x80\x99:\n'}
+[33.700927] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:114:33: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.701413] (linglong_control) StderrLine: {'line': b'  114 |   EXPECT_EQ(states[18].get_value(), 1);\n'}
+[33.701997] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.702503] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.703016] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.703677] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.704226] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:117:33: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.704658] (linglong_control) StderrLine: {'line': b'  117 |   EXPECT_EQ(states[18].get_value(), 0);\n'}
+[33.705234] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.705740] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.707077] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.708179] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.708919] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function \xe2\x80\x98virtual void SimPlugin_SupervisedFaultPublishesLatchUntilOrderedRelease_Test::TestBody()\xe2\x80\x99:\n'}
+[33.709662] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:142:32: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.710321] (linglong_control) StderrLine: {'line': b'  142 |   EXPECT_EQ(states[9].get_value(), 0);  // active\n'}
+[33.710946] (-) TimerEvent: {}
+[33.711089] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.711734] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.712302] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.712873] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.713501] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:143:33: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.714108] (linglong_control) StderrLine: {'line': b'  143 |   EXPECT_EQ(states[10].get_value(), 7);  // injected fault\n'}
+[33.714641] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.715167] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.715785] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.716412] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.716840] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:144:33: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.717457] (linglong_control) StderrLine: {'line': b'  144 |   EXPECT_EQ(states[18].get_value(), 0);  // commands disabled\n'}
+[33.717996] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.718581] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.719143] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.719785] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.720360] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:145:45: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.720968] (linglong_control) StderrLine: {'line': b'  145 |   const double cycles = states[11].get_value();\n'}
+[33.721917] (linglong_control) StderrLine: {'line': b'      |                         ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.722540] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.723069] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.724143] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.725146] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:151:35: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.725855] (linglong_control) StderrLine: {'line': b'  151 |     EXPECT_EQ(states[11].get_value(), cycles);  // No fabricated progress while faulted.\n'}
+[33.726418] (linglong_control) StderrLine: {'line': b'      |               ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.726900] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.727470] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.728165] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.728779] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:152:47: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.729362] (linglong_control) StderrLine: {'line': b'  152 |     EXPECT_TRUE(std::isnan(states[0].get_value()));\n'}
+[33.729878] (linglong_control) StderrLine: {'line': b'      |                            ~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.730355] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.730795] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.731384] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.732030] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:153:35: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.732570] (linglong_control) StderrLine: {'line': b'  153 |     EXPECT_EQ(states[10].get_value(), 7);\n'}
+[33.733060] (linglong_control) StderrLine: {'line': b'      |               ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.733562] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.734142] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.734598] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.735026] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:159:33: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.735708] (linglong_control) StderrLine: {'line': b'  159 |   EXPECT_EQ(states[10].get_value(), 7);\n'}
+[33.736254] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.736778] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.737411] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.738000] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.738525] (linglong_control) StderrLine: {'line': b'/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:162:32: warning: \xe2\x80\x98double hardware_interface::Handle::get_value() const\xe2\x80\x99 is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]\n'}
+[33.739002] (linglong_control) StderrLine: {'line': b'  162 |   EXPECT_EQ(states[9].get_value(), 0);\n'}
+[33.739605] (linglong_control) StderrLine: {'line': b'      |             ~~~~~~~~~~~~~~~~~~~^~\n'}
+[33.740628] (linglong_control) StderrLine: {'line': b'/opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here\n'}
+[33.741249] (linglong_control) StderrLine: {'line': b'  304 |   double get_value() const\n'}
+[33.741900] (linglong_control) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[33.811116] (-) TimerEvent: {}
+[33.911777] (-) TimerEvent: {}
+[34.012320] (-) TimerEvent: {}
+[34.112855] (-) TimerEvent: {}
+[34.213347] (-) TimerEvent: {}
+[34.313906] (-) TimerEvent: {}
+[34.414659] (-) TimerEvent: {}
+[34.515319] (-) TimerEvent: {}
+[34.616189] (-) TimerEvent: {}
+[34.716730] (-) TimerEvent: {}
+[34.817337] (-) TimerEvent: {}
+[34.917855] (-) TimerEvent: {}
+[35.018446] (-) TimerEvent: {}
+[35.118974] (-) TimerEvent: {}
+[35.219494] (-) TimerEvent: {}
+[35.320069] (-) TimerEvent: {}
+[35.420586] (-) TimerEvent: {}
+[35.521098] (-) TimerEvent: {}
+[35.621793] (-) TimerEvent: {}
+[35.722476] (-) TimerEvent: {}
+[35.823254] (-) TimerEvent: {}
+[35.923988] (-) TimerEvent: {}
+[36.024636] (-) TimerEvent: {}
+[36.125261] (-) TimerEvent: {}
+[36.225845] (-) TimerEvent: {}
+[36.326334] (-) TimerEvent: {}
+[36.426850] (-) TimerEvent: {}
+[36.527343] (-) TimerEvent: {}
+[36.627932] (-) TimerEvent: {}
+[36.728660] (-) TimerEvent: {}
+[36.829238] (-) TimerEvent: {}
+[36.929767] (-) TimerEvent: {}
+[37.030306] (-) TimerEvent: {}
+[37.130787] (-) TimerEvent: {}
+[37.231286] (-) TimerEvent: {}
+[37.332014] (-) TimerEvent: {}
+[37.432783] (-) TimerEvent: {}
+[37.533372] (-) TimerEvent: {}
+[37.633903] (-) TimerEvent: {}
+[37.734557] (-) TimerEvent: {}
+[37.835272] (-) TimerEvent: {}
+[37.935818] (-) TimerEvent: {}
+[38.036584] (-) TimerEvent: {}
+[38.137206] (-) TimerEvent: {}
+[38.237781] (-) TimerEvent: {}
+[38.338109] (-) TimerEvent: {}
+[38.438446] (-) TimerEvent: {}
+[38.538806] (-) TimerEvent: {}
+[38.581793] (linglong_control) StdoutLine: {'line': b'[100%] Linking CXX executable test_plugin\n'}
+[38.638969] (-) TimerEvent: {}
+[38.739532] (-) TimerEvent: {}
+[38.839952] (-) TimerEvent: {}
+[38.941234] (-) TimerEvent: {}
+[39.041773] (-) TimerEvent: {}
+[39.142538] (-) TimerEvent: {}
+[39.243220] (-) TimerEvent: {}
+[39.343794] (-) TimerEvent: {}
+[39.444164] (-) TimerEvent: {}
+[39.544688] (-) TimerEvent: {}
+[39.645029] (-) TimerEvent: {}
+[39.745357] (-) TimerEvent: {}
+[39.845695] (-) TimerEvent: {}
+[39.946060] (-) TimerEvent: {}
+[40.046443] (-) TimerEvent: {}
+[40.146785] (-) TimerEvent: {}
+[40.247092] (-) TimerEvent: {}
+[40.347430] (-) TimerEvent: {}
+[40.447799] (-) TimerEvent: {}
+[40.548432] (-) TimerEvent: {}
+[40.576204] (linglong_control) StdoutLine: {'line': b'[100%] Built target test_plugin\n'}
+[40.641160] (linglong_control) CommandEnded: {'returncode': 0}
+[40.648565] (-) TimerEvent: {}
+[40.654961] (linglong_control) JobProgress: {'identifier': 'linglong_control', 'progress': 'install'}
+[40.668711] (linglong_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control'], 'cwd': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'env': OrderedDict({'LINGLONG_CLEAN_BUILD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'PYTHONPATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[40.682381] (linglong_control) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[40.695583] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/linglong_hardware.xml\n'}
+[40.748736] (-) TimerEvent: {}
+[40.769159] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/liblinglong_sim_system.so\n'}
+[40.848898] (-) TimerEvent: {}
+[40.929840] (linglong_control) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/liblinglong_sim_system.so" to ""\n'}
+[40.938353] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include\n'}
+[40.949026] (-) TimerEvent: {}
+[40.955469] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control\n'}
+[40.975771] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/hardware_state.hpp\n'}
+[41.025951] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_bus.hpp\n'}
+[41.049181] (-) TimerEvent: {}
+[41.077721] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_core.hpp\n'}
+[41.126676] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_system.hpp\n'}
+[41.149325] (-) TimerEvent: {}
+[41.172707] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/sim_core.hpp\n'}
+[41.220128] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/sim_system.hpp\n'}
+[41.249475] (-) TimerEvent: {}
+[41.265149] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config\n'}
+[41.282678] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/controllers.yaml\n'}
+[41.335846] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/left_arm_hardware.yaml\n'}
+[41.349651] (-) TimerEvent: {}
+[41.384908] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/launch\n'}
+[41.403095] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/launch/control.launch.py\n'}
+[41.449782] (-) TimerEvent: {}
+[41.451799] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/urdf\n'}
+[41.471421] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/urdf/arm_control.urdf.xacro\n'}
+[41.523351] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/RELEASE_ID\n'}
+[41.549930] (-) TimerEvent: {}
+[41.571109] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/pythonpath.sh\n'}
+[41.586232] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/pythonpath.dsv\n'}
+[41.601727] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info\n'}
+[41.624556] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/dependency_links.txt\n'}
+[41.650094] (-) TimerEvent: {}
+[41.694571] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/PKG-INFO\n'}
+[41.750261] (-) TimerEvent: {}
+[41.789189] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/SOURCES.txt\n'}
+[41.850438] (-) TimerEvent: {}
+[41.930576] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/top_level.txt\n'}
+[41.950604] (-) TimerEvent: {}
+[42.047418] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools\n'}
+[42.050793] (-) TimerEvent: {}
+[42.092791] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/acceptance.py\n'}
+[42.150957] (-) TimerEvent: {}
+[42.183593] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/architecture_probe.py\n'}
+[42.251137] (-) TimerEvent: {}
+[42.275440] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/diagnostics.py\n'}
+[42.351316] (-) TimerEvent: {}
+[42.373175] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/evidence.py\n'}
+[42.451487] (-) TimerEvent: {}
+[42.455519] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/fault_snapshot.py\n'}
+[42.531928] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/health.py\n'}
+[42.551630] (-) TimerEvent: {}
+[42.613792] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/left_arm_configuration.py\n'}
+[42.651771] (-) TimerEvent: {}
+[42.688661] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_client.py\n'}
+[42.751921] (-) TimerEvent: {}
+[42.761787] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_manager.py\n'}
+[42.835189] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_state.py\n'}
+[42.852063] (-) TimerEvent: {}
+[42.906025] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py\n'}
+[42.952221] (-) TimerEvent: {}
+[42.970415] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/__init__.py\n'}
+[43.052339] (-) TimerEvent: {}
+[43.152688] (-) TimerEvent: {}
+[43.253053] (-) TimerEvent: {}
+[43.353539] (-) TimerEvent: {}
+[43.454081] (-) TimerEvent: {}
+[43.554543] (-) TimerEvent: {}
+[43.655058] (-) TimerEvent: {}
+[43.755528] (-) TimerEvent: {}
+[43.856134] (-) TimerEvent: {}
+[43.956745] (-) TimerEvent: {}
+[44.019283] (linglong_control) StdoutLine: {'line': b"Listing '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools'...\n"}
+[44.020450] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/__init__.py'...\n"}
+[44.021251] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/acceptance.py'...\n"}
+[44.022328] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/architecture_probe.py'...\n"}
+[44.024705] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/diagnostics.py'...\n"}
+[44.028483] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/evidence.py'...\n"}
+[44.029972] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/fault_snapshot.py'...\n"}
+[44.031037] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/health.py'...\n"}
+[44.031890] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/left_arm_configuration.py'...\n"}
+[44.032641] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_client.py'...\n"}
+[44.033546] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_manager.py'...\n"}
+[44.034802] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_state.py'...\n"}
+[44.035685] (linglong_control) StdoutLine: {'line': b"Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py'...\n"}
+[44.050284] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/control_diagnostics\n'}
+[44.056920] (-) TimerEvent: {}
+[44.130882] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/trajectory_demo\n'}
+[44.157130] (-) TimerEvent: {}
+[44.200403] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/architecture_probe\n'}
+[44.257292] (-) TimerEvent: {}
+[44.268498] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/fault_snapshot\n'}
+[44.334527] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/system_manager\n'}
+[44.357486] (-) TimerEvent: {}
+[44.420418] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/system_transition\n'}
+[44.457699] (-) TimerEvent: {}
+[44.484320] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/library_path.sh\n'}
+[44.503780] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/library_path.dsv\n'}
+[44.531072] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/package_run_dependencies/linglong_control\n'}
+[44.557824] (-) TimerEvent: {}
+[44.558242] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/parent_prefix_path/linglong_control\n'}
+[44.569409] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/ament_prefix_path.sh\n'}
+[44.588424] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/ament_prefix_path.dsv\n'}
+[44.601309] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/path.sh\n'}
+[44.620990] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/path.dsv\n'}
+[44.638377] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.bash\n'}
+[44.654080] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.sh\n'}
+[44.658028] (-) TimerEvent: {}
+[44.672925] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.zsh\n'}
+[44.687282] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.dsv\n'}
+[44.702256] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.dsv\n'}
+[44.758170] (-) TimerEvent: {}
+[44.765807] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/packages/linglong_control\n'}
+[44.794865] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/linglong_control\n'}
+[44.828583] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/export_linglong_controlExport.cmake\n'}
+[44.848778] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/export_linglong_controlExport-debug.cmake\n'}
+[44.858555] (-) TimerEvent: {}
+[44.865464] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[44.881176] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[44.897945] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/linglong_controlConfig.cmake\n'}
+[44.909732] (linglong_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/linglong_controlConfig-version.cmake\n'}
+[44.927413] (linglong_control) StdoutLine: {'line': b'-- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.xml\n'}
+[44.958748] (-) TimerEvent: {}
+[44.980602] (linglong_control) CommandEnded: {'returncode': 0}
+[45.058863] (-) TimerEvent: {}
+[45.159237] (-) TimerEvent: {}
+[45.259665] (-) TimerEvent: {}
+[45.360150] (-) TimerEvent: {}
+[45.460565] (-) TimerEvent: {}
+[45.560909] (-) TimerEvent: {}
+[45.661285] (-) TimerEvent: {}
+[45.761707] (-) TimerEvent: {}
+[45.830857] (linglong_control) JobEnded: {'identifier': 'linglong_control', 'rc': 0}
+[45.838273] (-) EventReactorShutdown: {}

@@ -1,0 +1,57 @@
+[
+  {
+    "path": "README.md",
+    "before": "6F2A7C3F151E402490D1F969B49894EFCB0301414E62437C94B2885858C5E2FA",
+    "after": "5500D7A7B4C31BB8F7912A1FA41E99738C85EC3E07F72D79CEECEF80FB27701D"
+  },
+  {
+    "path": "WEB_PLATFORM.md",
+    "before": null,
+    "after": "B9C6F4A5C4D5180ECFC12D0416CCB6B6D944F03ECB6971EA50E9135390D749B5"
+  },
+  {
+    "path": "controller\\README.md",
+    "before": null,
+    "after": "EBBFBEE7AF47CD319685B3006C73E42C4ABFE9C937684D55122E16846C5D7268"
+  },
+  {
+    "path": "docs\\ethercat\\ARCHITECTURE.md",
+    "before": null,
+    "after": "C44F4464688BE81E4BD29C3B85B7AAF80194961A84BCCCA8168A2F9A44803469"
+  },
+  {
+    "path": "docs\\ethercat\\CAPABILITIES.md",
+    "before": null,
+    "after": "491B351FB47FD8C2737C46F88AEC1F2799446076BCAB4BAD8F03FC0DB8480776"
+  },
+  {
+    "path": "docs\\ethercat\\commissioning.template.yaml",
+    "before": null,
+    "after": "14D8DF14D417FFF92F27DD4658518A16F6361B2538040750047B2B1F3F078785"
+  },
+  {
+    "path": "docs\\ethercat\\ENGINEERING.md",
+    "before": null,
+    "after": "741376FE16773CD60927C0D5DD3A6B81516260CFBFFCB92509EC5F1B33D9637C"
+  },
+  {
+    "path": "docs\\ethercat\\INTERFACES.md",
+    "before": null,
+    "after": "9BC6966B9543F1F24C5A5E390C2C27520708C10FA12FA8C879568ED0DDD260BB"
+  },
+  {
+    "path": "docs\\ethercat\\README.md",
+    "before": null,
+    "after": "025E39D9CFF5A3FC64F94151ED9C747E434CBD964492AC5FD870C14E8E76DDE3"
+  },
+  {
+    "path": "docs\\ethercat\\RECOVERY.md",
+    "before": null,
+    "after": "47F5CCFCC010034BD2972C31B245C8C31B55BD921714D9035FD5ACA1974E1150"
+  },
+  {
+    "path": "docs\\ethercat\\ROADMAP.md",
+    "before": null,
+    "after": "2B0AA766947B26A20A0D8CDA5E48BA46B7B3AAD414A7DC81BC40FEEABA98D1E5"
+  }
+]

@@ -1,0 +1,36 @@
+[1.731s] Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control': PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build-release/arm_control build --build-base /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build install --record /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log --install-scripts $base/lib/arm_control --single-version-externally-managed install_data
+[2.290s] running egg_info
+[2.311s] writing ../../build-release/arm_control/arm_control.egg-info/PKG-INFO
+[2.317s] writing dependency_links to ../../build-release/arm_control/arm_control.egg-info/dependency_links.txt
+[2.320s] writing entry points to ../../build-release/arm_control/arm_control.egg-info/entry_points.txt
+[2.325s] writing requirements to ../../build-release/arm_control/arm_control.egg-info/requires.txt
+[2.327s] writing top-level names to ../../build-release/arm_control/arm_control.egg-info/top_level.txt
+[2.398s] reading manifest file '../../build-release/arm_control/arm_control.egg-info/SOURCES.txt'
+[2.457s] writing manifest file '../../build-release/arm_control/arm_control.egg-info/SOURCES.txt'
+[2.460s] running build
+[2.461s] running build_py
+[2.472s] copying arm_control/backend.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control
+[2.494s] copying arm_control/node.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control
+[2.519s] copying arm_control/__init__.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control
+[2.535s] running install
+[2.546s] running install_lib
+[2.602s] copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/backend.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control
+[2.642s] copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/node.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control
+[2.681s] copying /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build/lib/arm_control/__init__.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control
+[2.719s] byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/backend.py to backend.cpython-312.pyc
+[2.768s] byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/node.py to node.cpython-312.pyc
+[2.815s] byte-compiling /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control/__init__.py to __init__.cpython-312.pyc
+[2.843s] running install_data
+[2.855s] copying resource/arm_control -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/ament_index/resource_index/packages
+[2.879s] copying package.xml -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control
+[2.905s] copying launch/arm_control.launch.py -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/launch
+[2.936s] copying config/arm_control.yaml -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/config
+[2.968s] copying urdf/arm.urdf -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/urdf
+[2.998s] copying rviz/arm.rviz -> /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/share/arm_control/rviz
+[3.014s] running install_egg_info
+[3.050s] removing '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control-0.1.0-py3.12.egg-info' (and everything under it)
+[3.127s] Copying ../../build-release/arm_control/arm_control.egg-info to /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages/arm_control-0.1.0-py3.12.egg-info
+[3.373s] running install_scripts
+[3.581s] Installing arm_control_node script to /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/arm_control
+[3.592s] writing list of installed files to '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log'
+[3.638s] Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control' returned '0': PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build-release/arm_control build --build-base /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/build install --record /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/install.log --install-scripts $base/lib/arm_control --single-version-externally-managed install_data

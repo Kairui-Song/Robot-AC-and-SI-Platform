@@ -1,0 +1,12 @@
+[
+  {
+    "scenario": "injected",
+    "passed": true,
+    "fault_code": 7
+  },
+  {
+    "scenario": "cycle_timeout",
+    "passed": true,
+    "fault_code": 5
+  }
+]

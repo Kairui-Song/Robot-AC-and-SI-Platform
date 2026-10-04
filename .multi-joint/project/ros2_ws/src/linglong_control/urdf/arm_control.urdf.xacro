@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="linglong_arm_demo">
+  <!-- Reuse the existing schematic only; it is not a calibrated mechanical model. -->
+  <xacro:include filename="$(find arm_control)/urdf/arm.urdf"/>
+  <xacro:arg name="backend" default="mock"/>
+  <xacro:arg name="fault_after_cycles" default="0"/>
+  <xacro:arg name="dropout_after_cycles" default="0"/>
+  <xacro:arg name="nominal_period" default="0.01"/>
+  <xacro:macro name="controlled_joint" params="name initial">
+    <joint name="${name}">
+      <param name="lower">-1.57</param>
+      <param name="upper">1.57</param>
+      <param name="initial_position">${initial}</param>
+      <param name="max_velocity">0.1</param>
+      <param name="max_command_step">0.05</param>
+      <param name="max_following_error">0.15</param>
+      <command_interface name="position">
+        <param name="min">-1.57</param><param name="max">1.57</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </xacro:macro>
+  <ros2_control name="LinglongSimSystem" type="system">
+    <hardware>
+      <plugin>linglong_control/SimSystem</plugin>
+      <param name="backend">$(arg backend)</param>
+      <param name="nominal_period">$(arg nominal_period)</param>
+      <param name="cycle_timeout">0.5</param>
+      <param name="feedback_timeout">0.1</param>
+      <param name="fault_after_cycles">$(arg fault_after_cycles)</param>
+      <param name="dropout_after_cycles">$(arg dropout_after_cycles)</param>
+    </hardware>
+    <!-- Nonzero initial state exercises activation without a jump to zero. -->
+    <xacro:controlled_joint name="joint_1" initial="0.15"/>
+    <xacro:controlled_joint name="joint_2" initial="-0.10"/>
+    <xacro:controlled_joint name="joint_3" initial="0.05"/>
+    <xacro:controlled_joint name="joint_5" initial="0.02"/>
+    <sensor name="control_health">
+      <state_interface name="mock"/>
+      <state_interface name="active"/>
+      <state_interface name="fault_code"/>
+      <state_interface name="cycles"/>
+      <state_interface name="period_seconds"/>
+      <state_interface name="max_period_seconds"/>
+      <state_interface name="deadline_misses"/>
+      <state_interface name="feedback_age_seconds"/>
+    </sensor>
+  </ros2_control>
+</robot>

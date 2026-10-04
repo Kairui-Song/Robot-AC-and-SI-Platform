@@ -1,0 +1,4 @@
+source;share/linglong_control/environment/ament_prefix_path.sh
+source;share/linglong_control/environment/library_path.sh
+source;share/linglong_control/environment/path.sh
+source;share/linglong_control/environment/pythonpath.sh

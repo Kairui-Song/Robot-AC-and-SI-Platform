@@ -1,0 +1,21 @@
+schema_version: 1
+profile: left_arm_mock_normal
+storage_id: sqlite3
+expected_backend: mock
+min_duration_sec: 2.0
+max_gap_sec: 0.5
+max_tracking_error_rad: 0.15
+required_tf_edges:
+  - [base_link, link_1]
+  - [link_1, link_2]
+  - [link_2, link_3]
+  - [link_3, link_5]
+topics:
+  /joint_states: {type: sensor_msgs/msg/JointState, min_count: 10}
+  /dynamic_joint_states: {type: control_msgs/msg/DynamicJointState, min_count: 10}
+  /diagnostics: {type: diagnostic_msgs/msg/DiagnosticArray, min_count: 2}
+  /tf: {type: tf2_msgs/msg/TFMessage, min_count: 1}
+  /tf_static: {type: tf2_msgs/msg/TFMessage, min_count: 0}
+  /arm_trajectory_controller/controller_state: {type: control_msgs/msg/JointTrajectoryControllerState, min_count: 10}
+  /arm_trajectory_controller/follow_joint_trajectory/_action/status: {type: action_msgs/msg/GoalStatusArray, min_count: 0}
+  /arm_trajectory_controller/follow_joint_trajectory/_action/feedback: {type: control_msgs/action/FollowJointTrajectory_FeedbackMessage, min_count: 0}

@@ -1,0 +1,120 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-01-10-19-18-257406-DESKTOP-N84JAM2-1087
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [1090]
+[INFO] [ros2_control_node-2]: process started with pid [1091]
+[INFO] [spawner-3]: process started with pid [1092]
+[INFO] [system_manager-4]: process started with pid [1093]
+[INFO] [control_diagnostics-5]: process started with pid [1094]
+[robot_state_publisher-1] [INFO] [1790849958.598515271] [robot_state_publisher]: Robot initialized
+[ros2_control_node-2] [INFO] [1790849958.844379495] [controller_manager]: Using Steady (Monotonic) clock for triggering controller manager cycles.
+[ros2_control_node-2] [INFO] [1790849958.948349630] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[ros2_control_node-2] [INFO] [1790849958.948728971] [controller_manager]: update rate is 100 Hz
+[ros2_control_node-2] [INFO] [1790849958.948753762] [controller_manager]: Overruns handling is : enabled
+[ros2_control_node-2] [INFO] [1790849958.948760835] [controller_manager]: Spawning controller_manager RT thread with scheduler priority: 50
+[ros2_control_node-2] [INFO] [1790849958.948942788] [controller_manager]: Successful set up FIFO RT scheduling policy with priority 50.
+[ros2_control_node-2] [INFO] [1790849958.959276490] [controller_manager]: Received robot description from topic.
+[ros2_control_node-2] [INFO] [1790849958.959381322] [controller_manager]: Enforcing command limits is disabled. Command limits from URDF will be ignored.
+[ros2_control_node-2] [INFO] [1790849958.993518464] [controller_manager]: Loading hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849959.005982985] [controller_manager]: Loaded hardware 'LinglongSimSystem' from plugin 'linglong_control/SimSystem'
+[ros2_control_node-2] [INFO] [1790849959.006152814] [controller_manager]: Initialize hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849959.017461650] [controller_manager]: Successful initialization of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790849959.018058289] [controller_manager]: Setting component 'LinglongSimSystem' to 'inactive' state.
+[ros2_control_node-2] [INFO] [1790849959.018088139] [resource_manager]: 'configure' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849959.018105998] [resource_manager]: Successful 'configure' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790849959.018182635] [controller_manager]: Registering statistics for : LinglongSimSystem
+[ros2_control_node-2] [INFO] [1790849959.018248815] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[ros2_control_node-2] [INFO] [1790849959.230046753] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[ros2_control_node-2] [INFO] [1790849959.230152016] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790849959.257317893] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/controllers.yaml --params-file /tmp/launch_params_u6doysds 
+[spawner-3] [INFO] [1790849959.293431578] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[ros2_control_node-2] [INFO] [1790849959.576518437] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790849959.577075389] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[ros2_control_node-2] [INFO] [1790849959.623390108] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790849959.629590289] [controller_manager]: Successfully switched controllers!
+[spawner-3] [INFO] [1790849959.641041105] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[system_manager-4] [INFO] [1790849959.807526645] [system_manager]: UNINITIALIZED: hardware/controller/feedback observation missing or stale
+[system_manager-4] [INFO] [1790849959.841934457] [system_manager]: CONFIGURED: waiting for inactive hardware and configured controllers
+[INFO] [spawner-3]: process has finished cleanly [pid 1092]
+[INFO] [spawner-6]: process started with pid [1177]
+[spawner-6] [INFO] [1790849960.486484229] [spawner_arm_trajectory_controller]: waiting for service /controller_manager/list_controllers to become available...
+[ros2_control_node-2] [INFO] [1790849962.741810660] [controller_manager]: Loading controller : 'arm_trajectory_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+[ros2_control_node-2] [INFO] [1790849962.741868791] [controller_manager]: Loading controller 'arm_trajectory_controller'
+[ros2_control_node-2] [INFO] [1790849962.751953365] [controller_manager]: Controller 'arm_trajectory_controller' node arguments: --ros-args --params-file /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/controllers.yaml --params-file /tmp/launch_params_u6doysds 
+[spawner-6] [INFO] [1790849962.810840132] [spawner_arm_trajectory_controller]: Loaded arm_trajectory_controller
+[ros2_control_node-2] [INFO] [1790849962.813390326] [controller_manager]: Configuring controller: 'arm_trajectory_controller'
+[ros2_control_node-2] [INFO] [1790849962.813626322] [arm_trajectory_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-2] [INFO] [1790849962.813718385] [arm_trajectory_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[ros2_control_node-2] [INFO] [1790849962.813759651] [arm_trajectory_controller]: Using 'splines' interpolation method.
+[ros2_control_node-2] [INFO] [1790849962.817544373] [arm_trajectory_controller]: Action status changes will be monitored at 20.00 Hz.
+[ros2_control_node-2] [INFO] [1790849962.826961928] [arm_trajectory_controller]: Setting initial scaling factor to 1.000000
+[ros2_control_node-2] [INFO] [1790849962.827061898] [arm_trajectory_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+[system_manager-4] [INFO] [1790849962.947595121] [system_manager]: READY: feedback valid; drives disabled; explicit enable required
+[INFO] [spawner-6]: process has finished cleanly [pid 1177]
+[INFO] [launch.user]: mock controllers configured; inspect /system/state and call /system/enable
+[ros2_control_node-2] [INFO] [1790849963.033972161] [resource_manager]: 'activate' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849963.034139883] [resource_manager]: Successful 'activate' of hardware 'LinglongSimSystem'
+[system_manager-4] [INFO] [1790849963.049158269] [system_manager]: ENABLING: enable requested; awaiting confirmation
+[ros2_control_node-2] [INFO] [1790849963.132815902] [controller_manager]: Activating controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [INFO] [1790849963.139264159] [controller_manager]: Requested controller switch from non-realtime loop
+[ros2_control_node-2] [INFO] [1790849963.139614912] [controller_manager]: Successfully switched controllers!
+[system_manager-4] [INFO] [1790849963.439827815] [system_manager]: ENABLED: enabled; no active trajectory goal
+[ros2_control_node-2] [INFO] [1790849963.442557372] [arm_trajectory_controller]: Received new action goal
+[ros2_control_node-2] [INFO] [1790849963.442636814] [arm_trajectory_controller]: Accepted new action goal
+[system_manager-4] [INFO] [1790849963.540870343] [system_manager]: RUNNING: trajectory goal in progress
+[ros2_control_node-2] [ERROR] [1790849966.029385294] [linglong_control]: MOCK fault latched, code=7; motion blocked; explicit recovery required
+[system_manager-4] [INFO] [1790849966.041314020] [system_manager]: FAULT: hardware fault 7: injected mock fault
+[ros2_control_node-2] [INFO] [1790849966.132924241] [controller_manager]: Deactivating controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [INFO] [1790849966.139258491] [controller_manager]: Requested controller switch from non-realtime loop
+[ros2_control_node-2] [INFO] [1790849966.139439816] [controller_manager]: Deactivated controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [INFO] [1790849966.139453712] [controller_manager]: Successfully switched controllers!
+[ros2_control_node-2] [INFO] [1790849966.233310046] [controller_manager]: Deactivating controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790849966.239201267] [controller_manager]: Requested controller switch from non-realtime loop
+[ros2_control_node-2] [INFO] [1790849966.239348346] [controller_manager]: Deactivated controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790849966.239354609] [controller_manager]: Successfully switched controllers!
+[ros2_control_node-2] [INFO] [1790849966.333279856] [resource_manager]: 'deactivate' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849966.333372513] [resource_manager]: Successful 'deactivate' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790849966.333377949] [resource_manager]: 'cleanup' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849966.333399212] [resource_manager]: Successful 'cleanup' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790849967.332681217] [controller_manager]: Deactivating controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [WARN] [1790849967.332762362] [controller_manager]: Controller with name 'arm_trajectory_controller' can not be deactivated since it is not active.
+[ros2_control_node-2] [WARN] [1790849967.332768759] [controller_manager]: Could not deactivate controller with name 'arm_trajectory_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[ros2_control_node-2] [INFO] [1790849967.332773635] [controller_manager]: After checking the controllers, no controllers need to be activated or deactivated.
+[system_manager-4] [INFO] [1790849967.340874046] [system_manager]: RECOVERING: recover requested; awaiting confirmation
+[ros2_control_node-2] [INFO] [1790849967.532846530] [resource_manager]: 'configure' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849967.532913247] [resource_manager]: Successful 'configure' of hardware 'LinglongSimSystem'
+[ros2_control_node-2] [INFO] [1790849967.632636841] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790849967.639234556] [controller_manager]: Requested controller switch from non-realtime loop
+[ros2_control_node-2] [INFO] [1790849967.639545352] [controller_manager]: Activated controllers: [ joint_state_broadcaster ]
+[ros2_control_node-2] [INFO] [1790849967.639564470] [controller_manager]: Successfully switched controllers!
+[system_manager-4] [INFO] [1790849967.940620558] [system_manager]: READY: feedback valid; drives disabled; explicit enable required
+[ros2_control_node-2] [INFO] [1790849968.032799566] [controller_manager]: Deactivating controllers: [ arm_trajectory_controller ]
+[ros2_control_node-2] [WARN] [1790849968.032880932] [controller_manager]: Controller with name 'arm_trajectory_controller' can not be deactivated since it is not active.
+[ros2_control_node-2] [WARN] [1790849968.032889863] [controller_manager]: Could not deactivate controller with name 'arm_trajectory_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[ros2_control_node-2] [INFO] [1790849968.032897554] [controller_manager]: After checking the controllers, no controllers need to be activated or deactivated.
+[system_manager-4] [INFO] [1790849968.043554892] [system_manager]: STOPPING: shutdown requested; awaiting confirmation
+[ros2_control_node-2] [INFO] [1790849968.133103023] [resource_manager]: 'shutdown' hardware 'LinglongSimSystem' 
+[ros2_control_node-2] [INFO] [1790849968.133171589] [resource_manager]: Successful 'shutdown' of hardware 'LinglongSimSystem'
+[system_manager-4] [INFO] [1790849968.250032651] [system_manager]: SHUTDOWN: hardware shutdown confirmed; not proof of mechanical stop
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [control_diagnostics-5]: sending signal 'SIGINT' to process[control_diagnostics-5]
+[INFO] [system_manager-4]: sending signal 'SIGINT' to process[system_manager-4]
+[INFO] [ros2_control_node-2]: sending signal 'SIGINT' to process[ros2_control_node-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[ros2_control_node-2] [INFO] [1790849968.260750335] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ros2_control_node-2] [INFO] [1790849968.260875330] [controller_manager]: Shutdown request received....
+[ros2_control_node-2] [INFO] [1790849968.260933152] [controller_manager]: Shutting down all controllers in the controller manager.
+[ros2_control_node-2] [INFO] [1790849968.260959486] [controller_manager]: Shutting down controller 'arm_trajectory_controller'
+[ros2_control_node-2] [INFO] [1790849968.261118079] [controller_manager]: Deactivating controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790849968.261156013] [controller_manager]: Shutting down controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1790849968.261242753] [controller_manager]: Shutting down the controller manager.
+[ros2_control_node-2] [ERROR] [1790849968.261978366] [controller_manager.pal_statistics]: Exception in publisher thread: context cannot be slept with because it's invalid!. Aborting!
+[ros2_control_node-2] [ERROR] [1790849968.262180920] [controller_manager.pal_statistics]: Exception in publisher thread: context cannot be slept with because it's invalid!. Aborting!
+[robot_state_publisher-1] [INFO] [1790849968.264165244] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ros2_control_node-2] [INFO] [1790849968.270497341] [controller_manager.pal_statistics]: Async messages lost 0
+[ros2_control_node-2] [INFO] [1790849968.270521664] [controller_manager.pal_statistics]: publish_async_failures_ 0
+[ros2_control_node-2] [INFO] [1790849968.273134580] [controller_manager.pal_statistics]: Async messages lost 0
+[ros2_control_node-2] [INFO] [1790849968.273157694] [controller_manager.pal_statistics]: publish_async_failures_ 0
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 1090]
+[INFO] [ros2_control_node-2]: process has finished cleanly [pid 1091]
+[INFO] [control_diagnostics-5]: process has finished cleanly [pid 1094]
+[INFO] [system_manager-4]: process has finished cleanly [pid 1093]

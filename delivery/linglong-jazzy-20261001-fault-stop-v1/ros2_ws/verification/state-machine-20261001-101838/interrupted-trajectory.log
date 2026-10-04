@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/trajectory_demo", line 5, in <module>
+    main()
+  File "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 154, in main
+    run(node, cancel=options.cancel)
+  File "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py", line 117, in run
+    raise RuntimeError(f'trajectory failed: {result.result.error_code} {result.result.error_string}')
+RuntimeError: trajectory failed: -1 Current goal cancelled during deactivate transition.
+[ros2run]: Process exited with failure 1

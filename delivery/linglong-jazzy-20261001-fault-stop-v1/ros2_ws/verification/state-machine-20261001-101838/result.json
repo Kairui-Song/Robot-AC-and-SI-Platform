@@ -1,0 +1,31 @@
+[
+  {
+    "scenario": "normal",
+    "passed": true,
+    "states": [
+      "UNINITIALIZED",
+      "CONFIGURED",
+      "READY",
+      "ENABLING",
+      "ENABLED",
+      "RUNNING",
+      "STOPPING",
+      "SHUTDOWN"
+    ]
+  },
+  {
+    "scenario": "fault_recovery",
+    "passed": true,
+    "states": [
+      "UNINITIALIZED",
+      "CONFIGURED",
+      "READY",
+      "ENABLING",
+      "ENABLED",
+      "FAULT",
+      "RECOVERING",
+      "STOPPING",
+      "SHUTDOWN"
+    ]
+  }
+]

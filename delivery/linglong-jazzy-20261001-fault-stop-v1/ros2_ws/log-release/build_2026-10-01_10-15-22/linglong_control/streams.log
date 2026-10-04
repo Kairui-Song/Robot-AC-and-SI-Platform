@@ -1,0 +1,269 @@
+[0.083s] Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control -DLINGLONG_CORE_ONLY=OFF -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control
+[0.447s] -- The C compiler identification is GNU 13.3.0
+[0.641s] -- The CXX compiler identification is GNU 13.3.0
+[0.685s] -- Detecting C compiler ABI info
+[1.552s] -- Detecting C compiler ABI info - done
+[1.616s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.617s] -- Detecting C compile features
+[1.618s] -- Detecting C compile features - done
+[1.674s] -- Detecting CXX compiler ABI info
+[2.259s] -- Detecting CXX compiler ABI info - done
+[2.297s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.298s] -- Detecting CXX compile features
+[2.299s] -- Detecting CXX compile features - done
+[2.348s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.838s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.839s] -- Found Threads: TRUE  
+[2.865s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.181s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.683s] -- Found hardware_interface: 4.48.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[3.926s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.994s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[4.074s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.159s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.706s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[4.873s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[4.895s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.994s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[5.039s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[5.048s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[5.066s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[5.076s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[5.092s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[5.107s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.378s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[6.005s] -- Found ament_cmake_pytest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[6.025s] -- Found ament_cmake_gtest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[6.045s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[12.132s] -- Configuring done (12.0s)
+[13.485s] -- Generating done (1.3s)
+[14.063s] -- Build files have been written to: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control
+[14.076s] Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control -DLINGLONG_CORE_ONLY=OFF -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control
+[14.084s] Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control -- -j8 -l8
+[14.338s] [ 31%] Building CXX object CMakeFiles/test_hardware_state.dir/test/test_hardware_state.cpp.o
+[14.343s] [ 31%] Building CXX object CMakeFiles/linglong_sim_system.dir/src/sim_system.cpp.o
+[14.348s] [ 31%] Building CXX object CMakeFiles/test_left_arm_core.dir/test/test_left_arm_core.cpp.o
+[14.352s] [ 31%] Building CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[14.356s] [ 31%] Building CXX object CMakeFiles/sim_validation.dir/test/sim_validation.cpp.o
+[14.358s] [ 43%] Building CXX object CMakeFiles/test_sim_core.dir/test/test_sim_core.cpp.o
+[14.360s] [ 43%] Building CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[15.417s] [ 50%] Linking CXX executable test_hardware_state
+[15.695s] [ 50%] Built target ament_cmake_python_copy_linglong_control_tools
+[15.878s] [ 50%] Built target test_hardware_state
+[15.920s] [ 56%] Linking CXX executable test_left_arm_core
+[16.247s] [ 56%] Built target test_left_arm_core
+[16.370s] [ 62%] Linking CXX executable test_sim_core
+[16.787s] [ 62%] Built target test_sim_core
+[16.931s] running egg_info
+[16.935s] creating linglong_control_tools.egg-info
+[16.990s] writing linglong_control_tools.egg-info/PKG-INFO
+[16.999s] writing dependency_links to linglong_control_tools.egg-info/dependency_links.txt
+[17.013s] writing top-level names to linglong_control_tools.egg-info/top_level.txt
+[17.026s] writing manifest file 'linglong_control_tools.egg-info/SOURCES.txt'
+[17.096s] [ 68%] Linking CXX static library libgtest_main.a
+[17.191s] reading manifest file 'linglong_control_tools.egg-info/SOURCES.txt'
+[17.265s] writing manifest file 'linglong_control_tools.egg-info/SOURCES.txt'
+[17.329s] [ 68%] Built target gtest_main
+[17.572s] [ 68%] Built target ament_cmake_python_build_linglong_control_tools_egg
+[18.537s] [ 75%] Linking CXX executable sim_validation
+[18.993s] [ 75%] Built target sim_validation
+[22.692s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp: In member function ‘virtual hardware_interface::CallbackReturn linglong_control::SimSystem::on_init(const hardware_interface::HardwareInfo&)’:
+[22.693s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp:39:31: warning: ‘virtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::on_init(const hardware_interface::HardwareInfo&)’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [-Wdeprecated-declarations]
+[22.696s]    39 |   if (SystemInterface::on_init(info) != hardware_interface::CallbackReturn::SUCCESS) {
+[22.696s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+[22.697s] In file included from /opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18,
+[22.698s]                  from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/include/linglong_control/sim_system.hpp:7,
+[22.699s]                  from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/src/sim_system.cpp:1:
+[22.699s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26: note: declared here
+[22.700s]   140 |   virtual CallbackReturn on_init(const HardwareInfo & hardware_info);
+[22.701s]       |                          ^~~~~~~
+[22.880s] [ 81%] Linking CXX static library libgtest.a
+[24.215s] [ 81%] Built target gtest
+[26.159s] [ 87%] Linking CXX shared library liblinglong_sim_system.so
+[26.931s] [ 87%] Built target linglong_sim_system
+[27.026s] [ 93%] Building CXX object CMakeFiles/test_plugin.dir/test/test_plugin.cpp.o
+[33.489s] In file included from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest.h:72,
+[33.491s]                  from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:1:
+[33.493s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function ‘virtual void SimPlugin_InterfacesActivationAndFaultLatch_Test::TestBody()’:
+[33.494s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:72:70: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.495s]    72 |   for (auto & command : commands) {EXPECT_DOUBLE_EQ(command.get_value(), 0.2);}
+[33.496s]       |                                                     ~~~~~~~~~~~~~~~~~^~
+[33.496s] In file included from /opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:28,
+[33.497s]                  from /opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18,
+[33.498s]                  from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/include/linglong_control/sim_system.hpp:7,
+[33.498s]                  from /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:2:
+[33.499s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.500s]   304 |   double get_value() const
+[33.501s]       |          ^~~~~~~~~
+[33.501s] In file included from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-printers.h:122,
+[33.502s]                  from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-matchers.h:49,
+[33.503s]                  from /opt/ros/jazzy/src/gtest_vendor/include/gtest/internal/gtest-death-test-internal.h:47,
+[33.504s]                  from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest-death-test.h:43,
+[33.504s]                  from /opt/ros/jazzy/src/gtest_vendor/include/gtest/gtest.h:65:
+[33.505s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:83:45: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.506s]    83 |   EXPECT_TRUE(std::isnan(states[0].get_value()));
+[33.507s]       |                          ~~~~~~~~~~~~~~~~~~~^~
+[33.511s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.512s]   304 |   double get_value() const
+[33.513s]       |          ^~~~~~~~~
+[33.514s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In lambda function:
+[33.514s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:99:62: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.515s]    99 |   const auto phase = [&states]() {return states[16].get_value();};
+[33.516s]       |                                          ~~~~~~~~~~~~~~~~~~~~^~
+[33.517s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.518s]   304 |   double get_value() const
+[33.519s]       |          ^~~~~~~~~
+[33.520s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function ‘virtual void SimPlugin_StateGuardsOwnershipAndTerminalShutdown_Test::TestBody()’:
+[33.521s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:114:33: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.521s]   114 |   EXPECT_EQ(states[18].get_value(), 1);
+[33.523s]       |             ~~~~~~~~~~~~~~~~~~~~^~
+[33.527s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.528s]   304 |   double get_value() const
+[33.529s]       |          ^~~~~~~~~
+[33.531s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:117:33: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.532s]   117 |   EXPECT_EQ(states[18].get_value(), 0);
+[33.533s]       |             ~~~~~~~~~~~~~~~~~~~~^~
+[33.533s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.534s]   304 |   double get_value() const
+[33.535s]       |          ^~~~~~~~~
+[33.536s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp: In member function ‘virtual void SimPlugin_SupervisedFaultPublishesLatchUntilOrderedRelease_Test::TestBody()’:
+[33.537s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:142:32: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.538s]   142 |   EXPECT_EQ(states[9].get_value(), 0);  // active
+[33.540s]       |             ~~~~~~~~~~~~~~~~~~~^~
+[33.541s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.544s]   304 |   double get_value() const
+[33.545s]       |          ^~~~~~~~~
+[33.546s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:143:33: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.546s]   143 |   EXPECT_EQ(states[10].get_value(), 7);  // injected fault
+[33.547s]       |             ~~~~~~~~~~~~~~~~~~~~^~
+[33.548s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.549s]   304 |   double get_value() const
+[33.549s]       |          ^~~~~~~~~
+[33.550s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:144:33: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.550s]   144 |   EXPECT_EQ(states[18].get_value(), 0);  // commands disabled
+[33.551s]       |             ~~~~~~~~~~~~~~~~~~~~^~
+[33.552s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.553s]   304 |   double get_value() const
+[33.554s]       |          ^~~~~~~~~
+[33.555s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:145:45: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.557s]   145 |   const double cycles = states[11].get_value();
+[33.558s]       |                         ~~~~~~~~~~~~~~~~~~~~^~
+[33.560s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.561s]   304 |   double get_value() const
+[33.562s]       |          ^~~~~~~~~
+[33.563s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:151:35: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.564s]   151 |     EXPECT_EQ(states[11].get_value(), cycles);  // No fabricated progress while faulted.
+[33.566s]       |               ~~~~~~~~~~~~~~~~~~~~^~
+[33.567s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.567s]   304 |   double get_value() const
+[33.568s]       |          ^~~~~~~~~
+[33.569s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:152:47: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.571s]   152 |     EXPECT_TRUE(std::isnan(states[0].get_value()));
+[33.571s]       |                            ~~~~~~~~~~~~~~~~~~~^~
+[33.573s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.574s]   304 |   double get_value() const
+[33.576s]       |          ^~~~~~~~~
+[33.578s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:153:35: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.579s]   153 |     EXPECT_EQ(states[10].get_value(), 7);
+[33.581s]       |               ~~~~~~~~~~~~~~~~~~~~^~
+[33.582s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.583s]   304 |   double get_value() const
+[33.584s]       |          ^~~~~~~~~
+[33.584s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:159:33: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.585s]   159 |   EXPECT_EQ(states[10].get_value(), 7);
+[33.586s]       |             ~~~~~~~~~~~~~~~~~~~~^~
+[33.587s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.588s]   304 |   double get_value() const
+[33.589s]       |          ^~~~~~~~~
+[33.590s] /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_plugin.cpp:162:32: warning: ‘double hardware_interface::Handle::get_value() const’ is deprecated: Use std::optional<T> get_optional() instead to retrieve the value. This method will be removed by the ROS 2 Kilted Kaiju release. [-Wdeprecated-declarations]
+[33.591s]   162 |   EXPECT_EQ(states[9].get_value(), 0);
+[33.592s]       |             ~~~~~~~~~~~~~~~~~~~^~
+[33.593s] /opt/ros/jazzy/include/hardware_interface/hardware_interface/handle.hpp:304:10: note: declared here
+[33.594s]   304 |   double get_value() const
+[33.595s]       |          ^~~~~~~~~
+[39.361s] [100%] Linking CXX executable test_plugin
+[41.546s] [100%] Built target test_plugin
+[41.612s] Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control -- -j8 -l8
+[41.641s] Invoking command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control
+[41.655s] -- Install configuration: "Debug"
+[41.674s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/linglong_hardware.xml
+[41.733s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/liblinglong_sim_system.so
+[42.152s] -- Set non-toolchain portion of runtime path of "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/liblinglong_sim_system.so" to ""
+[42.175s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include
+[42.316s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control
+[42.358s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/hardware_state.hpp
+[42.468s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_bus.hpp
+[42.595s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_core.hpp
+[42.697s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/left_arm_system.hpp
+[42.863s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/sim_core.hpp
+[42.996s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/include/linglong_control/sim_system.hpp
+[43.112s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config
+[43.154s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/controllers.yaml
+[43.294s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/config/left_arm_hardware.yaml
+[43.412s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/launch
+[43.451s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/launch/control.launch.py
+[43.571s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/urdf
+[43.603s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/urdf/arm_control.urdf.xacro
+[43.674s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/RELEASE_ID
+[43.736s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/pythonpath.sh
+[43.794s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/pythonpath.dsv
+[43.855s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info
+[43.887s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/dependency_links.txt
+[43.958s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/PKG-INFO
+[44.039s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/SOURCES.txt
+[44.117s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools-0.3.0-py3.12.egg-info/top_level.txt
+[44.179s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools
+[44.206s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/acceptance.py
+[44.273s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/architecture_probe.py
+[44.339s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/diagnostics.py
+[44.406s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/evidence.py
+[44.475s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/fault_snapshot.py
+[44.549s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/health.py
+[44.619s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/left_arm_configuration.py
+[44.695s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_client.py
+[44.776s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_manager.py
+[44.858s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_state.py
+[44.940s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py
+[45.019s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/__init__.py
+[45.843s] Listing '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools'...
+[45.844s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/__init__.py'...
+[45.845s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/acceptance.py'...
+[45.846s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/architecture_probe.py'...
+[45.847s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/diagnostics.py'...
+[45.847s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/evidence.py'...
+[45.848s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/fault_snapshot.py'...
+[45.849s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/health.py'...
+[45.850s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/left_arm_configuration.py'...
+[45.850s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_client.py'...
+[45.851s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_manager.py'...
+[45.852s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/system_state.py'...
+[45.852s] Compiling '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages/linglong_control_tools/trajectory_demo.py'...
+[45.873s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/control_diagnostics
+[45.931s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/trajectory_demo
+[45.994s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/architecture_probe
+[46.081s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/fault_snapshot
+[46.138s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/system_manager
+[46.199s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/linglong_control/system_transition
+[46.286s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/library_path.sh
+[46.362s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/library_path.dsv
+[46.499s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/package_run_dependencies/linglong_control
+[46.746s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/parent_prefix_path/linglong_control
+[46.854s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/ament_prefix_path.sh
+[46.935s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/ament_prefix_path.dsv
+[47.009s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/path.sh
+[47.074s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/environment/path.dsv
+[47.139s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.bash
+[47.195s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.sh
+[47.257s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.zsh
+[47.316s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/local_setup.dsv
+[47.374s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.dsv
+[47.466s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/packages/linglong_control
+[47.583s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/linglong_control
+[47.704s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/export_linglong_controlExport.cmake
+[47.798s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/export_linglong_controlExport-debug.cmake
+[47.874s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/ament_cmake_export_targets-extras.cmake
+[47.984s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[48.211s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/linglong_controlConfig.cmake
+[48.287s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/cmake/linglong_controlConfig-version.cmake
+[48.365s] -- Installing: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/share/linglong_control/package.xml
+[48.448s] Invoked command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control' returned '0': AMENT_PREFIX_PATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PYTHONPATH=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control

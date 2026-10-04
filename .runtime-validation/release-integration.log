@@ -1,0 +1,2 @@
+[{"scenario": "normal", "passed": true, "states": ["UNINITIALIZED", "CONFIGURED", "READY", "ENABLING", "ENABLED", "RUNNING", "STOPPING", "SHUTDOWN"]}, {"scenario": "fault_recovery", "passed": true, "states": ["UNINITIALIZED", "CONFIGURED", "READY", "ENABLING", "ENABLED", "FAULT", "RECOVERING", "STOPPING", "SHUTDOWN"]}]
+[{"scenario": "injected", "passed": true, "fault_code": 7}, {"scenario": "cycle_timeout", "passed": true, "fault_code": 5}]

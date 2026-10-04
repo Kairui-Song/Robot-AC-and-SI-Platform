@@ -8,3 +8,10 @@ verification/
 __pycache__/
 .pytest_cache/
 *.pyc
+**/build/
+**/build-*/
+**/install/
+**/install-*/
+**/log/
+**/log-*/
+**/.cmake/

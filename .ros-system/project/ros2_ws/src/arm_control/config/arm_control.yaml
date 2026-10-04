@@ -1,0 +1,16 @@
+arm_control:
+  ros__parameters:
+    backend: mock
+    ethercat_executable: ethercat
+    master_index: 0
+    # DEMO VALUES ONLY. Measure encoder resolution, gear ratio, direction and zero.
+    counts_per_radian: [100000.0, 100000.0, 100000.0, 100000.0]
+    zero_counts: [0.0, 0.0, 0.0, 0.0]
+    lower_limits: [-1.57, -1.57, -1.57, -1.57]
+    upper_limits: [1.57, 1.57, 1.57, 1.57]
+    calibration_confirmed: false
+    poll_hz: 5.0
+    command_timeout_sec: 2.0
+    command_max_age_sec: 0.5
+    cli_timeout_sec: 0.5
+    max_step_rad: 0.05

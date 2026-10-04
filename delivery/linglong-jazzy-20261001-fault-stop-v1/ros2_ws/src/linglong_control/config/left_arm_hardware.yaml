@@ -1,0 +1,35 @@
+# TEMPLATE ONLY: never use demonstration encoder scales on a physical arm.
+# Sources: controller/ethercat_left_arm_test.py and controller/dance_flow.sh.
+calibration_confirmed: false
+pdo_mapping_confirmed: false
+stop_behavior_confirmed: false
+master_index: 0
+vendor_id: 0x1097
+product_code: 0x2406
+update_rate: 100
+cycle_timeout: 0.05
+startup_timeout: 5.0
+# Fill from the EYOU drive manual/field settings. Zero means no DC.
+dc_assign_activate: 0
+watchdog_divider: 0
+watchdog_intervals: 0  # Required, nonzero; verify timeout and stop/brake response.
+joints:
+  joint_1: &joint
+    slave_position: 1
+    counts_per_radian: 0.0
+    zero_counts: 0.0
+    velocity_counts_per_rad_s: 0.0
+    lower: -1.57
+    upper: 1.57
+    max_velocity: 0.1
+    max_command_step: 0.01
+    max_following_error: 0.15
+  joint_2:
+    <<: *joint
+    slave_position: 2
+  joint_3:
+    <<: *joint
+    slave_position: 3
+  joint_5:
+    <<: *joint
+    slave_position: 5

@@ -1,0 +1,78 @@
+# Documentation record only. NOT a ROS parameter file or hardware_config.
+schema_version: 1
+record_kind: commissioning_documentation
+status: not_collected
+session_id: null
+collected_at: null
+operator: null
+device_route: eyou_left_arm
+source_revision_or_sha256_manifest: null
+
+master:
+  host: null
+  operating_system: null
+  kernel: null
+  igh_version: null
+  nic_and_driver: null
+  master_index: 0
+  requested_period_ns: null
+  scheduler_policy_and_priority: null
+  topology_evidence: null
+
+# Copy this record once per physical slave. Expected positions are 1,2,3,5;
+# never fill measured fields from expectation alone.
+slaves:
+  - joint_name: joint_1
+    expected_position: 1
+    observed_position: null
+    expected_vendor_id: 0x1097
+    expected_product_code: 0x2406
+    observed_vendor_id: null
+    observed_product_code: null
+    revision: null
+    serial: null
+    firmware: null
+    esi:
+      filename: null
+      source_and_version: null
+      sha256: null
+      compatible_firmware: null
+    pdo:
+      export_file: null
+      sha256: null
+      mapping_review: pending
+      differences_from_code: null
+    startup_sdo_evidence: null
+    calibration:
+      position_unit: null
+      velocity_unit: null
+      torque_unit_and_rated_torque: null
+      gear_ratio: null
+      direction: null
+      zero_counts: null
+      position_counts_per_joint_radian: null
+      velocity_counts_per_joint_rad_s: null
+      limits_and_measurement_evidence: null
+
+synchronization:
+  dc_enabled: null
+  assign_activate: null
+  sync0_cycle_ns: null
+  sync0_shift_ns: null
+  parameter_source: null
+  application_time_basis_and_call_site_review: pending
+  measured_sync_error_evidence: null
+
+stop_behavior:
+  controlword_policy: null
+  watchdog_settings_and_source: null
+  brake_and_gravity_load_review: pending
+  communication_loss_evidence: null
+  process_exit_evidence: null
+  recovery_evidence: null
+
+evidence:
+  raw_logs: []
+  configuration_sha256: null
+  outcome: unverified
+  unresolved_items: []

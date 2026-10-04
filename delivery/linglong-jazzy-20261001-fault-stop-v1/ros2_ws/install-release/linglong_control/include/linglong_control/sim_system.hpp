@@ -1,0 +1,47 @@
+#pragma once
+
+#include <array>
+#include <chrono>
+#include <memory>
+#include <vector>
+#include "hardware_interface/system_interface.hpp"
+#include "linglong_control/sim_core.hpp"
+#include "linglong_control/hardware_state.hpp"
+
+namespace linglong_control
+{
+class SimSystem : public hardware_interface::SystemInterface
+{
+public:
+  hardware_interface::CallbackReturn on_init(const hardware_interface::HardwareInfo &) override;
+  std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
+  std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
+  hardware_interface::CallbackReturn on_configure(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_activate(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_error(const rclcpp_lifecycle::State &) override;
+  hardware_interface::return_type read(const rclcpp::Time &, const rclcpp::Duration &) override;
+  hardware_interface::return_type write(const rclcpp::Time &, const rclcpp::Duration &) override;
+  hardware_interface::return_type prepare_command_mode_switch(
+    const std::vector<std::string> &, const std::vector<std::string> &) override;
+  hardware_interface::return_type perform_command_mode_switch(
+    const std::vector<std::string> &, const std::vector<std::string> &) override;
+
+private:
+  void update_states();
+  std::unique_ptr<SimCore> core_;
+  std::vector<double> positions_, velocities_, commands_;
+  std::vector<std::string> command_keys_;
+  bool commands_enabled_{false};
+  // Opt-in only for the MOCK launch with its mandatory lifecycle supervisor.
+  bool supervised_fault_stop_{false};
+  hardware_interface::return_type fault_result();
+  bool fault_reported_{false};
+  HardwareStateMachine machine_;
+  static constexpr auto health_names_ = control_health_names;
+  std::array<double, control_health_names.size()> health_{};
+  std::chrono::steady_clock::time_point last_read_;
+};
+}  // namespace linglong_control

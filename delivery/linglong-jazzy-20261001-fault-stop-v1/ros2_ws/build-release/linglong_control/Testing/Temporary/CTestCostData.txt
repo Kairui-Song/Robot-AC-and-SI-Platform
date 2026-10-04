@@ -1,0 +1,14 @@
+hardware_state 1 0.0330552
+left_arm_core 1 0.0544348
+sim_core 1 0.0367981
+test_plugin 1 0.736049
+test_health 1 2.03114
+test_diagnostics_message 1 3.56762
+test_system_state 1 1.96671
+test_system_manager 1 1.41218
+test_acceptance 1 1.52217
+test_evidence 1 1.57952
+test_snapshot_callbacks 1 1.37027
+test_description 1 1.76748
+test_left_arm_configuration 1 1.59183
+---

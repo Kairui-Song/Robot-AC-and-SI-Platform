@@ -1,0 +1,132 @@
+[
+  {
+    "relative": ".cursor\\skills\\ros2-ethercat-left-arm\\SKILL.md",
+    "before": null,
+    "after": "C213B155ED94F6F5135FA5F04549C8AC8440C30D4F1C2D54D2C0E89B968D5F3D"
+  },
+  {
+    "relative": "docs\\ethercat\\CAPABILITIES.md",
+    "before": "491B351FB47FD8C2737C46F88AEC1F2799446076BCAB4BAD8F03FC0DB8480776",
+    "after": "6EB8F7A5D725595DC884464E8203279B4F5DAD5DA0FEF176BF440F13ED4B8FCF"
+  },
+  {
+    "relative": "docs\\ethercat\\INTERFACES.md",
+    "before": "9BC6966B9543F1F24C5A5E390C2C27520708C10FA12FA8C879568ED0DDD260BB",
+    "after": "D4860740666F7E67F9312C6E0ACCD4B6722D8659B54B01BE29CEFF86371E5B33"
+  },
+  {
+    "relative": "docs\\ethercat\\ROADMAP.md",
+    "before": "2B0AA766947B26A20A0D8CDA5E48BA46B7B3AAD414A7DC81BC40FEEABA98D1E5",
+    "after": "43AB362383C8AB5BBA6E8B46418F908C1FBD2F529E7729D703168D09E4E617B6"
+  },
+  {
+    "relative": "ros2_ws\\LEFT_ARM_MULTI_JOINT.md",
+    "before": null,
+    "after": "FB5A30DEE5EB2574361E601E64FC71FA94571DAB30CD4EF2239E747323A61798"
+  },
+  {
+    "relative": "ros2_ws\\VERIFICATION.md",
+    "before": "6A86EF00268F196205FE0BA5C8C2A4454C56ADBAA2025C92CADC2E3E79211D7C",
+    "after": "4FFD5D2D1282E9E75CEDD35E9A3D0C90BB6F5C6A0B9F5F390DB36FDAD977F22B"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\CMakeLists.txt",
+    "before": "6AA23976767B646844519522DB978A07976F3AE66950CF3BEDEC8F9F0904DAE6",
+    "after": "CCAE709D93B2648D1FC914A52A176CD4EC85F0FE02839AB686F70AF1240080E0"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_bus.hpp",
+    "before": "0913DF741F71345E381202DFF5F12709C53C8579E88DA08CCBFE2EA1413A9127",
+    "after": "646AA8A349201820C95B58A5C5ABCA3306983BCEE41BBCAC453D81DDBE85F160"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_core.hpp",
+    "before": "322EBF3A41E26C7E8CA9F7F80D726A03F9E95A13DB21FCBF3A4133FE3CEFECC7",
+    "after": "2E64BBEBC87FE4DD15128F10852134F0BC4BBD31AADDB79FC80E93C08226D3E3"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_diagnostics.hpp",
+    "before": null,
+    "after": "58F694BDD58EBBC7D1C46BF8474FA15C0B2A784662ECD8F04D75AE314B220229"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\include\\linglong_control\\left_arm_system.hpp",
+    "before": "2BFDB84FF93EED1FA13E5A10EF2B3A62A78EEFF12ED54A32DB1EF31247180EDA",
+    "after": "453534B9A4CDAC718B868F7B697D2AAE4B1986370644209046A3DDFBE48B957D"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\launch\\left_arm.launch.py",
+    "before": null,
+    "after": "E9BC4090967CE82C87DBE92F58D43A4FB9B162A22188C8D1461087F44669431E"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\diagnostics.py",
+    "before": "869AA1116AB441F9A3B699B0F0F539DAB0C3D98C59235A7640ED4C11A4593D9F",
+    "after": "24E48CC8CF24BD0FB568B88157033C4E58D5E7D1DF6D046AE65A413039DA20C1"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\evidence.py",
+    "before": "8ECB28502CB31AC25DB23159177FE45642EF88DA486303715B2F690E20838BFA",
+    "after": "7246EE2E1FC55A3F60E6BA2410E457058FC28FB5F01481C17CB8A8D97907A224"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\health.py",
+    "before": "15463EC599A51677E464CDAF36A4CB1F32FA0E2A0C5D62E8F7F2D22B47632DF7",
+    "after": "B4BA1CEF3DDE3CF83029B24376067632EF9A95EF487A2AA44DD2604F857D005D"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\left_arm_configuration.py",
+    "before": "CAE440671FF6820EF46DD7CBEF1253638F180C1A0E1FEA7BA36C2CF9E1731DC9",
+    "after": "4755AC411B6ABC9B5EE049DE6C85D20883132D0A77081662A4DEA8A58A73B299"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\left_arm_motion_plan.py",
+    "before": null,
+    "after": "6A63C21E527C400BB4F996BB5E0A33E3F812897B01FB7E0DD1E4FE73D208FDA3"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\linglong_control_tools\\left_arm_motion.py",
+    "before": null,
+    "after": "265C8CD5679F2F0263A97F1D1D7881A9CBDB2DC2B1714115C01001229455BBE1"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\scripts\\left_arm_motion",
+    "before": null,
+    "after": "DA13D5072856861936AC2405FD601ADA5ADE70C3BD837AC325E07C2D8C2C2EAC"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\src\\left_arm_system.cpp",
+    "before": "C3054F839C4040C4A350AC755D6A72853D961BA43998E9E10334C4CCA44D75CB",
+    "after": "6413ACB1740BEDDD12B831041037CEE251FC32FEAE7785E2E936955D1B501372"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_evidence.py",
+    "before": "81B2A6D76798238CCC176AB36827AB2CCB874C2F86182C1938C965C40DB3BBC1",
+    "after": "BCEEF2F2266C123384A3B7A48C5B6084BFFB1E40125EA322C8F7502131A6B035"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_bus.cpp",
+    "before": "36C22F2867B4BAE090DF3A4F7FAB66C7D8346B295820E6C54B388C77BE0C6173",
+    "after": "33D772642EF2E6D5EB0934C7FD56EE63F248D759A8C3204A6B1E67F1EA4BA089"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_configuration.py",
+    "before": "5563A65A9B94A3B3F94ED75E0BA117052B150F47BC4EBB0DC17532CFF5D605A1",
+    "after": "CB5453DD2E322A0FC55DCEEA4000E5E97D280F6EE34E3D452C2B61F4390AC710"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_core.cpp",
+    "before": "F7D414F05BB7297A5E9996657FA23E2D71D001606A09196F7CD4A3EBC01C3E18",
+    "after": "FA1C7216FBD7F62751509FF2C30A724D6A183AEFEB173244558C995D56342452"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_motion_callbacks.py",
+    "before": null,
+    "after": "975B2684A8E6A8912F11C911F92FA8E87948F9E9EF8708E806254B0CD3F3DF5F"
+  },
+  {
+    "relative": "ros2_ws\\src\\linglong_control\\test\\test_left_arm_motion_plan.py",
+    "before": null,
+    "after": "CB068407C07DF78BF5D68EEE4B5C2A940FE843E466770DFB7FA03377E3837673"
+  }
+]

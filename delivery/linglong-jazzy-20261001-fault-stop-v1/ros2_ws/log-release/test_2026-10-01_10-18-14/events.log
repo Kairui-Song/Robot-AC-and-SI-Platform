@@ -1,0 +1,532 @@
+[0.000000] (-) TimerEvent: {}
+[0.000557] (arm_control) JobQueued: {'identifier': 'arm_control', 'dependencies': OrderedDict({'arm_control': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control'})}
+[0.000841] (linglong_control) JobQueued: {'identifier': 'linglong_control', 'dependencies': OrderedDict({'arm_control': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control', 'linglong_control': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control'})}
+[0.001037] (arm_control) JobStarted: {'identifier': 'arm_control'}
+[0.097668] (-) TimerEvent: {}
+[0.198801] (-) TimerEvent: {}
+[0.299525] (-) TimerEvent: {}
+[0.400503] (-) TimerEvent: {}
+[0.503270] (-) TimerEvent: {}
+[0.603828] (-) TimerEvent: {}
+[0.704299] (-) TimerEvent: {}
+[0.804875] (-) TimerEvent: {}
+[0.905385] (-) TimerEvent: {}
+[1.005940] (-) TimerEvent: {}
+[1.081312] (arm_control) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control', 'env': OrderedDict({'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': '', 'COLCON_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '', 'DISPLAY': '', 'LANG': 'C.UTF-8', 'XAUTHORITY': '', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy', 'LINGLONG_CLEAN_RELEASE': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control', 'PYTHONPATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/pytest.xml --junit-prefix=arm_control -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/.pytest_cache'}), 'shell': False}
+[1.106079] (-) TimerEvent: {}
+[1.206495] (-) TimerEvent: {}
+[1.306942] (-) TimerEvent: {}
+[1.407423] (-) TimerEvent: {}
+[1.508290] (-) TimerEvent: {}
+[1.608803] (-) TimerEvent: {}
+[1.709369] (-) TimerEvent: {}
+[1.809813] (-) TimerEvent: {}
+[1.910403] (-) TimerEvent: {}
+[2.010956] (-) TimerEvent: {}
+[2.111457] (-) TimerEvent: {}
+[2.212078] (-) TimerEvent: {}
+[2.312713] (-) TimerEvent: {}
+[2.415982] (-) TimerEvent: {}
+[2.516465] (-) TimerEvent: {}
+[2.571588] (arm_control) StdoutLine: {'line': b'============================= test session starts ==============================\n'}
+[2.572749] (arm_control) StdoutLine: {'line': b'platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[2.573377] (arm_control) StdoutLine: {'line': b'cachedir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/.pytest_cache\n'}
+[2.573855] (arm_control) StdoutLine: {'line': b'rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/arm_control\n'}
+[2.574467] (arm_control) StdoutLine: {'line': b'plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[2.575045] (arm_control) StdoutLine: {'line': b'collected 14 items\n'}
+[2.575690] (arm_control) StdoutLine: {'line': b'\n'}
+[2.592759] (arm_control) StdoutLine: {'line': b'test/test_backend.py ........                                            [ 57%]\n'}
+[2.616608] (-) TimerEvent: {}
+[2.685111] (arm_control) StdoutLine: {'line': b'test/test_node_logic.py ......                                           [100%]\n'}
+[2.686317] (arm_control) StdoutLine: {'line': b'\n'}
+[2.687100] (arm_control) StdoutLine: {'line': b'- generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/arm_control/pytest.xml -\n'}
+[2.687944] (arm_control) StdoutLine: {'line': b'============================== 14 passed in 0.30s ==============================\n'}
+[2.716798] (-) TimerEvent: {}
+[2.748563] (arm_control) CommandEnded: {'returncode': 0}
+[2.749767] (arm_control) JobEnded: {'identifier': 'arm_control', 'rc': 0}
+[2.756533] (linglong_control) JobStarted: {'identifier': 'linglong_control'}
+[2.816954] (-) TimerEvent: {}
+[2.917458] (-) TimerEvent: {}
+[3.017876] (-) TimerEvent: {}
+[3.056120] (linglong_control) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Debug', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'env': OrderedDict({'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': '', 'COLCON_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '', 'DISPLAY': '', 'LANG': 'C.UTF-8', 'XAUTHORITY': '', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy', 'LINGLONG_CLEAN_RELEASE': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control', 'PYTHONPATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control/lib/python3.12/site-packages:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/arm_control/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/install-release/linglong_control:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[3.118082] (-) TimerEvent: {}
+[3.208799] (linglong_control) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/CTestConfiguration.ini\n'}
+[3.210388] (linglong_control) StdoutLine: {'line': b'Parse Config file:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/CTestConfiguration.ini\n'}
+[3.214172] (linglong_control) StdoutLine: {'line': b'   Site: DESKTOP-N84JAM2\n'}
+[3.217949] (linglong_control) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[3.219262] (-) TimerEvent: {}
+[3.221724] (linglong_control) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[3.235008] (linglong_control) StdoutLine: {'line': b'Create new tag: 20261001-1018 - Experimental\n'}
+[3.238002] (linglong_control) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/CTestConfiguration.ini\n'}
+[3.239507] (linglong_control) StdoutLine: {'line': b'Parse Config file:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/CTestConfiguration.ini\n'}
+[3.241131] (linglong_control) StdoutLine: {'line': b'Test project /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[3.261282] (linglong_control) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[3.319481] (-) TimerEvent: {}
+[3.335769] (linglong_control) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[3.338627] (linglong_control) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[3.341722] (linglong_control) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[3.343624] (linglong_control) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[3.345400] (linglong_control) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[3.348348] (linglong_control) StdoutLine: {'line': b'test 1\n'}
+[3.349843] (linglong_control) StdoutLine: {'line': b'      Start  1: hardware_state\n'}
+[3.351790] (linglong_control) StdoutLine: {'line': b'\n'}
+[3.355092] (linglong_control) StdoutLine: {'line': b'1: Test command: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_hardware_state\n'}
+[3.356177] (linglong_control) StdoutLine: {'line': b'1: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[3.357421] (linglong_control) StdoutLine: {'line': b'1: Test timeout computed to be: 10000000\n'}
+[3.374168] (linglong_control) StdoutLine: {'line': b'1: Hardware state guards, recovery and terminal shutdown passed\n'}
+[3.377427] (linglong_control) StdoutLine: {'line': b' 1/13 Test  #1: hardware_state ...................   Passed    0.03 sec\n'}
+[3.394002] (linglong_control) StdoutLine: {'line': b'test 2\n'}
+[3.406129] (linglong_control) StdoutLine: {'line': b'      Start  2: left_arm_core\n'}
+[3.416104] (linglong_control) StdoutLine: {'line': b'\n'}
+[3.431392] (-) TimerEvent: {}
+[3.432213] (linglong_control) StdoutLine: {'line': b'2: Test command: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_left_arm_core\n'}
+[3.436581] (linglong_control) StdoutLine: {'line': b'2: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[3.439448] (linglong_control) StdoutLine: {'line': b'2: Test timeout computed to be: 10000000\n'}
+[3.459133] (linglong_control) StdoutLine: {'line': b'2: Left arm: group validation, enable, calibration, feedback faults and latching passed\n'}
+[3.461463] (linglong_control) StdoutLine: {'line': b' 2/13 Test  #2: left_arm_core ....................   Passed    0.05 sec\n'}
+[3.466772] (linglong_control) StdoutLine: {'line': b'test 3\n'}
+[3.468249] (linglong_control) StdoutLine: {'line': b'      Start  3: sim_core\n'}
+[3.469548] (linglong_control) StdoutLine: {'line': b'\n'}
+[3.470621] (linglong_control) StdoutLine: {'line': b'3: Test command: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_sim_core\n'}
+[3.471806] (linglong_control) StdoutLine: {'line': b'3: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[3.472623] (linglong_control) StdoutLine: {'line': b'3: Test timeout computed to be: 10000000\n'}
+[3.504314] (linglong_control) StdoutLine: {'line': b'3: PASS invalid configuration rejected\n'}
+[3.507348] (linglong_control) StdoutLine: {'line': b'3: PASS activate requires configure\n'}
+[3.508398] (linglong_control) StdoutLine: {'line': b'3: PASS inactive heartbeat does not consume fault injection cycles\n'}
+[3.509253] (linglong_control) StdoutLine: {'line': b'3: PASS activation holds nonzero feedback\n'}
+[3.510249] (linglong_control) StdoutLine: {'line': b'3: PASS finite-rate simulated feedback\n'}
+[3.513369] (linglong_control) StdoutLine: {'line': b'3: PASS inactive ignores commands and motion\n'}
+[3.516974] (linglong_control) StdoutLine: {'line': b'3: PASS reactivation discards stale target\n'}
+[3.518240] (linglong_control) StdoutLine: {'line': b'3: PASS NaN and infinity latch fault\n'}
+[3.519328] (linglong_control) StdoutLine: {'line': b'3: PASS whole batch rejected before any motion\n'}
+[3.520247] (linglong_control) StdoutLine: {'line': b'3: PASS command step bounded\n'}
+[3.521255] (linglong_control) StdoutLine: {'line': b'3: PASS following error bounded\n'}
+[3.522278] (linglong_control) StdoutLine: {'line': b'3: PASS missed interval counted then timeout latched\n'}
+[3.523225] (linglong_control) StdoutLine: {'line': b'3: PASS invalid elapsed time rejected\n'}
+[3.524207] (linglong_control) StdoutLine: {'line': b'3: PASS dropout reports age and faults without synthetic feedback\n'}
+[3.525349] (linglong_control) StdoutLine: {'line': b'3: PASS injected fault survives framework error handling\n'}
+[3.526434] (linglong_control) StdoutLine: {'line': b'3: PASS controller stop holds feedback\n'}
+[3.533282] (-) TimerEvent: {}
+[3.533809] (linglong_control) StdoutLine: {'line': b'3: PASS long trajectory needs no repeated topic heartbeat\n'}
+[3.535124] (linglong_control) StdoutLine: {'line': b'3: 17 control-core scenarios passed\n'}
+[3.536466] (linglong_control) StdoutLine: {'line': b' 3/13 Test  #3: sim_core .........................   Passed    0.04 sec\n'}
+[3.537676] (linglong_control) StdoutLine: {'line': b'test 4\n'}
+[3.538612] (linglong_control) StdoutLine: {'line': b'      Start  4: test_plugin\n'}
+[3.539537] (linglong_control) StdoutLine: {'line': b'\n'}
+[3.540444] (linglong_control) StdoutLine: {'line': b'4: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_gtest/test_plugin.txt" "--command" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_plugin" "--gtest_output=xml:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml"\n'}
+[3.541425] (linglong_control) StdoutLine: {'line': b'4: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[3.543522] (linglong_control) StdoutLine: {'line': b'4: Test timeout computed to be: 60\n'}
+[3.633597] (-) TimerEvent: {}
+[3.734786] (-) TimerEvent: {}
+[3.835423] (-) TimerEvent: {}
+[3.935863] (-) TimerEvent: {}
+[4.036397] (-) TimerEvent: {}
+[4.066319] (linglong_control) StdoutLine: {'line': b"4: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[4.067604] (linglong_control) StdoutLine: {'line': b'4:  - /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_plugin --gtest_output=xml:/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml\n'}
+[4.136560] (-) TimerEvent: {}
+[4.162196] (linglong_control) StdoutLine: {'line': b'4: Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc\n'}
+[4.163885] (linglong_control) StdoutLine: {'line': b'4: [==========] Running 5 tests from 1 test suite.\n'}
+[4.164643] (linglong_control) StdoutLine: {'line': b'4: [----------] Global test environment set-up.\n'}
+[4.165315] (linglong_control) StdoutLine: {'line': b'4: [----------] 5 tests from SimPlugin\n'}
+[4.166157] (linglong_control) StdoutLine: {'line': b'4: [ RUN      ] SimPlugin.DiscoveredViaPluginlib\n'}
+[4.202933] (linglong_control) StdoutLine: {'line': b'4: [       OK ] SimPlugin.DiscoveredViaPluginlib (40 ms)\n'}
+[4.203973] (linglong_control) StdoutLine: {'line': b'4: [ RUN      ] SimPlugin.HardwareBackendNeverFallsBackToMock\n'}
+[4.204887] (linglong_control) StdoutLine: {'line': b'4: [ERROR] [1790849898.670302330] [linglong_control]: Configuration rejected: SimSystem only supports backend=mock; no EtherCAT driver installed\n'}
+[4.205986] (linglong_control) StdoutLine: {'line': b'4: [       OK ] SimPlugin.HardwareBackendNeverFallsBackToMock (1 ms)\n'}
+[4.207006] (linglong_control) StdoutLine: {'line': b'4: [ RUN      ] SimPlugin.InterfacesActivationAndFaultLatch\n'}
+[4.207720] (linglong_control) StdoutLine: {'line': b'4: [ERROR] [1790849898.671410779] [linglong_control]: MOCK fault latched, code=2; motion blocked; explicit recovery required\n'}
+[4.208516] (linglong_control) StdoutLine: {'line': b'4: [ERROR] [1790849898.671455603] [linglong_control]: MOCK fault latched, code=2; restart after correcting the cause\n'}
+[4.209298] (linglong_control) StdoutLine: {'line': b'4: [       OK ] SimPlugin.InterfacesActivationAndFaultLatch (1 ms)\n'}
+[4.210239] (linglong_control) StdoutLine: {'line': b'4: [ RUN      ] SimPlugin.StateGuardsOwnershipAndTerminalShutdown\n'}
+[4.211790] (linglong_control) StdoutLine: {'line': b'4: [       OK ] SimPlugin.StateGuardsOwnershipAndTerminalShutdown (0 ms)\n'}
+[4.213015] (linglong_control) StdoutLine: {'line': b'4: [ RUN      ] SimPlugin.SupervisedFaultPublishesLatchUntilOrderedRelease\n'}
+[4.214274] (linglong_control) StdoutLine: {'line': b'4: [ERROR] [1790849898.671938150] [linglong_control]: MOCK fault latched, code=7; motion blocked; explicit recovery required\n'}
+[4.215035] (linglong_control) StdoutLine: {'line': b'4: [       OK ] SimPlugin.SupervisedFaultPublishesLatchUntilOrderedRelease (0 ms)\n'}
+[4.216119] (linglong_control) StdoutLine: {'line': b'4: [----------] 5 tests from SimPlugin (43 ms total)\n'}
+[4.217060] (linglong_control) StdoutLine: {'line': b'4: \n'}
+[4.217868] (linglong_control) StdoutLine: {'line': b'4: [----------] Global test environment tear-down\n'}
+[4.218746] (linglong_control) StdoutLine: {'line': b'4: [==========] 5 tests from 1 test suite ran. (43 ms total)\n'}
+[4.219601] (linglong_control) StdoutLine: {'line': b'4: [  PASSED  ] 5 tests.\n'}
+[4.220468] (linglong_control) StdoutLine: {'line': b'4: -- run_test.py: return code 0\n'}
+[4.222679] (linglong_control) StdoutLine: {'line': b"4: -- run_test.py: inject classname prefix into gtest result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml'\n"}
+[4.225835] (linglong_control) StdoutLine: {'line': b"4: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_plugin.gtest.xml'\n"}
+[4.236705] (-) TimerEvent: {}
+[4.251844] (linglong_control) StdoutLine: {'line': b' 4/13 Test  #4: test_plugin ......................   Passed    0.74 sec\n'}
+[4.254678] (linglong_control) StdoutLine: {'line': b'test 5\n'}
+[4.256372] (linglong_control) StdoutLine: {'line': b'      Start  5: test_health\n'}
+[4.257527] (linglong_control) StdoutLine: {'line': b'\n'}
+[4.258750] (linglong_control) StdoutLine: {'line': b'5: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_health.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_health.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_health.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_health/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_health.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[4.259817] (linglong_control) StdoutLine: {'line': b'5: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[4.260902] (linglong_control) StdoutLine: {'line': b'5: Test timeout computed to be: 60\n'}
+[4.336879] (-) TimerEvent: {}
+[4.437415] (-) TimerEvent: {}
+[4.537971] (-) TimerEvent: {}
+[4.638542] (-) TimerEvent: {}
+[4.739214] (-) TimerEvent: {}
+[4.756788] (linglong_control) StdoutLine: {'line': b"5: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[4.757958] (linglong_control) StdoutLine: {'line': b'5:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_health.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_health/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_health.xunit.xml --junit-prefix=linglong_control\n'}
+[4.839417] (-) TimerEvent: {}
+[4.940034] (-) TimerEvent: {}
+[5.040600] (-) TimerEvent: {}
+[5.141081] (-) TimerEvent: {}
+[5.241643] (-) TimerEvent: {}
+[5.342099] (-) TimerEvent: {}
+[5.442702] (-) TimerEvent: {}
+[5.543298] (-) TimerEvent: {}
+[5.643929] (-) TimerEvent: {}
+[5.744375] (-) TimerEvent: {}
+[5.844779] (-) TimerEvent: {}
+[5.945322] (-) TimerEvent: {}
+[6.011510] (linglong_control) StdoutLine: {'line': b'5: ============================= test session starts ==============================\n'}
+[6.012692] (linglong_control) StdoutLine: {'line': b'5: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[6.014605] (linglong_control) StdoutLine: {'line': b'5: cachedir: build-release/linglong_control/ament_cmake_pytest/test_health/.cache\n'}
+[6.015490] (linglong_control) StdoutLine: {'line': b'5: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[6.016152] (linglong_control) StdoutLine: {'line': b'5: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[6.045451] (-) TimerEvent: {}
+[6.118876] (linglong_control) StdoutLine: {'line': b'5: collected 21 items\n'}
+[6.120812] (linglong_control) StdoutLine: {'line': b'5: \n'}
+[6.145627] (-) TimerEvent: {}
+[6.205191] (linglong_control) StdoutLine: {'line': b'5: ../../src/linglong_control/test/test_health.py .....................     [100%]\n'}
+[6.205926] (linglong_control) StdoutLine: {'line': b'5: \n'}
+[6.206468] (linglong_control) StdoutLine: {'line': b'5: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_health.xunit.xml -\n'}
+[6.207080] (linglong_control) StdoutLine: {'line': b'5: ============================== 21 passed in 0.19s ==============================\n'}
+[6.245848] (-) TimerEvent: {}
+[6.266261] (linglong_control) StdoutLine: {'line': b'5: -- run_test.py: return code 0\n'}
+[6.270018] (linglong_control) StdoutLine: {'line': b"5: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_health.xunit.xml'\n"}
+[6.286884] (linglong_control) StdoutLine: {'line': b' 5/13 Test  #5: test_health ......................   Passed    2.03 sec\n'}
+[6.288975] (linglong_control) StdoutLine: {'line': b'test 6\n'}
+[6.289890] (linglong_control) StdoutLine: {'line': b'      Start  6: test_diagnostics_message\n'}
+[6.290794] (linglong_control) StdoutLine: {'line': b'\n'}
+[6.291718] (linglong_control) StdoutLine: {'line': b'6: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_diagnostics_message.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_diagnostics_message.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_diagnostics_message.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_diagnostics_message/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_diagnostics_message.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[6.292434] (linglong_control) StdoutLine: {'line': b'6: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[6.293036] (linglong_control) StdoutLine: {'line': b'6: Test timeout computed to be: 60\n'}
+[6.346078] (-) TimerEvent: {}
+[6.446555] (-) TimerEvent: {}
+[6.547162] (-) TimerEvent: {}
+[6.647711] (-) TimerEvent: {}
+[6.748786] (-) TimerEvent: {}
+[6.849393] (-) TimerEvent: {}
+[6.942780] (linglong_control) StdoutLine: {'line': b"6: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[6.959248] (-) TimerEvent: {}
+[6.959768] (linglong_control) StdoutLine: {'line': b'6:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_diagnostics_message.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_diagnostics_message/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_diagnostics_message.xunit.xml --junit-prefix=linglong_control\n'}
+[7.059445] (-) TimerEvent: {}
+[7.174750] (-) TimerEvent: {}
+[7.277772] (-) TimerEvent: {}
+[7.382923] (-) TimerEvent: {}
+[7.484310] (-) TimerEvent: {}
+[7.585107] (-) TimerEvent: {}
+[7.687648] (-) TimerEvent: {}
+[7.788146] (-) TimerEvent: {}
+[7.917890] (-) TimerEvent: {}
+[8.021961] (-) TimerEvent: {}
+[8.128005] (-) TimerEvent: {}
+[8.231267] (-) TimerEvent: {}
+[8.332003] (-) TimerEvent: {}
+[8.432529] (-) TimerEvent: {}
+[8.533123] (-) TimerEvent: {}
+[8.633743] (-) TimerEvent: {}
+[8.734755] (-) TimerEvent: {}
+[8.835403] (-) TimerEvent: {}
+[8.936118] (-) TimerEvent: {}
+[8.980182] (linglong_control) StdoutLine: {'line': b'6: ============================= test session starts ==============================\n'}
+[8.981115] (linglong_control) StdoutLine: {'line': b'6: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[8.983165] (linglong_control) StdoutLine: {'line': b'6: cachedir: build-release/linglong_control/ament_cmake_pytest/test_diagnostics_message/.cache\n'}
+[8.984126] (linglong_control) StdoutLine: {'line': b'6: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[8.984958] (linglong_control) StdoutLine: {'line': b'6: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[9.036284] (-) TimerEvent: {}
+[9.136678] (-) TimerEvent: {}
+[9.237195] (-) TimerEvent: {}
+[9.337623] (-) TimerEvent: {}
+[9.438158] (-) TimerEvent: {}
+[9.538572] (-) TimerEvent: {}
+[9.546870] (linglong_control) StdoutLine: {'line': b'6: collected 6 items\n'}
+[9.549266] (linglong_control) StdoutLine: {'line': b'6: \n'}
+[9.638757] (-) TimerEvent: {}
+[9.736557] (linglong_control) StdoutLine: {'line': b'6: ../../src/linglong_control/test/test_diagnostics_message.py ......       [100%]\n'}
+[9.737718] (linglong_control) StdoutLine: {'line': b'6: \n'}
+[9.738836] (-) TimerEvent: {}
+[9.739232] (linglong_control) StdoutLine: {'line': b'6: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_diagnostics_message.xunit.xml -\n'}
+[9.740147] (linglong_control) StdoutLine: {'line': b'6: ============================== 6 passed in 0.76s ===============================\n'}
+[9.837997] (linglong_control) StdoutLine: {'line': b'6: -- run_test.py: return code 0\n'}
+[9.838877] (-) TimerEvent: {}
+[9.842054] (linglong_control) StdoutLine: {'line': b"6: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_diagnostics_message.xunit.xml'\n"}
+[9.858380] (linglong_control) StdoutLine: {'line': b' 6/13 Test  #6: test_diagnostics_message .........   Passed    3.57 sec\n'}
+[9.860098] (linglong_control) StdoutLine: {'line': b'test 7\n'}
+[9.860874] (linglong_control) StdoutLine: {'line': b'      Start  7: test_system_state\n'}
+[9.861981] (linglong_control) StdoutLine: {'line': b'\n'}
+[9.863108] (linglong_control) StdoutLine: {'line': b'7: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_state.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_state.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_system_state.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_state/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_state.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[9.863983] (linglong_control) StdoutLine: {'line': b'7: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[9.864660] (linglong_control) StdoutLine: {'line': b'7: Test timeout computed to be: 60\n'}
+[9.939051] (-) TimerEvent: {}
+[10.039549] (-) TimerEvent: {}
+[10.140185] (-) TimerEvent: {}
+[10.240699] (-) TimerEvent: {}
+[10.341194] (-) TimerEvent: {}
+[10.442564] (-) TimerEvent: {}
+[10.504375] (linglong_control) StdoutLine: {'line': b"7: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[10.508078] (linglong_control) StdoutLine: {'line': b'7:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_system_state.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_state/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_state.xunit.xml --junit-prefix=linglong_control\n'}
+[10.542742] (-) TimerEvent: {}
+[10.643448] (-) TimerEvent: {}
+[10.744015] (-) TimerEvent: {}
+[10.844434] (-) TimerEvent: {}
+[10.944891] (-) TimerEvent: {}
+[11.045342] (-) TimerEvent: {}
+[11.145965] (-) TimerEvent: {}
+[11.246734] (-) TimerEvent: {}
+[11.347273] (-) TimerEvent: {}
+[11.447770] (-) TimerEvent: {}
+[11.548137] (-) TimerEvent: {}
+[11.582965] (linglong_control) StdoutLine: {'line': b'7: ============================= test session starts ==============================\n'}
+[11.583964] (linglong_control) StdoutLine: {'line': b'7: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[11.585973] (linglong_control) StdoutLine: {'line': b'7: cachedir: build-release/linglong_control/ament_cmake_pytest/test_system_state/.cache\n'}
+[11.586881] (linglong_control) StdoutLine: {'line': b'7: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[11.587548] (linglong_control) StdoutLine: {'line': b'7: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[11.648275] (-) TimerEvent: {}
+[11.704198] (linglong_control) StdoutLine: {'line': b'7: collected 10 items\n'}
+[11.706293] (linglong_control) StdoutLine: {'line': b'7: \n'}
+[11.748398] (-) TimerEvent: {}
+[11.760693] (linglong_control) StdoutLine: {'line': b'7: ../../src/linglong_control/test/test_system_state.py ..........          [100%]\n'}
+[11.761642] (linglong_control) StdoutLine: {'line': b'7: \n'}
+[11.762505] (linglong_control) StdoutLine: {'line': b'7: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_state.xunit.xml -\n'}
+[11.763064] (linglong_control) StdoutLine: {'line': b'7: ============================== 10 passed in 0.18s ==============================\n'}
+[11.808688] (linglong_control) StdoutLine: {'line': b'7: -- run_test.py: return code 0\n'}
+[11.812492] (linglong_control) StdoutLine: {'line': b"7: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_state.xunit.xml'\n"}
+[11.828447] (linglong_control) StdoutLine: {'line': b' 7/13 Test  #7: test_system_state ................   Passed    1.97 sec\n'}
+[11.830886] (linglong_control) StdoutLine: {'line': b'test 8\n'}
+[11.831785] (linglong_control) StdoutLine: {'line': b'      Start  8: test_system_manager\n'}
+[11.832472] (linglong_control) StdoutLine: {'line': b'\n'}
+[11.833139] (linglong_control) StdoutLine: {'line': b'8: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_manager.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_manager.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_system_manager.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_manager/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_manager.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[11.833910] (linglong_control) StdoutLine: {'line': b'8: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[11.834478] (linglong_control) StdoutLine: {'line': b'8: Test timeout computed to be: 60\n'}
+[11.848544] (-) TimerEvent: {}
+[11.949058] (-) TimerEvent: {}
+[12.049427] (-) TimerEvent: {}
+[12.102268] (linglong_control) StdoutLine: {'line': b"8: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[12.103030] (linglong_control) StdoutLine: {'line': b'8:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_system_manager.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_system_manager/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_manager.xunit.xml --junit-prefix=linglong_control\n'}
+[12.149569] (-) TimerEvent: {}
+[12.249980] (-) TimerEvent: {}
+[12.350334] (-) TimerEvent: {}
+[12.450702] (-) TimerEvent: {}
+[12.551140] (-) TimerEvent: {}
+[12.651722] (-) TimerEvent: {}
+[12.752095] (-) TimerEvent: {}
+[12.852478] (-) TimerEvent: {}
+[12.898389] (linglong_control) StdoutLine: {'line': b'8: ============================= test session starts ==============================\n'}
+[12.899304] (linglong_control) StdoutLine: {'line': b'8: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[12.900852] (linglong_control) StdoutLine: {'line': b'8: cachedir: build-release/linglong_control/ament_cmake_pytest/test_system_manager/.cache\n'}
+[12.901548] (linglong_control) StdoutLine: {'line': b'8: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[12.902187] (linglong_control) StdoutLine: {'line': b'8: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[12.952612] (-) TimerEvent: {}
+[13.011035] (linglong_control) StdoutLine: {'line': b'8: collected 15 items\n'}
+[13.012976] (linglong_control) StdoutLine: {'line': b'8: \n'}
+[13.052733] (-) TimerEvent: {}
+[13.153108] (-) TimerEvent: {}
+[13.180364] (linglong_control) StdoutLine: {'line': b'8: ../../src/linglong_control/test/test_system_manager.py ...............   [100%]\n'}
+[13.181377] (linglong_control) StdoutLine: {'line': b'8: \n'}
+[13.181951] (linglong_control) StdoutLine: {'line': b'8: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_manager.xunit.xml -\n'}
+[13.182464] (linglong_control) StdoutLine: {'line': b'8: ============================== 15 passed in 0.28s ==============================\n'}
+[13.226522] (linglong_control) StdoutLine: {'line': b'8: -- run_test.py: return code 0\n'}
+[13.231554] (linglong_control) StdoutLine: {'line': b"8: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_system_manager.xunit.xml'\n"}
+[13.244246] (linglong_control) StdoutLine: {'line': b' 8/13 Test  #8: test_system_manager ..............   Passed    1.41 sec\n'}
+[13.246635] (linglong_control) StdoutLine: {'line': b'test 9\n'}
+[13.248063] (linglong_control) StdoutLine: {'line': b'      Start  9: test_acceptance\n'}
+[13.249049] (linglong_control) StdoutLine: {'line': b'\n'}
+[13.249718] (linglong_control) StdoutLine: {'line': b'9: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_acceptance.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_acceptance.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_acceptance.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_acceptance/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_acceptance.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[13.250443] (linglong_control) StdoutLine: {'line': b'9: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[13.251335] (linglong_control) StdoutLine: {'line': b'9: Test timeout computed to be: 60\n'}
+[13.253218] (-) TimerEvent: {}
+[13.353517] (-) TimerEvent: {}
+[13.453847] (-) TimerEvent: {}
+[13.528087] (linglong_control) StdoutLine: {'line': b"9: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[13.529776] (linglong_control) StdoutLine: {'line': b'9:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_acceptance.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_acceptance/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_acceptance.xunit.xml --junit-prefix=linglong_control\n'}
+[13.554003] (-) TimerEvent: {}
+[13.654566] (-) TimerEvent: {}
+[13.755117] (-) TimerEvent: {}
+[13.855520] (-) TimerEvent: {}
+[13.955993] (-) TimerEvent: {}
+[14.056493] (-) TimerEvent: {}
+[14.156956] (-) TimerEvent: {}
+[14.257398] (-) TimerEvent: {}
+[14.357773] (-) TimerEvent: {}
+[14.458195] (-) TimerEvent: {}
+[14.525675] (linglong_control) StdoutLine: {'line': b'9: ============================= test session starts ==============================\n'}
+[14.526453] (linglong_control) StdoutLine: {'line': b'9: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[14.528282] (linglong_control) StdoutLine: {'line': b'9: cachedir: build-release/linglong_control/ament_cmake_pytest/test_acceptance/.cache\n'}
+[14.529081] (linglong_control) StdoutLine: {'line': b'9: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[14.529670] (linglong_control) StdoutLine: {'line': b'9: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[14.558327] (-) TimerEvent: {}
+[14.622029] (linglong_control) StdoutLine: {'line': b'9: collected 10 items\n'}
+[14.624231] (linglong_control) StdoutLine: {'line': b'9: \n'}
+[14.658482] (-) TimerEvent: {}
+[14.684831] (linglong_control) StdoutLine: {'line': b'9: ../../src/linglong_control/test/test_acceptance.py ..........            [100%]\n'}
+[14.686567] (linglong_control) StdoutLine: {'line': b'9: \n'}
+[14.687507] (linglong_control) StdoutLine: {'line': b'9: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_acceptance.xunit.xml -\n'}
+[14.688389] (linglong_control) StdoutLine: {'line': b'9: ============================== 10 passed in 0.16s ==============================\n'}
+[14.749258] (linglong_control) StdoutLine: {'line': b'9: -- run_test.py: return code 0\n'}
+[14.753291] (linglong_control) StdoutLine: {'line': b"9: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_acceptance.xunit.xml'\n"}
+[14.758685] (-) TimerEvent: {}
+[14.770137] (linglong_control) StdoutLine: {'line': b' 9/13 Test  #9: test_acceptance ..................   Passed    1.52 sec\n'}
+[14.772107] (linglong_control) StdoutLine: {'line': b'test 10\n'}
+[14.773139] (linglong_control) StdoutLine: {'line': b'      Start 10: test_evidence\n'}
+[14.774257] (linglong_control) StdoutLine: {'line': b'\n'}
+[14.775263] (linglong_control) StdoutLine: {'line': b'10: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_evidence.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_evidence.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_evidence.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_evidence/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_evidence.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[14.776085] (linglong_control) StdoutLine: {'line': b'10: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[14.776856] (linglong_control) StdoutLine: {'line': b'10: Test timeout computed to be: 60\n'}
+[14.858809] (-) TimerEvent: {}
+[14.959188] (-) TimerEvent: {}
+[15.059627] (-) TimerEvent: {}
+[15.133196] (linglong_control) StdoutLine: {'line': b"10: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[15.135376] (linglong_control) StdoutLine: {'line': b'10:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_evidence.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_evidence/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_evidence.xunit.xml --junit-prefix=linglong_control\n'}
+[15.159797] (-) TimerEvent: {}
+[15.260283] (-) TimerEvent: {}
+[15.360811] (-) TimerEvent: {}
+[15.461238] (-) TimerEvent: {}
+[15.561842] (-) TimerEvent: {}
+[15.662291] (-) TimerEvent: {}
+[15.762925] (-) TimerEvent: {}
+[15.863887] (-) TimerEvent: {}
+[15.964240] (-) TimerEvent: {}
+[16.064619] (-) TimerEvent: {}
+[16.090756] (linglong_control) StdoutLine: {'line': b'10: ============================= test session starts ==============================\n'}
+[16.091445] (linglong_control) StdoutLine: {'line': b'10: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[16.092899] (linglong_control) StdoutLine: {'line': b'10: cachedir: build-release/linglong_control/ament_cmake_pytest/test_evidence/.cache\n'}
+[16.093614] (linglong_control) StdoutLine: {'line': b'10: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[16.094181] (linglong_control) StdoutLine: {'line': b'10: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[16.164757] (-) TimerEvent: {}
+[16.198974] (linglong_control) StdoutLine: {'line': b'10: collected 24 items\n'}
+[16.200682] (linglong_control) StdoutLine: {'line': b'10: \n'}
+[16.254466] (linglong_control) StdoutLine: {'line': b'10: ../../src/linglong_control/test/test_evidence.py ....................... [ 95%]\n'}
+[16.264913] (-) TimerEvent: {}
+[16.286722] (linglong_control) StdoutLine: {'line': b'10: .                                                                        [100%]\n'}
+[16.287660] (linglong_control) StdoutLine: {'line': b'10: \n'}
+[16.288272] (linglong_control) StdoutLine: {'line': b'10: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_evidence.xunit.xml -\n'}
+[16.289095] (linglong_control) StdoutLine: {'line': b'10: ============================== 24 passed in 0.20s ==============================\n'}
+[16.335572] (linglong_control) StdoutLine: {'line': b'10: -- run_test.py: return code 0\n'}
+[16.340129] (linglong_control) StdoutLine: {'line': b"10: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_evidence.xunit.xml'\n"}
+[16.352773] (linglong_control) StdoutLine: {'line': b'10/13 Test #10: test_evidence ....................   Passed    1.58 sec\n'}
+[16.354737] (linglong_control) StdoutLine: {'line': b'test 11\n'}
+[16.355445] (linglong_control) StdoutLine: {'line': b'      Start 11: test_snapshot_callbacks\n'}
+[16.356192] (linglong_control) StdoutLine: {'line': b'\n'}
+[16.356818] (linglong_control) StdoutLine: {'line': b'11: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_snapshot_callbacks.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_snapshot_callbacks.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_snapshot_callbacks.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_snapshot_callbacks/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_snapshot_callbacks.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[16.357378] (linglong_control) StdoutLine: {'line': b'11: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[16.357952] (linglong_control) StdoutLine: {'line': b'11: Test timeout computed to be: 60\n'}
+[16.365049] (-) TimerEvent: {}
+[16.465354] (-) TimerEvent: {}
+[16.565658] (-) TimerEvent: {}
+[16.640624] (linglong_control) StdoutLine: {'line': b"11: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[16.641591] (linglong_control) StdoutLine: {'line': b'11:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_snapshot_callbacks.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_snapshot_callbacks/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_snapshot_callbacks.xunit.xml --junit-prefix=linglong_control\n'}
+[16.665779] (-) TimerEvent: {}
+[16.766118] (-) TimerEvent: {}
+[16.866440] (-) TimerEvent: {}
+[16.966782] (-) TimerEvent: {}
+[17.067252] (-) TimerEvent: {}
+[17.167776] (-) TimerEvent: {}
+[17.268241] (-) TimerEvent: {}
+[17.368691] (-) TimerEvent: {}
+[17.469324] (-) TimerEvent: {}
+[17.486287] (linglong_control) StdoutLine: {'line': b'11: ============================= test session starts ==============================\n'}
+[17.486988] (linglong_control) StdoutLine: {'line': b'11: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[17.488486] (linglong_control) StdoutLine: {'line': b'11: cachedir: build-release/linglong_control/ament_cmake_pytest/test_snapshot_callbacks/.cache\n'}
+[17.489146] (linglong_control) StdoutLine: {'line': b'11: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[17.489680] (linglong_control) StdoutLine: {'line': b'11: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[17.569490] (-) TimerEvent: {}
+[17.584252] (linglong_control) StdoutLine: {'line': b'11: collected 4 items\n'}
+[17.586209] (linglong_control) StdoutLine: {'line': b'11: \n'}
+[17.658604] (linglong_control) StdoutLine: {'line': b'11: ../../src/linglong_control/test/test_snapshot_callbacks.py ....          [100%]\n'}
+[17.659610] (linglong_control) StdoutLine: {'line': b'11: \n'}
+[17.660407] (linglong_control) StdoutLine: {'line': b'11: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_snapshot_callbacks.xunit.xml -\n'}
+[17.661233] (linglong_control) StdoutLine: {'line': b'11: ============================== 4 passed in 0.17s ===============================\n'}
+[17.669639] (-) TimerEvent: {}
+[17.708889] (linglong_control) StdoutLine: {'line': b'11: -- run_test.py: return code 0\n'}
+[17.712380] (linglong_control) StdoutLine: {'line': b"11: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_snapshot_callbacks.xunit.xml'\n"}
+[17.726329] (linglong_control) StdoutLine: {'line': b'11/13 Test #11: test_snapshot_callbacks ..........   Passed    1.37 sec\n'}
+[17.729149] (linglong_control) StdoutLine: {'line': b'test 12\n'}
+[17.730052] (linglong_control) StdoutLine: {'line': b'      Start 12: test_description\n'}
+[17.730725] (linglong_control) StdoutLine: {'line': b'\n'}
+[17.731356] (linglong_control) StdoutLine: {'line': b'12: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_description.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_description.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_description.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_description/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_description.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[17.732123] (linglong_control) StdoutLine: {'line': b'12: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[17.732812] (linglong_control) StdoutLine: {'line': b'12: Test timeout computed to be: 60\n'}
+[17.769775] (-) TimerEvent: {}
+[17.870066] (-) TimerEvent: {}
+[17.970403] (-) TimerEvent: {}
+[17.984268] (linglong_control) StdoutLine: {'line': b"12: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[17.985230] (linglong_control) StdoutLine: {'line': b'12:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_description.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_description/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_description.xunit.xml --junit-prefix=linglong_control\n'}
+[18.070548] (-) TimerEvent: {}
+[18.170908] (-) TimerEvent: {}
+[18.271279] (-) TimerEvent: {}
+[18.371687] (-) TimerEvent: {}
+[18.472153] (-) TimerEvent: {}
+[18.572669] (-) TimerEvent: {}
+[18.673138] (-) TimerEvent: {}
+[18.773913] (-) TimerEvent: {}
+[18.874724] (-) TimerEvent: {}
+[18.976040] (-) TimerEvent: {}
+[19.077768] (-) TimerEvent: {}
+[19.179527] (-) TimerEvent: {}
+[19.214864] (linglong_control) StdoutLine: {'line': b'12: ============================= test session starts ==============================\n'}
+[19.216279] (linglong_control) StdoutLine: {'line': b'12: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[19.220888] (linglong_control) StdoutLine: {'line': b'12: cachedir: build-release/linglong_control/ament_cmake_pytest/test_description/.cache\n'}
+[19.222414] (linglong_control) StdoutLine: {'line': b'12: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[19.223592] (linglong_control) StdoutLine: {'line': b'12: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[19.279723] (-) TimerEvent: {}
+[19.349151] (linglong_control) StdoutLine: {'line': b'12: collected 1 item\n'}
+[19.351891] (linglong_control) StdoutLine: {'line': b'12: \n'}
+[19.379889] (-) TimerEvent: {}
+[19.424694] (linglong_control) StdoutLine: {'line': b'12: ../../src/linglong_control/test/test_description.py .                    [100%]\n'}
+[19.426513] (linglong_control) StdoutLine: {'line': b'12: \n'}
+[19.427463] (linglong_control) StdoutLine: {'line': b'12: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_description.xunit.xml -\n'}
+[19.428914] (linglong_control) StdoutLine: {'line': b'12: ============================== 1 passed in 0.21s ===============================\n'}
+[19.477864] (linglong_control) StdoutLine: {'line': b'12: -- run_test.py: return code 0\n'}
+[19.479976] (-) TimerEvent: {}
+[19.482696] (linglong_control) StdoutLine: {'line': b"12: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_description.xunit.xml'\n"}
+[19.497934] (linglong_control) StdoutLine: {'line': b'12/13 Test #12: test_description .................   Passed    1.77 sec\n'}
+[19.500723] (linglong_control) StdoutLine: {'line': b'test 13\n'}
+[19.501932] (linglong_control) StdoutLine: {'line': b'      Start 13: test_left_arm_configuration\n'}
+[19.503628] (linglong_control) StdoutLine: {'line': b'\n'}
+[19.504537] (linglong_control) StdoutLine: {'line': b'13: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_left_arm_configuration.xunit.xml" "--package-name" "linglong_control" "--output-file" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_left_arm_configuration.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_left_arm_configuration.py" "-o" "cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_left_arm_configuration/.cache" "--junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_left_arm_configuration.xunit.xml" "--junit-prefix=linglong_control"\n'}
+[19.505312] (linglong_control) StdoutLine: {'line': b'13: Working Directory: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control\n'}
+[19.506068] (linglong_control) StdoutLine: {'line': b'13: Test timeout computed to be: 60\n'}
+[19.580256] (-) TimerEvent: {}
+[19.680676] (-) TimerEvent: {}
+[19.781091] (-) TimerEvent: {}
+[19.859800] (linglong_control) StdoutLine: {'line': b"13: -- run_test.py: invoking following command in '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control':\n"}
+[19.860569] (linglong_control) StdoutLine: {'line': b'13:  - /usr/bin/python3 -u -m pytest /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/src/linglong_control/test/test_left_arm_configuration.py -o cache_dir=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/ament_cmake_pytest/test_left_arm_configuration/.cache --junit-xml=/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_left_arm_configuration.xunit.xml --junit-prefix=linglong_control\n'}
+[19.881236] (-) TimerEvent: {}
+[19.981706] (-) TimerEvent: {}
+[20.082125] (-) TimerEvent: {}
+[20.182503] (-) TimerEvent: {}
+[20.282894] (-) TimerEvent: {}
+[20.383354] (-) TimerEvent: {}
+[20.483689] (-) TimerEvent: {}
+[20.584027] (-) TimerEvent: {}
+[20.684354] (-) TimerEvent: {}
+[20.710941] (linglong_control) StdoutLine: {'line': b'13: ============================= test session starts ==============================\n'}
+[20.711782] (linglong_control) StdoutLine: {'line': b'13: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[20.713742] (linglong_control) StdoutLine: {'line': b'13: cachedir: build-release/linglong_control/ament_cmake_pytest/test_left_arm_configuration/.cache\n'}
+[20.714496] (linglong_control) StdoutLine: {'line': b'13: rootdir: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws\n'}
+[20.715031] (linglong_control) StdoutLine: {'line': b'13: plugins: ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, launch-testing-3.4.11, colcon-core-0.21.3, typeguard-4.1.5\n'}
+[20.784481] (-) TimerEvent: {}
+[20.831276] (linglong_control) StdoutLine: {'line': b'13: collected 25 items\n'}
+[20.833097] (linglong_control) StdoutLine: {'line': b'13: \n'}
+[20.884591] (-) TimerEvent: {}
+[20.891965] (linglong_control) StdoutLine: {'line': b'13: ../../src/linglong_control/test/test_left_arm_configuration.py ......... [ 36%]\n'}
+[20.984717] (-) TimerEvent: {}
+[21.029918] (linglong_control) StdoutLine: {'line': b'13: ................                                                         [100%]\n'}
+[21.030975] (linglong_control) StdoutLine: {'line': b'13: \n'}
+[21.031592] (linglong_control) StdoutLine: {'line': b'13: - generated xml file: /workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_left_arm_configuration.xunit.xml -\n'}
+[21.032214] (linglong_control) StdoutLine: {'line': b'13: ============================== 25 passed in 0.32s ==============================\n'}
+[21.077674] (linglong_control) StdoutLine: {'line': b'13: -- run_test.py: return code 0\n'}
+[21.081088] (linglong_control) StdoutLine: {'line': b"13: -- run_test.py: verify result file '/workspace/delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/linglong_control/test_results/linglong_control/test_left_arm_configuration.xunit.xml'\n"}
+[21.084838] (-) TimerEvent: {}
+[21.093596] (linglong_control) StdoutLine: {'line': b'13/13 Test #13: test_left_arm_configuration ......   Passed    1.59 sec\n'}
+[21.101292] (linglong_control) StdoutLine: {'line': b'\n'}
+[21.102253] (linglong_control) StdoutLine: {'line': b'100% tests passed, 0 tests failed out of 13\n'}
+[21.103099] (linglong_control) StdoutLine: {'line': b'\n'}
+[21.103848] (linglong_control) StdoutLine: {'line': b'Label Time Summary:\n'}
+[21.104544] (linglong_control) StdoutLine: {'line': b'gtest     =   0.74 sec*proc (1 test)\n'}
+[21.105135] (linglong_control) StdoutLine: {'line': b'pytest    =  16.81 sec*proc (9 tests)\n'}
+[21.105880] (linglong_control) StdoutLine: {'line': b'\n'}
+[21.106585] (linglong_control) StdoutLine: {'line': b'Total Test time (real) =  17.84 sec\n'}
+[21.119206] (linglong_control) CommandEnded: {'returncode': 0}
+[21.120647] (linglong_control) JobEnded: {'identifier': 'linglong_control', 'rc': 0}
+[21.127853] (-) EventReactorShutdown: {}
