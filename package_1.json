@@ -1,0 +1,16 @@
+{
+  "name": "linglong_1025_2",
+  "version": "1.0.0",
+  "description": "快速说明：本项目在主控本机运行，提供网页 UI 用于对 5 路 CAN 总线（左腿、右腿、左臂、右臂、头部）和 IMU USB 姿态单元进行一键自检。",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -1,0 +1,115 @@
+拔差之后需要从新执行：
+先看 can0 是否还在：
+ip link show can0
+
+能看到
+sudo ip link set can0 down
+sudo ip link set can0 up type can bitrate 1000000 restart-ms 100
+
+ip -details link show can0
+
+然后在运行
+candump can0
+
+dandu.py
+默认20度
+python3 dandu.py 1
+
+python3 dandu.py 5 40
+
+
+1、sudo apt update
+sudo apt install python3-flask python3-flask-cors python3-serial python3-numpy
+2、pip3 install flask-socketio
+3、pip3 install python-socketio
+4、pip3 install flask-socketio eventlet --no-index --find-links=.
+5、python3 app.py
+
+
+
+
+1. 首先确认串口端口
+在Windows上查看串口端口号：
+
+打开设备管理器
+
+找到"端口 (COM 和 LPT)"
+
+查看你的USB串口设备对应的COM号（比如 COM3, COM4 等）
+
+2. 运行测试
+bash
+# 头部测试 - 单次播放
+python test_head_serial.py -p COM3 -f 30
+
+# 头部测试 - 循环播放
+python test_head_serial.py -p COM3 -l -f 30
+
+# 左臂测试
+python test_left_arm_serial.py -p COM3 -l -f 30
+
+# 右臂测试
+python test_right_arm_serial.py -p COM3 -l -f 30
+
+# 左腿测试
+python test_left_leg_serial.py -p COM3 -l -f 30
+
+# 右腿测试
+python test_right_leg_serial.py -p COM3 -l -f 30
+3. 如果不确定端口号，让程序自动检测
+bash
+# 不指定端口，程序会自动列出所有可用端口
+python test_head_serial.py -l -f 30
+程序会显示：
+
+text
+可用串口列表:
+  [0] COM3 - USB Serial Port
+  [1] COM4 - Some other device
+请选择串口编号:
+4. 调整参数
+-p, --port: 串口端口号
+
+-b, --baudrate: 波特率（默认115200，如果主控使用其他波特率需要修改）
+
+-l, --loop: 循环播放模式
+
+-f, --fps: 帧率（默认50，可以调低到30或10进行测试）
+
+5. 安全提示
+先不要连接电机，先测试串口通信是否正常
+
+确认主控板程序已正确烧录
+
+先使用低帧率测试（如 -f 10）
+
+确保角度值在电机安全范围内
+
+准备好急停按钮
+
+6. 如果串口连接失败
+如果出现连接失败，检查：
+
+主控板是否已通电
+
+USB线是否连接好
+
+串口驱动是否安装
+
+波特率是否匹配
+
+是否有其他程序占用了串口
+
+7. 测试步骤建议
+bash
+# 第1步：先测试串口通信（低帧率，单次播放）
+python test_head_serial.py -p COM3 -f 10
+
+# 第2步：如果成功，增加帧率
+python test_head_serial.py -p COM3 -f 30
+
+# 第3步：测试循环播放
+python test_head_serial.py -p COM3 -l -f 30
+
+# 第4步：测试其他部位
+python test_left_arm_serial.py -p COM3 -l -f 30

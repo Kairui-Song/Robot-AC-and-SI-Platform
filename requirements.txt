@@ -1,0 +1,7 @@
+Flask
+flask-socketio
+pyserial
+python-can
+pywebview
+websocket-client
+reportlab

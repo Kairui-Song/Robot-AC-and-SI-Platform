@@ -1,0 +1,8 @@
+Fix: avoid stale telemetry and harden CAN mask behavior
+
+- Add timestamps to controller status samples and expose `status_fresh` / `status_age_seconds`.
+- Make status fresh threshold configurable via `LINGLONG_STATUS_FRESH_SECONDS` (default 2s).
+- Add environment switch `LINGLONG_ENABLE_CAN_MASK` to control CAN interface masking.
+- Strengthen exception logging around `can_mask.disable_all_except` to capture stack traces and safely fall back.
+
+Includes unit-like simulation script `tools/simulate_benchmark_run.py` and CHANGELOG entry.

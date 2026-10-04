@@ -1,0 +1,6 @@
+Integrated project:
+- Frontend UI: LingLong 1025 self-check system
+- Driver bridge: peak_driver_bridge.py
+- CAN driver script: ../peak-linux-driver-8.20.0/scripts/quanbu_tongshi.py
+- Default CAN channel: usb-can0
+- Entry: start_peak_ui.bat

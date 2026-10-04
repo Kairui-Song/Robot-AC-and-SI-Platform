@@ -1,0 +1,15 @@
+{
+  "mode": "ssh",
+  "host": "192.168.1.201",
+  "user": "enpht",
+  "ssh_key": "/home/rx01296/.ssh/id_ed25519",
+  "known_hosts": "/home/rx01296/.ssh/known_hosts",
+  "remote_script": "/opt/linglong/ethercat_left_arm_test.py",
+  "remote_dance_script": "/opt/linglong/dance_flow.sh",
+  "remote_preflight": "/opt/linglong/bin/controller_test_client",
+  "remote_controller_test": "/opt/linglong/bin/je_single_motor_test_v2",
+  "master_index": 0,
+  "expected_slave_count": 1,
+  "connect_timeout": 8,
+  "total_timeout": 90
+}
