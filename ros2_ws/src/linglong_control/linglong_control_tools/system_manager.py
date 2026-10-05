@@ -177,6 +177,27 @@ class SystemManager(Node):
         # reason to invent a new fault threshold. The core enforces its cycle
         # timeout; missing/delayed feedback and stopped counters remain blocking.
         healthy = level in (0, 1) and health['feedback_age_seconds'] == 0
+        if healthy and self.policy.backend == 'ethercat_left_arm':
+            # Internal lifecycle flags alone do not prove CiA402 drive state.
+            try:
+                bus = self.monitor.snapshot['ethercat_bus']
+                if any(bus.get(k) != 1 for k in ('link_up', 'feedback_valid', 'state_valid')) or \
+                        bus.get('wc_state') != 2 or bus.get('working_counter', 0) <= 0:
+                    raise ValueError('physical bus feedback is incomplete')
+                for slave in (1, 2, 3, 5):
+                    drive = self.monitor.snapshot[f'ethercat_slave_{slave}']
+                    if any(drive.get(k) != 1 for k in ('online', 'operational', 'state_valid', 'sample_valid')) or \
+                            drive.get('al_state') != 8 or drive.get('mode_display') != 8:
+                        raise ValueError(f'slave p{slave}: OP/CSP feedback not confirmed')
+                    status = drive['status_word']
+                    if not math.isfinite(status) or status != int(status) or not 0 <= status <= 65535:
+                        raise ValueError(f'slave p{slave}: invalid status word')
+                    if health['hardware_state'] == HardwareState.INACTIVE and int(status) & 0x004f != 0x0040:
+                        raise ValueError(f'slave p{slave}: disabled drive feedback not confirmed')
+                    if health['hardware_state'] == HardwareState.ACTIVE and int(status) & 0x006f != 0x0027:
+                        raise ValueError(f'slave p{slave}: enabled drive feedback not confirmed')
+            except (KeyError, ValueError, TypeError) as error:
+                return health, False, str(error)
         return health, healthy, reason
 
     def observe(self, now):

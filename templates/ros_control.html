@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+  #rosControl button:disabled { opacity: .35; cursor: not-allowed; box-shadow: none; filter: grayscale(1); }
+  #rosControl input { box-sizing: border-box; max-width: 100%; padding: 10px; margin-top: 8px; background: #151515; color: #eee; border: 1px solid #555; border-radius: 6px; }
+  #rosControl .notice-banner { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+  #rosControl .summary-card label, #rosControl label.summary-card { display: block; }
+  #rosControl p { line-height: 1.6; }
+</style>
+<div id="rosControl">
 <header class="top-bar"><div><h2>ROS 整臂控制</h2><p>状态反馈、使能与四关节轨迹</p></div></header>
 <section class="notice-banner"><strong id="rosConnection">连接检测中</strong><span id="rosReason">等待主控反馈</span></section>
 <section class="content-grid">
@@ -37,5 +45,6 @@
   </article>
   <article class="glass-card card-wide"><label>管理员令牌（配置后填写） <input id="rosAdminToken" type="password" autocomplete="off" /></label></article>
 </section>
+</div>
 <script src="/static/js/ros_control.js"></script>
 {% endblock %}

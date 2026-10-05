@@ -307,3 +307,25 @@ def test_state_message_labels_expired_health_as_history(module):
     assert not message['feedback_fresh']
     assert message['last_observed_health']['active'] == 1.
     assert 'control cycle timeout' in message['reason']
+
+
+def test_physical_ready_requires_disabled_drive_feedback_not_only_internal_flags(module):
+    node = adapter(module)
+    node.policy = SystemStateMachine('ethercat_left_arm')
+    health = dict(hardware_state=4., commands_enabled=0., transition_sequence=4.,
+                  active=0., fault_code=0., feedback_age_seconds=0.)
+    resources = {'control_health': health, 'ethercat_bus': dict(
+        link_up=1, feedback_valid=1, state_valid=1, wc_state=2, working_counter=12)}
+    for slave in (1, 2, 3, 5):
+        resources[f'ethercat_slave_{slave}'] = dict(online=1, operational=1, state_valid=1,
+            sample_valid=1, al_state=8, mode_display=8, status_word=0x27)
+    node.monitor = NS(snapshot=resources, last_received=1., last_progress=1.,
+                      status=lambda now: (1, 'inactive'))
+    node.hardware_time = node.controller_time = 1.
+    node.stale_timeout = 1.
+    assert not node.evidence(1.1)[1]
+    for slave in (1, 2, 3, 5):
+        resources[f'ethercat_slave_{slave}']['status_word'] = 0x40
+    assert node.evidence(1.1)[1]
+    resources['ethercat_slave_5']['sample_valid'] = 0
+    assert not node.evidence(1.1)[1]
