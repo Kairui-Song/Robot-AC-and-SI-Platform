@@ -58,7 +58,7 @@ def setup(context):
     supervisor = Node(package='linglong_control', executable='system_manager', output='screen',
         parameters=[{'backend': backend, 'hardware_name': hardware_name, 'nominal_period': 1.0 / rate}])
     gateway = Node(package='linglong_control', executable='web_gateway', output='screen',
-        parameters=[{'backend': backend, 'robot_description': description}],
+        parameters=[{'backend': backend, **robot}],
         condition=IfCondition(LaunchConfiguration('web_gateway')))
 
     def after_broadcaster(event, _context):

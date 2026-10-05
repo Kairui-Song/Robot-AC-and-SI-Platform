@@ -15,3 +15,5 @@ colcon --log-base log-state-machine test --build-base build-state-machine --inst
   --packages-select linglong_control arm_control --event-handlers console_direct-
 colcon test-result --test-result-base build-state-machine --verbose
 python3 tools/verify_system_state.py
+python3 tools/verify_fault_delivery.py
+python3 tools/verify_web_integration.py

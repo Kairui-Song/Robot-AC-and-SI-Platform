@@ -38,7 +38,7 @@ ROS 命令接口为 `position`，单位 rad；状态接口为 `position`/`veloci
 
 ## 已有健康接口
 
-`control_health` 随 `/dynamic_joint_states` 发布八个字段：
+`control_health` 随 `/dynamic_joint_states` 发布原有八个基础字段，并增加三个状态机字段：
 
 - `mock`：模拟为 1，物理后端为 0；0 只是后端标记，不是实机验收结论。
 - `active`：硬件控制核心是否激活，不是控制器资源占用状态。
@@ -47,6 +47,9 @@ ROS 命令接口为 `position`，单位 rad；状态接口为 `position`/`veloci
 - `period_seconds`、`max_period_seconds`：观测周期及最大观测周期，单位 s。
 - `deadline_misses`：超过 1.5 倍标称周期的观测次数。
 - `feedback_age_seconds`：插件记录的反馈延迟信息，不代替原始 WKC 与采样时戳。
+- `hardware_state`：`hardware_state.hpp` / `system_state.py` 共享的硬件阶段编号（0–9）。
+- `transition_sequence`：硬件状态切换序列号。
+- `commands_enabled`：当前插件是否允许控制器位置命令；ACTIVE 本身不等于拥有命令接口。
 
 新插件发生故障时可导出 NaN 关节状态，避免把最后一次位置继续标作健康测量。
 诊断与故障快照必须显式选择正确后端。
