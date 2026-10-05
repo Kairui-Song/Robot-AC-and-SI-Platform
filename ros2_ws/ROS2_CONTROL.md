@@ -1,5 +1,7 @@
 # Linglong ros2_control 模拟控制栈
 
+当前启动先进入 READY，显式调用 `ros2 run linglong_control system_client enable` 后再执行动作；网页入口和完整步骤见 [WEB_CONTROL.md](WEB_CONTROL.md)。
+
 统一约定见 [SYSTEM_CONTRACT.md](SYSTEM_CONTRACT.md)，自动录制/归档/分析/回放验收见 [BAG_WORKFLOW.md](BAG_WORKFLOW.md)。后者已替代仅有手动录包命令的操作入口，但尚无本轮 ROS 实际运行记录。
 
 本次按“先模拟闭环与接口，再按现场配置接硬件”实现。目标环境为 **Ubuntu 24.04 + ROS2 Jazzy**。
@@ -54,6 +56,8 @@ ros2 launch linglong_control control.launch.py
 ros2 control list_controllers
 ros2 control list_hardware_components
 ros2 control list_hardware_interfaces
+ros2 run linglong_control system_client ready
+ros2 run linglong_control system_client enable
 ros2 run linglong_control trajectory_demo
 ```
 

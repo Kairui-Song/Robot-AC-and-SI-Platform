@@ -9,11 +9,12 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     share = Path(get_package_share_directory('linglong_control'))
-    names = ('backend', 'hardware_config', 'rviz')
+    names = ('backend', 'hardware_config', 'rviz', 'web_gateway')
     return LaunchDescription([
         DeclareLaunchArgument('backend', default_value='mock'),
         DeclareLaunchArgument('hardware_config', default_value=''),
         DeclareLaunchArgument('rviz', default_value='true'),
+        DeclareLaunchArgument('web_gateway', default_value='true'),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(str(share / 'launch/control.launch.py')),
             launch_arguments={name: LaunchConfiguration(name) for name in names}.items()),
     ])

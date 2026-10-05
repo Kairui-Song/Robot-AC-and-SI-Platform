@@ -23,6 +23,8 @@ ros2 launch linglong_control left_arm.launch.py backend:=mock
 ```bash
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
+ros2 run linglong_control system_client ready
+ros2 run linglong_control system_client enable
 ros2 run linglong_control left_arm_motion --wave --duration 6
 ```
 
@@ -40,7 +42,7 @@ wave 沿用 `controller/dance_flow.sh` 的四轴相位与幅度比例，改为�
 物理后端仍使用已有 `backend:=ethercat_left_arm` 和经现场确认的 `hardware_config`，构建需要已有 IgH 开发环境及 `-DLINGLONG_WITH_IGH=ON`。动作客户端物理模式还需显式传入 `--backend ethercat_left_arm --hardware-config <同一配置文件>`；默认 mock 不接受物理反馈。
 模板继续保留未确认标记，不能直接用作现场标定。参见 [接入要求](LEFT_ARM_HARDWARE.md)。本轮没有运行物理模式。
 
-新增 `ethercat_bus` 和 `ethercat_slave_1/2/3/5` 状态资源，由 joint_state_broadcaster 进入 `/dynamic_joint_states`，再传给诊断及 fault_snapshot JSON。mock 的八字段健康接口不变。
+新增 `ethercat_bus` 和 `ethercat_slave_1/2/3/5` 状态资源，由 joint_state_broadcaster 进入 `/dynamic_joint_states`，再传给诊断及 fault_snapshot JSON。两个后端在原八字段健康接口上增加 `hardware_state`、`transition_sequence`、`commands_enabled`，供系统状态机确认生命周期和命令所有权。
 字段定义见 [接口说明](../docs/ethercat/INTERFACES.md)。这些是插件报告的数据，不是独立硬件测量或实机验收证据。
 控制循环故障后 ROS 状态流可能停止，最后一次故障帧不保证被发布；生命周期错误日志同时记录锁存故障码、站号及 WKC。恢复仍需排查原因、重启并重新确认，不自动恢复旧轨迹。
 

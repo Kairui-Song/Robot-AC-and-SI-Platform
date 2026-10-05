@@ -49,7 +49,7 @@ trap 'exit 143' TERM
 start_mock() {
   local logfile="$1"
   shift
-  setsid ros2 launch linglong_control control.launch.py rviz:=false "$@" >"$logfile" 2>&1 &
+  setsid ros2 launch linglong_control control.launch.py rviz:=false web_gateway:=false "$@" >"$logfile" 2>&1 &
   launch_pid=$!
 }
 start_mock "$records/launch.log"

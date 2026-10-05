@@ -67,6 +67,13 @@ TEST(SimPlugin, InterfacesActivationAndFaultLatch)
   ASSERT_EQ(commands.size(), 4u);
   const rclcpp_lifecycle::State previous;
   ASSERT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
+  EXPECT_DOUBLE_EQ(states[16].get_value(), 4.0);  // INACTIVE
+  EXPECT_DOUBLE_EQ(states[18].get_value(), 0.0);  // No command ownership
+  const auto inactive_cycles = states[11].get_value();
+  EXPECT_EQ(system.read(rclcpp::Time(0), rclcpp::Duration::from_seconds(.01)),
+    hardware_interface::return_type::OK);
+  EXPECT_GT(states[11].get_value(), inactive_cycles);
+  EXPECT_DOUBLE_EQ(states[0].get_value(), 0.2);  // Fresh feedback, no motion
   ASSERT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::SUCCESS);
   for (auto & command : commands) {EXPECT_DOUBLE_EQ(command.get_value(), 0.2);}
   const std::vector<std::string> keys{
@@ -76,15 +83,24 @@ TEST(SimPlugin, InterfacesActivationAndFaultLatch)
     hardware_interface::return_type::ERROR);
   ASSERT_EQ(system.prepare_command_mode_switch(keys, {}), hardware_interface::return_type::OK);
   ASSERT_EQ(system.perform_command_mode_switch(keys, {}), hardware_interface::return_type::OK);
+  EXPECT_DOUBLE_EQ(states[16].get_value(), 6.0);  // ACTIVE
+  EXPECT_DOUBLE_EQ(states[18].get_value(), 1.0);
   (void)commands[3].set_value(2.0);
   EXPECT_EQ(system.write(rclcpp::Time(0), rclcpp::Duration::from_seconds(.01)),
     hardware_interface::return_type::ERROR);
   EXPECT_TRUE(std::isnan(states[0].get_value()));
+  EXPECT_DOUBLE_EQ(states[16].get_value(), 7.0);  // FAULT
+  EXPECT_DOUBLE_EQ(states[18].get_value(), 0.0);
   EXPECT_EQ(system.on_error(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::FAILURE);
   // MOCK reconfiguration resets the fault but remains inactive until explicit enable.
   EXPECT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
+  EXPECT_DOUBLE_EQ(states[16].get_value(), 4.0);
+  EXPECT_DOUBLE_EQ(states[18].get_value(), 0.0);  // Recovery never authorizes commands
   EXPECT_EQ(system.on_cleanup(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::SUCCESS);
+  EXPECT_EQ(system.on_shutdown(previous), hardware_interface::CallbackReturn::SUCCESS);
+  EXPECT_DOUBLE_EQ(states[16].get_value(), 9.0);
+  EXPECT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::FAILURE);
 }

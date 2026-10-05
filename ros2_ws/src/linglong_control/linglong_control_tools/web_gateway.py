@@ -23,6 +23,7 @@ from linglong_control_tools.gateway_http import GatewayTransport, make_server
 from linglong_control_tools.health import HealthMonitor
 from linglong_control_tools.interfaces import JOINT_NAMES, TRAJECTORY_ACTION
 from linglong_control_tools.left_arm_motion_plan import build_plan
+from linglong_control_tools.acceptance import cancel_matches
 
 
 class WebGateway(Node):
@@ -44,6 +45,7 @@ class WebGateway(Node):
         self.goal = None
         self.goal_handle = None
         self.lifecycle_pending = False
+        self.lifecycle_sequence = 0
         self.transport = GatewayTransport(os.environ.get('LINGLONG_ROS_TOKEN', ''))
         self.clients = {c: self.create_client(Trigger, '/system/' + c)
                         for c in ('enable', 'disable', 'recover', 'shutdown')}
@@ -83,6 +85,7 @@ class WebGateway(Node):
         if healthy:
             joints = {name: dict(self.monitor.snapshot[name]) for name in JOINT_NAMES}
         return dict(ok=connected, connected=connected, backend=self.backend, system=system,
+                    command_pending=self.lifecycle_pending or system.get('transition_sequence', -1) < self.lifecycle_sequence,
                     feedback_fresh=healthy, joints=joints, limits=self.limits,
                     goal=dict(self.goal) if self.goal else None)
 
@@ -123,13 +126,16 @@ class WebGateway(Node):
                 raise ValueError('cancel takes an empty JSON object')
             if self.goal_handle is None or not self.goal or self.goal['status'] not in ('ACCEPTED', 'RUNNING'):
                 raise RuntimeError('no accepted Web trajectory to cancel')
-            self.goal_handle.cancel_goal_async().add_done_callback(lambda f: self.cancel_reply(task, f))
+            handle = self.goal_handle
+            handle.cancel_goal_async().add_done_callback(lambda f: self.cancel_reply(task, f, handle))
 
     def lifecycle_reply(self, task, future):
         self.lifecycle_pending = False
         try:
             result = future.result()
             detail = json.loads(result.message) if result.success else result.message
+            if result.success:
+                self.lifecycle_sequence = detail['transition_sequence']
             task.finish(202 if result.success else 409, ok=result.success,
                         accepted=result.success, operation=task.command, detail=detail)
         except Exception as error:
@@ -138,7 +144,7 @@ class WebGateway(Node):
     def send_trajectory(self, task, view):
         system = view['system']
         if system.get('state') != 'ENABLED' or not system.get('motion_authorized') or \
-                system.get('operation') or not system.get('feedback_fresh') or not view['feedback_fresh']:
+                view['command_pending'] or system.get('operation') or not system.get('feedback_fresh') or not view['feedback_fresh']:
             raise RuntimeError('trajectory requires ENABLED, supervisor authorization and fresh feedback')
         if self.goal and self.goal['status'] in ('SUBMITTING', 'ACCEPTED', 'RUNNING', 'CANCELLING', 'UNKNOWN'):
             raise RuntimeError('a Web trajectory is already in progress')
@@ -197,11 +203,11 @@ class WebGateway(Node):
             self.goal.update(status='UNKNOWN', result=dict(error=str(error)))
         self.goal_handle = None
 
-    def cancel_reply(self, task, future):
+    def cancel_reply(self, task, future, handle):
         try:
             result = future.result()
-            accepted = bool(result.goals_canceling)
-            if accepted and self.goal_handle is not None:
+            accepted = cancel_matches(result, handle.goal_id)
+            if accepted and self.goal_handle is handle:
                 self.goal['status'] = 'CANCELLING'
             task.finish(202 if accepted else 409, ok=accepted, accepted=accepted,
                         detail='cancellation requested; await trajectory result')

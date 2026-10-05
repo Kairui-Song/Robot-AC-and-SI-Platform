@@ -49,10 +49,11 @@ def node_for(module, state='ENABLED'):
     node.backend = 'mock'
     node.monitor = HealthMonitor(stale_timeout=1.)
     node.system = dict(state=state, backend='mock', motion_authorized=state == 'ENABLED',
-                       operation=None, feedback_fresh=True)
+                       operation=None, feedback_fresh=True, transition_sequence=0)
     node.system_received = time.monotonic()
     node.goal = node.goal_handle = None
     node.lifecycle_pending = False
+    node.lifecycle_sequence = 0
     node.limits = {name: dict(lower=-1.57, upper=1.57, max_velocity=.1) for name in JOINT_NAMES}
     node.transport = GatewayTransport(timeout=.3)
     node.action = Mock()
@@ -151,6 +152,35 @@ def test_expired_queue_task_is_never_executed(gateway_module):
     node.clients['enable'].call_async.assert_not_called()
 
 
+def test_disable_acknowledgment_blocks_motion_until_new_system_sequence(gateway_module):
+    node = node_for(gateway_module)
+    request = task('disable')
+    node.execute(request)
+    with pytest.raises(RuntimeError, match='requires ENABLED'):
+        node.execute(task('trajectory', dict(offsets=[.01]*4, duration=6)))
+    node.lifecycle_reply(request, NS(result=lambda: NS(success=True,
+        message=json.dumps(dict(accepted='disable', transition_sequence=3)))))
+    assert node.view()['command_pending']
+    with pytest.raises(RuntimeError, match='requires ENABLED'):
+        node.execute(task('trajectory', dict(offsets=[.01]*4, duration=6)))
+    node.action.send_goal_async.assert_not_called()
+    node.system.update(state='READY', motion_authorized=False, transition_sequence=4)
+    assert not node.view()['command_pending']
+
+
+def test_late_cancel_reply_cannot_modify_a_new_goal(gateway_module):
+    node = node_for(gateway_module)
+    old_handle = NS(goal_id=NS(uuid=[1]*16))
+    new_handle = NS(goal_id=NS(uuid=[2]*16))
+    node.goal_handle = new_handle
+    node.goal = dict(id='new', status='ACCEPTED')
+    request = task('cancel')
+    response = NS(return_code=0, goals_canceling=[NS(goal_id=old_handle.goal_id)])
+    node.cancel_reply(request, NS(result=lambda: response), old_handle)
+    assert request.result['accepted']
+    assert node.goal['status'] == 'ACCEPTED' and node.goal['id'] == 'new'
+
+
 @pytest.fixture
 def server():
     transport = GatewayTransport(token='test-token', timeout=.2)
@@ -205,6 +235,8 @@ def test_flask_http_ros_adapter_round_trip(server, gateway_module, monkeypatch):
     flask = pytest.importorskip('flask')
     # This test is also run from colcon; locate the Web module explicitly.
     root = Path(__file__).resolve().parents[4]
+    if not (root / 'ros_control_bridge.py').is_file():
+        pytest.skip('Web platform source is not included in this standalone ROS package')
     spec = importlib.util.spec_from_file_location('bridge_under_test', root / 'ros_control_bridge.py')
     bridge = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(bridge)
@@ -217,7 +249,7 @@ def test_flask_http_ros_adapter_round_trip(server, gateway_module, monkeypatch):
     node = node_for(gateway_module, 'READY')
     node.transport = transport
     def complete(future_callback):
-        node.system.update(state='ENABLED', motion_authorized=True)
+        node.system.update(state='ENABLED', motion_authorized=True, transition_sequence=3)
         future_callback(NS(result=lambda: NS(success=True,
             message=json.dumps(dict(transition_sequence=3, accepted='enable')))))
     node.clients['enable'].call_async.return_value.add_done_callback.side_effect = complete

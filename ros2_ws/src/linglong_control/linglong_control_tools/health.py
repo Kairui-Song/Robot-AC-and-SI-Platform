@@ -1,6 +1,5 @@
 """ROS-independent health checks; receipt and progress time use a monotonic clock."""
 import math
-import json
 
 from linglong_control_tools.interfaces import JOINT_NAMES
 FAULTS = {

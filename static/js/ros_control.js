@@ -16,7 +16,7 @@
     el('rosOperation').textContent = s.operation ? `正在处理：${s.operation}` : s.last_result ? `上次操作：${s.last_result.operation} · ${s.last_result.success ? '完成' : '失败'} · ${s.last_result.reason}` : '暂无状态切换';
     const goal = view.goal || {};
     el('rosGoal').textContent = goal.status ? `轨迹：${goal.status}${goal.result ? ' · ' + (goal.result.message || '') : ''}` : '暂无轨迹';
-    const busy = pending || !!s.operation || !!s.restart_required || !connected;
+    const busy = pending || !!view.command_pending || !!s.operation || !!s.restart_required || !connected;
     document.querySelectorAll('[data-ros-command]').forEach(button => {
       const c = button.dataset.rosCommand;
       const allowed = c === 'enable' ? s.state === 'READY' && view.feedback_fresh :

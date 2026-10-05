@@ -55,6 +55,7 @@ def scenario(out, kind):
     with path.open('w') as log:
         launch = subprocess.Popen(['ros2', 'launch', 'linglong_control', 'control.launch.py',
                                    'backend:=mock', 'rviz:=false',
+                                   'web_gateway:=false',
                                    f'fault_after_cycles:={300 if kind == "injected" else 0}'],
                                   stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
         try:

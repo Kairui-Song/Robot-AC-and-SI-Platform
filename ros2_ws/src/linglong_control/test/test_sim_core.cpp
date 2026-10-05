@@ -72,6 +72,16 @@ int main()
       core.write({0.4, -0.1}); core.read(0.01);
       near(core.positions()[0], 0.3);
     });
+    test("inactive feedback progresses without consuming active fault injection", [] {
+      SimConfig config; config.fault_after_cycles = 2;
+      auto core = make(config);
+      require(core.configure(), "configure failed");
+      for (int i = 0; i < 100; ++i) {require(core.read(.01), "inactive feedback failed");}
+      require(core.cycles() == 100 && !core.active(), "inactive feedback counter stopped");
+      near(core.positions()[0], .3);
+      require(core.activate() && core.read(.01), "first active cycle failed");
+      require(!core.read(.01) && core.fault() == Fault::injected, "active fault injection missing");
+    });
     test("reactivation discards stale target", [] {
       auto core = make(); start(core);
       core.write({0.33, -0.17}); core.read(0.01); core.deactivate();

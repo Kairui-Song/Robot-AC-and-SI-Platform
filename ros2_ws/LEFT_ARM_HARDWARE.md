@@ -67,7 +67,7 @@ ros2 launch linglong_control control.launch.py \
   hardware_config:=/absolute/path/to/left_arm_calibrated.yaml rviz:=false
 ```
 
-该启动会配置硬件并执行四关节 CiA402 使能流程。启动时目标先对齐各关节实测位置，
+该启动只配置硬件并建立禁用驱动的周期通信；等待 `/system/state` 为 READY 后，显式执行 `ros2 run linglong_control system_client enable` 或在网页点击使能，才执行四关节 CiA402 使能流程。激活时目标先对齐各关节实测位置，
 所有关节均进入 CSP/Operation Enabled 才允许控制器执行指令，不自动复位驱动故障。
 原 `trajectory_demo` 和故障注入实验仍只允许 MOCK，不能用作实机验收工具。
 
