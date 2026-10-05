@@ -14,6 +14,9 @@
                 <strong>主控测试平台</strong>
             </div>
             <nav class="nav-icons">
+                <a class="nav-item {% if page == 'ros-control' %}active{% endif %}" href="{{ url_for('ros_control') }}">
+                    <span class="nav-icon">↔</span><span>ROS 整臂控制</span>
+                </a>
                 <a class="nav-item {% if page == 'overview' %}active{% endif %}" href="{{ url_for('index') }}">
                     <span class="nav-icon">⌂</span>
                     <span>整机总览</span>

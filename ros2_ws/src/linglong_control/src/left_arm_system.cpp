@@ -61,7 +61,7 @@ Callback LeftArmSystem::on_init(const hardware_interface::HardwareInfo & info)
     }
     std::set<std::string> health;
     for (const auto & s : info_.sensors[0].state_interfaces) {health.insert(s.name);}
-    if (info_.sensors[0].state_interfaces.size() != 8 ||
+    if (info_.sensors[0].state_interfaces.size() != health_names_.size() ||
       health != std::set<std::string>(health_names_.begin(), health_names_.end())) {
       throw std::invalid_argument("Invalid health interfaces");
     }
@@ -96,9 +96,11 @@ Callback LeftArmSystem::on_init(const hardware_interface::HardwareInfo & info)
     bus_config_.watchdog_intervals = integer(p, "watchdog_intervals", 65535);
     if (!bus_config_.watchdog_intervals) {throw std::invalid_argument("Drive watchdog must be configured");}
     core_ = std::make_unique<LeftArmCore>(calibration);
+    state_.transition(HardwareState::INIT);
     positions_.fill(std::numeric_limits<double>::quiet_NaN());
     velocities_ = commands_ = positions_;
   } catch (const std::exception & e) {
+    state_.transition(HardwareState::FAULT);
     RCLCPP_ERROR(rclcpp::get_logger("left_arm"), "Configuration rejected: %s", e.what());
     return Callback::ERROR;
   }
@@ -112,7 +114,7 @@ std::vector<hardware_interface::StateInterface> LeftArmSystem::export_state_inte
     result.emplace_back(left_arm_names[i], "position", &positions_[i]);
     result.emplace_back(left_arm_names[i], "velocity", &velocities_[i]);
   }
-  for (std::size_t i = 0; i < 8; ++i) {result.emplace_back("control_health", health_names_[i], &health_[i]);}
+  for (std::size_t i = 0; i < health_names_.size(); ++i) {result.emplace_back("control_health", health_names_[i], &health_[i]);}
   for (std::size_t i = 0; i < arm_bus_fields.size(); ++i) {
     result.emplace_back("ethercat_bus", arm_bus_fields[i], &bus_health_[i]);
   }
@@ -134,6 +136,13 @@ void LeftArmSystem::states()
   health_[0] = 0;  // Physical PDO feedback; never labelled mock.
   health_[1] = core_->active() ? 1 : 0;
   health_[2] = core_->fault();
+  if (core_->fault()) {
+    commands_enabled_ = false;
+    state_.transition(HardwareState::FAULT);
+  }
+  health_[8] = static_cast<double>(state_.state());
+  health_[9] = static_cast<double>(state_.sequence());
+  health_[10] = commands_enabled_ ? 1 : 0;
   const auto & d = bus_.diagnostic();
   bus_health_[0] = d.link_up;
   bus_health_[1] = d.working_counter;
@@ -201,11 +210,15 @@ bool LeftArmSystem::startup(bool enable)
 Callback LeftArmSystem::on_configure(const rclcpp_lifecycle::State &)
 {
   std::lock_guard<std::mutex> lock(mutex_);
-  if (!core_ || core_->fault() || configured_) {return Callback::FAILURE;}
+  if (!core_ || core_->fault() || configured_ || state_.state() != HardwareState::INIT) {return Callback::FAILURE;}
   try {
+    state_.transition(HardwareState::DISCOVERING);
     bus_.open(bus_config_);
+    state_.transition(HardwareState::CONFIGURING);
     if (!startup(false)) {bus_.close(); return Callback::FAILURE;}
     configured_ = true;
+    state_.transition(HardwareState::INACTIVE);
+    states();
     return Callback::SUCCESS;
   } catch (const std::exception & e) {
     core_->fail(9);
@@ -219,22 +232,37 @@ Callback LeftArmSystem::on_activate(const rclcpp_lifecycle::State &)
   std::lock_guard<std::mutex> lock(mutex_);
   if (!configured_ || core_->fault()) {return Callback::FAILURE;}
   commands_enabled_ = false;
-  return startup(true) ? Callback::SUCCESS : Callback::FAILURE;
+  if (!state_.transition(HardwareState::ACTIVATING)) {return Callback::FAILURE;}
+  if (!startup(true)) {return Callback::FAILURE;}
+  state_.transition(HardwareState::ACTIVE);
+  states();
+  return Callback::SUCCESS;
 }
 Callback LeftArmSystem::on_deactivate(const rclcpp_lifecycle::State &)
 {
   std::lock_guard<std::mutex> lock(mutex_);
   stop();
+  if (state_.state() == HardwareState::ACTIVE) {state_.transition(HardwareState::INACTIVE);}
+  states();
   return Callback::SUCCESS;
 }
 Callback LeftArmSystem::on_cleanup(const rclcpp_lifecycle::State &)
 {
   std::lock_guard<std::mutex> lock(mutex_);
   stop(); bus_.close(); configured_ = false;
+  state_.transition(HardwareState::INIT);
+  if (core_) {states();}
   // Fault remains latched even through cleanup. Correct cause and restart.
   return Callback::SUCCESS;
 }
-Callback LeftArmSystem::on_shutdown(const rclcpp_lifecycle::State & s) {return on_cleanup(s);}
+Callback LeftArmSystem::on_shutdown(const rclcpp_lifecycle::State &)
+{
+  std::lock_guard<std::mutex> lock(mutex_);
+  stop(); bus_.close(); configured_ = false;
+  state_.transition(HardwareState::SHUTDOWN);
+  if (core_) {states();}
+  return Callback::SUCCESS;
+}
 Callback LeftArmSystem::on_error(const rclcpp_lifecycle::State &)
 {
   std::lock_guard<std::mutex> lock(mutex_);
@@ -307,6 +335,7 @@ Result LeftArmSystem::perform_command_mode_switch(
     commands_ = core_->positions();
     commands_enabled_ = owns(start);
   }
+  states();
   return Result::OK;
 }
 }  // namespace linglong_control

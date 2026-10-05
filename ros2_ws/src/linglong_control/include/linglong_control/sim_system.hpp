@@ -6,6 +6,7 @@
 #include <vector>
 #include "hardware_interface/system_interface.hpp"
 #include "linglong_control/sim_core.hpp"
+#include "linglong_control/hardware_state.hpp"
 
 namespace linglong_control
 {
@@ -34,10 +35,9 @@ private:
   std::vector<double> positions_, velocities_, commands_;
   std::vector<std::string> command_keys_;
   bool commands_enabled_{false};
-  static constexpr std::array<const char *, 8> health_names_{
-    "mock", "active", "fault_code", "cycles", "period_seconds", "max_period_seconds",
-    "deadline_misses", "feedback_age_seconds"};
-  std::array<double, 8> health_{};
+  HardwareStateMachine state_;
+  static constexpr auto health_names_ = control_health_names;
+  std::array<double, control_health_names.size()> health_{};
   std::chrono::steady_clock::time_point last_read_;
 };
 }  // namespace linglong_control

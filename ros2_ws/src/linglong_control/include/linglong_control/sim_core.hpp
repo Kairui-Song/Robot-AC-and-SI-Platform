@@ -66,6 +66,7 @@ public:
     }
     configured_ = true;
     cycles_ = deadline_misses_ = 0;
+    active_cycles_ = 0;
     feedback_age_ = last_period_ = max_period_ = 0.0;
     return true;
   }
@@ -110,23 +111,25 @@ public:
   bool read(double elapsed)
   {
     if (fault_ != Fault::none) {return false;}
-    if (!active_) {return true;}
+    if (!configured_) {return true;}
     ++cycles_;
+    if (active_) {++active_cycles_;}
     if (!positive(elapsed)) {return latch(Fault::cycle_timeout);}
     last_period_ = elapsed;
     max_period_ = std::max(max_period_, elapsed);
     // An observed interval > 1.5 nominal periods; not a hard real-time guarantee.
     if (elapsed > 1.5 * config_.nominal_period) {++deadline_misses_;}
     if (elapsed > config_.cycle_timeout) {return latch(Fault::cycle_timeout);}
-    if (config_.fault_after_cycles && cycles_ >= config_.fault_after_cycles) {
+    if (active_ && config_.fault_after_cycles && active_cycles_ >= config_.fault_after_cycles) {
       return latch(Fault::injected);
     }
-    if (config_.dropout_after_cycles && cycles_ >= config_.dropout_after_cycles) {
+    if (active_ && config_.dropout_after_cycles && active_cycles_ >= config_.dropout_after_cycles) {
       feedback_age_ += elapsed;
       if (feedback_age_ >= config_.feedback_timeout) {return latch(Fault::feedback_timeout);}
       return true;  // Hold last sample, expose its age; do not fabricate a new measurement.
     }
     feedback_age_ = 0.0;
+    if (!active_) {return true;}  // Fresh inactive feedback without simulated motion.
     for (std::size_t i = 0; i < joints_.size(); ++i) {
       const double max_delta = joints_[i].max_velocity * elapsed;
       const double delta = std::clamp(targets_[i] - positions_[i], -max_delta, max_delta);
@@ -175,6 +178,7 @@ private:
   bool configured_{false}, active_{false};
   Fault fault_{Fault::none};
   std::uint64_t cycles_{0}, deadline_misses_{0};
+  std::uint64_t active_cycles_{0};
   double feedback_age_{0.0}, last_period_{0.0}, max_period_{0.0};
 };
 }  // namespace linglong_control

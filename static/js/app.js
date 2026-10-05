@@ -545,8 +545,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const emergencyBtn = document.querySelector('.emergency-button');
     if (emergencyBtn) {
         emergencyBtn.addEventListener('click', () => {
-            socket.emit('stop_test', { target: 'single_motor_preflight' });
-            socket.emit('stop_test', { target: 'controller_benchmark' });
+            socket.emit('stop_test', { target: 'single_motor_preflight',
+                admin_token: document.getElementById('rosAdminToken')?.value || '' });
             appendHardwareLog('已请求停止当前软件测试任务；硬件急停需由独立安全回路执行。', false);
         });
     }

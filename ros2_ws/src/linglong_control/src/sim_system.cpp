@@ -37,6 +37,7 @@ hardware_interface::CallbackReturn SimSystem::on_init(const hardware_interface::
     return hardware_interface::CallbackReturn::ERROR;
   }
   try {
+    state_.transition(HardwareState::INIT);
     // Intentionally supports only mock. A hardware value must never silently fall back to mock.
     if (info_.hardware_parameters.at("backend") != "mock") {
       throw std::invalid_argument("SimSystem only supports backend=mock; no EtherCAT driver installed");
@@ -85,6 +86,7 @@ hardware_interface::CallbackReturn SimSystem::on_init(const hardware_interface::
     commands_ = positions_;
     health_[0] = 1.0;
   } catch (const std::exception & error) {
+    state_.transition(HardwareState::FAULT);
     RCLCPP_ERROR(rclcpp::get_logger("linglong_control"), "Configuration rejected: %s", error.what());
     return hardware_interface::CallbackReturn::ERROR;
   }
@@ -115,6 +117,10 @@ std::vector<hardware_interface::CommandInterface> SimSystem::export_command_inte
 
 void SimSystem::update_states()
 {
+  if (core_->fault() != Fault::none) {
+    commands_enabled_ = false;
+    state_.transition(HardwareState::FAULT);
+  }
   if (core_->fault() == Fault::none) {
     std::copy(core_->positions().begin(), core_->positions().end(), positions_.begin());
     std::copy(core_->velocities().begin(), core_->velocities().end(), velocities_.begin());
@@ -125,12 +131,27 @@ void SimSystem::update_states()
   }
   health_ = {1.0, core_->active() ? 1.0 : 0.0, static_cast<double>(core_->fault()),
     static_cast<double>(core_->cycles()), core_->last_period(), core_->max_period(),
-    static_cast<double>(core_->deadline_misses()), core_->feedback_age()};
+    static_cast<double>(core_->deadline_misses()), core_->feedback_age(),
+    static_cast<double>(state_.state()), static_cast<double>(state_.sequence()),
+    commands_enabled_ ? 1.0 : 0.0};
 }
 
 hardware_interface::CallbackReturn SimSystem::on_configure(const rclcpp_lifecycle::State &)
 {
-  if (!core_->configure()) {return hardware_interface::CallbackReturn::FAILURE;}
+  if (state_.state() == HardwareState::SHUTDOWN) {return hardware_interface::CallbackReturn::FAILURE;}
+  // Framework error handling can leave the plugin UNCONFIGURED without cleanup.
+  if (state_.state() == HardwareState::FAULT) {
+    state_.transition(HardwareState::RECOVERING);
+    core_->cleanup();
+    state_.transition(HardwareState::INIT);
+  }
+  if (state_.state() != HardwareState::INIT || !core_->configure()) {
+    return hardware_interface::CallbackReturn::FAILURE;
+  }
+  state_.transition(HardwareState::DISCOVERING);
+  state_.transition(HardwareState::CONFIGURING);
+  state_.transition(HardwareState::INACTIVE);
+  last_read_ = std::chrono::steady_clock::now();
   update_states();
   std::copy(positions_.begin(), positions_.end(), commands_.begin());
   return hardware_interface::CallbackReturn::SUCCESS;
@@ -138,7 +159,12 @@ hardware_interface::CallbackReturn SimSystem::on_configure(const rclcpp_lifecycl
 
 hardware_interface::CallbackReturn SimSystem::on_activate(const rclcpp_lifecycle::State &)
 {
-  if (!core_->activate()) {return hardware_interface::CallbackReturn::FAILURE;}
+  if (state_.state() != HardwareState::INACTIVE || !core_->activate()) {
+    return hardware_interface::CallbackReturn::FAILURE;
+  }
+  state_.transition(HardwareState::ACTIVATING);
+  state_.transition(HardwareState::ACTIVE);
+  commands_enabled_ = false;
   update_states();
   std::copy(positions_.begin(), positions_.end(), commands_.begin());
   last_read_ = std::chrono::steady_clock::now();
@@ -150,6 +176,7 @@ hardware_interface::CallbackReturn SimSystem::on_deactivate(const rclcpp_lifecyc
 {
   commands_enabled_ = false;
   core_->deactivate();
+  if (state_.state() == HardwareState::ACTIVE) {state_.transition(HardwareState::INACTIVE);}
   update_states();
   std::copy(core_->positions().begin(), core_->positions().end(), commands_.begin());
   return hardware_interface::CallbackReturn::SUCCESS;
@@ -159,6 +186,9 @@ hardware_interface::CallbackReturn SimSystem::on_cleanup(const rclcpp_lifecycle:
 {
   commands_enabled_ = false;
   core_->cleanup();
+  if (state_.state() == HardwareState::ACTIVE) {state_.transition(HardwareState::INACTIVE);}
+  if (state_.state() == HardwareState::FAULT) {state_.transition(HardwareState::RECOVERING);}
+  state_.transition(HardwareState::INIT);
   update_states();
   return hardware_interface::CallbackReturn::SUCCESS;
 }
@@ -167,6 +197,7 @@ hardware_interface::CallbackReturn SimSystem::on_shutdown(const rclcpp_lifecycle
 {
   commands_enabled_ = false;
   core_->deactivate();
+  state_.transition(HardwareState::SHUTDOWN);
   update_states();
   return hardware_interface::CallbackReturn::SUCCESS;
 }
@@ -222,16 +253,23 @@ hardware_interface::return_type SimSystem::prepare_command_mode_switch(
 hardware_interface::return_type SimSystem::perform_command_mode_switch(
   const std::vector<std::string> & start, const std::vector<std::string> & stop)
 {
+  if (prepare_command_mode_switch(start, stop) != hardware_interface::return_type::OK) {
+    return hardware_interface::return_type::ERROR;
+  }
   const auto owns = [this](const auto & keys) {
       return std::any_of(keys.begin(), keys.end(), [this](const auto & key) {
         return std::find(command_keys_.begin(), command_keys_.end(), key) != command_keys_.end();
       });
     };
+  if (owns(start) && (!core_->active() || core_->fault() != Fault::none)) {
+    return hardware_interface::return_type::ERROR;
+  }
   if (owns(stop) || owns(start)) {
     core_->hold();
     std::copy(core_->positions().begin(), core_->positions().end(), commands_.begin());
     commands_enabled_ = owns(start) && core_->active() && core_->fault() == Fault::none;
   }
+  update_states();
   return hardware_interface::return_type::OK;
 }
 }  // namespace linglong_control

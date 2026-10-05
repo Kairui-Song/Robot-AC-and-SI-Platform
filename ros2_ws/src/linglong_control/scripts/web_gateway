@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+from linglong_control_tools.web_gateway import main
+main()

@@ -6,6 +6,8 @@ from comm_logger import get_entries, get_log_title, get_alerts, build_pdf, recor
 from report_store import add_result, get_report_data, get_comm_log_entries, get_latest_result
 
 app = Flask(__name__)
+from ros_control_bridge import register as register_ros_control
+register_ros_control(app)
 
 # ========== 修改2：配置SocketIO，增加超时和心跳设置 ==========
 socketio = SocketIO(
@@ -38,6 +40,11 @@ def _controller_info_log_lines(info):
 @socketio.on('run_motor_preflight')
 def handle_motor_preflight(payload):
     sid = request.sid
+    from ros_control_bridge import configured
+    if configured():
+        socketio.emit('motor_preflight_result', {'ok': False, 'motion_allowed': False,
+            'error': 'ROS 控制模式已配置，请使用 ROS 控制页面；直连预检已停用。'}, room=sid)
+        return
     profile_id = (payload or {}).get('profile_id')
     controller_profile = (payload or {}).get('controller_profile', 'auto')
     if controller_profile not in {'auto', 'ep_h507a1'}:
@@ -86,6 +93,20 @@ def handle_run_test(payload):
 def handle_stop_test(payload):
     payload = payload or {}
     target = payload.get('target')
+    from ros_control_bridge import configured, call
+    if configured():
+        admin_token = os.environ.get('LINGLONG_ADMIN_TOKEN')
+        if admin_token and payload.get('admin_token') != admin_token:
+            socketio.emit('test_progress', {'target': 'ros_control', 'status': 'rejected',
+                'error': '需要管理员令牌，请在 ROS 控制页填写后停用。'}, room=request.sid)
+            return
+        sid = request.sid
+        def stop_ros():
+            result, _ = call('disable', {})
+            socketio.emit('test_progress', {'target': 'ros_control',
+                'status': 'stopping' if result.get('ok') else 'rejected', 'result': result}, room=sid)
+        socketio.start_background_task(stop_ros)
+        return
     stopped = False
     if target == 'single_motor_preflight':
         from ethercat_bridge import stop_active_test
@@ -106,6 +127,11 @@ def handle_stop_test(payload):
 @socketio.on('run_controller_benchmark')
 def handle_controller_benchmark(payload):
     sid = request.sid
+    from ros_control_bridge import configured
+    if configured():
+        socketio.emit('benchmark_result', {'ok': False, 'motion_allowed': False,
+            'error': 'ROS 控制模式已配置，直连运动基准已停用，避免争用 EtherCAT 主站。'}, room=sid)
+        return
     options = payload or {}
 
     def _runner():

@@ -53,6 +53,8 @@ start_mock() {
   launch_pid=$!
 }
 start_mock "$records/launch.log"
+timeout 55 ros2 run linglong_control system_client ready
+timeout 55 ros2 run linglong_control system_client enable
 
 # The client has bounded discovery, feedback, Action and completion timeouts.
 timeout 35 ros2 run linglong_control trajectory_demo 2>&1 | tee "$records/trajectory.log"
@@ -67,6 +69,8 @@ timeout --kill-after=3s 15s ros2 run linglong_control fault_snapshot \
   --duration 1 --output "$records/normal-evidence.json" >"$records/normal-evidence.log" 2>&1
 cleanup
 start_mock "$records/dropout-launch.log" dropout_after_cycles:=1500
+timeout 55 ros2 run linglong_control system_client ready
+timeout 55 ros2 run linglong_control system_client enable
 timeout --kill-after=3s 40s ros2 run linglong_control fault_snapshot \
   --duration 30 --until-fault --output "$records/dropout-evidence.json" >"$records/dropout-evidence.log" 2>&1 &
 snapshot_pid=$!
@@ -76,6 +80,8 @@ wait "$snapshot_pid"
 snapshot_pid=''
 cleanup
 start_mock "$records/fault-launch.log" fault_after_cycles:=1500
+timeout 55 ros2 run linglong_control system_client ready
+timeout 55 ros2 run linglong_control system_client enable
 timeout --kill-after=3s 40s ros2 run linglong_control fault_snapshot \
   --duration 30 --until-fault --output "$records/fault-evidence.json" >"$records/fault-evidence.log" 2>&1 &
 snapshot_pid=$!

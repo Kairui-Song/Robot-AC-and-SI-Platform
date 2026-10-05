@@ -28,7 +28,7 @@ def wait(node, future, timeout):
     return future.result()
 
 
-def observe_hold(node, monitor, duration=0.6, reference=None):
+def observe_hold(node, monitor, duration=0.6, reference=None, active=True):
     window = None
     last_received = monitor.last_received
     deadline = time.monotonic() + duration + 2.0
@@ -41,7 +41,7 @@ def observe_hold(node, monitor, duration=0.6, reference=None):
             continue
         last_received = monitor.last_received
         h = monitor.snapshot['control_health']
-        if h['mock'] != 1 or h['active'] != 1 or h['feedback_age_seconds'] != 0:
+        if h['mock'] != 1 or h['active'] != int(active) or h['feedback_age_seconds'] != 0:
             raise RuntimeError('active fresh MOCK feedback required')
         positions = [monitor.snapshot[n]['position'] for n in JOINT_NAMES]
         velocities = [monitor.snapshot[n]['velocity'] for n in JOINT_NAMES]

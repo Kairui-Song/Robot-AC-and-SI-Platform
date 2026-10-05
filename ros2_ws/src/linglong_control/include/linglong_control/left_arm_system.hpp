@@ -7,6 +7,7 @@
 #include <vector>
 #include "hardware_interface/system_interface.hpp"
 #include "linglong_control/left_arm_bus.hpp"
+#include "linglong_control/hardware_state.hpp"
 
 namespace linglong_control
 {
@@ -38,10 +39,9 @@ private:
   std::unique_ptr<LeftArmCore> core_;
   ArmTargets positions_{}, velocities_{}, commands_{};
   std::vector<std::string> keys_;
-  static constexpr std::array<const char *, 8> health_names_{
-    "mock", "active", "fault_code", "cycles", "period_seconds", "max_period_seconds",
-    "deadline_misses", "feedback_age_seconds"};
-  std::array<double, 8> health_{};
+  HardwareStateMachine state_;
+  static constexpr auto health_names_ = control_health_names;
+  std::array<double, control_health_names.size()> health_{};
   std::array<double, 9> bus_health_{};
   std::array<std::array<double, 7>, 4> slave_health_{};
   bool first_fault_recorded_{false};

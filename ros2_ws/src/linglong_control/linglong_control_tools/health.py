@@ -1,5 +1,6 @@
 """ROS-independent health checks; receipt and progress time use a monotonic clock."""
 import math
+import json
 
 from linglong_control_tools.interfaces import JOINT_NAMES
 FAULTS = {
@@ -32,6 +33,13 @@ def decode_snapshot(names, values):
             raise ValueError(f'invalid control_health counter: {key}')
     if any(health[key] < 0 for key in ('period_seconds', 'max_period_seconds', 'feedback_age_seconds')):
         raise ValueError('negative control_health duration')
+    phase_keys = ('hardware_state', 'transition_sequence', 'commands_enabled')
+    if any(key in health for key in phase_keys):
+        if any(key not in health or not math.isfinite(health[key]) for key in phase_keys):
+            raise ValueError('incomplete state-machine telemetry')
+        if health['hardware_state'] not in range(10) or health['commands_enabled'] not in (0, 1) or \
+                health['transition_sequence'] < 0 or health['transition_sequence'] != math.floor(health['transition_sequence']):
+            raise ValueError('invalid state-machine telemetry')
     # Fault frames may intentionally contain NaN position. Preserve fault reason first.
     if health['fault_code'] == 0:
         for name in JOINT_NAMES:
@@ -57,6 +65,7 @@ class HealthMonitor:
         self.last_progress = None
         self.last_cycles = None
         self.invalid_reason = None
+        self.last_observed_fault = None
 
     def receive(self, names, values, now):
         try:
@@ -69,8 +78,32 @@ class HealthMonitor:
             self.last_progress = now
         self.last_cycles = cycles
         self.snapshot = snapshot
+        if snapshot['control_health']['fault_code']:
+            health = snapshot['control_health']
+            code = int(health['fault_code'])
+            self.last_observed_fault = dict(code=code, reason=FAULTS.get(code, 'unknown'),
+                                           cycles=health['cycles'], received_monotonic=now)
         self.last_received = now
         self.invalid_reason = None
+
+    def telemetry(self, now):
+        fresh = (self.snapshot is not None and self.invalid_reason is None and
+                 self.last_received is not None and now - self.last_received <= self.stale_timeout and
+                 self.last_progress is not None and now - self.last_progress <= self.stale_timeout)
+        historical = dict(self.snapshot['control_health']) if self.snapshot else None
+        return dict(feedback_fresh=fresh, current_health=historical if fresh else None,
+                    last_observed_health=historical, last_observed_fault=self.last_observed_fault)
+
+    def diagnostic_fields(self, now):
+        view = self.telemetry(now)
+        fields = {'feedback_fresh': str(view['feedback_fresh']).lower()}
+        fields.update({k: str(v) for k, v in (view['current_health'] or {}).items()})
+        fields.update({'last_observed.' + k: str(v)
+                       for k, v in (view['last_observed_health'] or {}).items()})
+        if view['last_observed_fault']:
+            fields.update({'last_observed_fault.' + k: str(v)
+                           for k, v in view['last_observed_fault'].items()})
+        return fields
 
     def status(self, now):
         if self.invalid_reason:

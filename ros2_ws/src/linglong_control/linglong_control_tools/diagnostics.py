@@ -1,8 +1,10 @@
 import time
+import json
 
 import rclpy
 from control_msgs.msg import DynamicJointState
 from diagnostic_msgs.msg import DiagnosticArray, DiagnosticStatus, KeyValue
+from std_msgs.msg import String
 from rcl_interfaces.msg import ParameterDescriptor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.clock import Clock, ClockType
@@ -25,6 +27,11 @@ class ControlDiagnostics(Node):
         self.monitor = HealthMonitor(self.get_parameter('stale_timeout').value,
                                      self.backend, self.get_parameter('nominal_period').value)
         self.group = MutuallyExclusiveCallbackGroup()
+        self.system_state = self.system_received = None
+        self.system_subscription = self.create_subscription(
+            String, '/system/state', self.receive_system,
+            QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE,
+                       durability=DurabilityPolicy.TRANSIENT_LOCAL), callback_group=self.group)
         qos = QoSProfile(depth=5, reliability=ReliabilityPolicy.BEST_EFFORT,
                          durability=DurabilityPolicy.VOLATILE)
         self.subscription = self.create_subscription(
@@ -39,14 +46,25 @@ class ControlDiagnostics(Node):
         self.monitor.receive(msg.joint_names,
             [(v.interface_names, v.values) for v in msg.interface_values], time.monotonic())
 
+    def receive_system(self, msg):
+        try:
+            value = json.loads(msg.data)
+            if isinstance(value, dict) and isinstance(value.get('state'), str):
+                self.system_state, self.system_received = value, time.monotonic()
+        except (ValueError, TypeError):
+            pass
+
     def publish(self):
-        level, message = self.monitor.status(time.monotonic())
-        status = DiagnosticStatus(level=level, name=DIAGNOSTIC_NAME,
+        now = time.monotonic()
+        level, message = self.monitor.status(now)
+        if self.system_received is not None and now - self.system_received <= 1.0 and \
+                self.system_state.get('state') == 'FAULT':
+            level, message = 2, 'system FAULT: ' + self.system_state.get('reason', 'system fault')
+        status = DiagnosticStatus(level=bytes([level]), name=DIAGNOSTIC_NAME,
                                   message=message, hardware_id=(
                                       'MOCK_ONLY' if self.backend == 'mock' else 'EYOU_LEFT_ARM_1_2_3_5'))
-        if self.monitor.snapshot:
-            health = self.monitor.snapshot['control_health']
-            status.values = [KeyValue(key=k, value=str(v)) for k, v in health.items()]
+        status.values = [KeyValue(key=k, value=v) for k, v in self.monitor.diagnostic_fields(now).items()]
+        if self.monitor.snapshot and self.monitor.telemetry(now)['feedback_fresh']:
             for resource, fields in self.monitor.snapshot.items():
                 if resource.startswith('ethercat_'):
                     status.values.extend(KeyValue(key=f'{resource}/{k}', value=str(v))

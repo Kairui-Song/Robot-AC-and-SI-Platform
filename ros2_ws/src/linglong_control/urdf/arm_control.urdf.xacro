@@ -45,6 +45,9 @@
       <state_interface name="max_period_seconds"/>
       <state_interface name="deadline_misses"/>
       <state_interface name="feedback_age_seconds"/>
+      <state_interface name="hardware_state"/>
+      <state_interface name="transition_sequence"/>
+      <state_interface name="commands_enabled"/>
     </sensor>
   </ros2_control>
 </robot>

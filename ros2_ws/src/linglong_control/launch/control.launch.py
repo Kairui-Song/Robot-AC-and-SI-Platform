@@ -40,9 +40,11 @@ def setup(context):
         description = physical_description(description, config)
         rate = int(config['update_rate'])
     robot = {'robot_description': ParameterValue(description, value_type=str)}
+    hardware_name = 'LinglongSimSystem' if backend == 'mock' else 'LinglongLeftArmSystem'
     manager = Node(
         package='controller_manager', executable='ros2_control_node', output='screen',
-        parameters=[str(share / 'config/controllers.yaml'), {'update_rate': rate}],
+        parameters=[str(share / 'config/controllers.yaml'), {'update_rate': rate,
+            'hardware_components_initial_state.inactive': [hardware_name]}],
         remappings=[('~/robot_description', '/robot_description')])
     broadcaster = Node(
         package='controller_manager', executable='spawner', output='screen',
@@ -51,7 +53,13 @@ def setup(context):
     trajectory = Node(
         package='controller_manager', executable='spawner', output='screen',
         arguments=['arm_trajectory_controller', '-c', '/controller_manager',
+                   '--inactive',
                    '--controller-manager-timeout', '30', '--switch-timeout', '10'])
+    supervisor = Node(package='linglong_control', executable='system_manager', output='screen',
+        parameters=[{'backend': backend, 'hardware_name': hardware_name, 'nominal_period': 1.0 / rate}])
+    gateway = Node(package='linglong_control', executable='web_gateway', output='screen',
+        parameters=[{'backend': backend, 'robot_description': description}],
+        condition=IfCondition(LaunchConfiguration('web_gateway')))
 
     def after_broadcaster(event, _context):
         if event.returncode != 0:
@@ -61,7 +69,7 @@ def setup(context):
     def after_trajectory(event, _context):
         if event.returncode != 0:
             return [EmitEvent(event=Shutdown(reason='trajectory controller failed'))]
-        return [LogInfo(msg=f'{backend} control ready: /arm_trajectory_controller/follow_joint_trajectory')]
+        return [LogInfo(msg=f'{backend} configured; wait for /system/state READY then call /system/enable')]
 
     return [
         RegisterEventHandler(OnProcessExit(target_action=manager,
@@ -70,6 +78,11 @@ def setup(context):
         RegisterEventHandler(OnProcessExit(target_action=trajectory, on_exit=after_trajectory)),
         Node(package='robot_state_publisher', executable='robot_state_publisher', parameters=[robot]),
         manager, broadcaster,
+        RegisterEventHandler(OnProcessExit(target_action=supervisor,
+            on_exit=[EmitEvent(event=Shutdown(reason='system supervisor exited'))])),
+        RegisterEventHandler(OnProcessExit(target_action=gateway,
+            on_exit=[EmitEvent(event=Shutdown(reason='Web gateway exited'))])),
+        supervisor, gateway,
         Node(package='linglong_control', executable='control_diagnostics', output='screen',
              parameters=[{'expected_backend': backend, 'nominal_period': 1.0 / rate}]),
         Node(package='rviz2', executable='rviz2',
@@ -83,6 +96,7 @@ def generate_launch_description():
         DeclareLaunchArgument('backend', default_value='mock'),
         DeclareLaunchArgument('hardware_config', default_value=''),
         DeclareLaunchArgument('rviz', default_value='true'),
+        DeclareLaunchArgument('web_gateway', default_value='true'),
         DeclareLaunchArgument('fault_after_cycles', default_value='0'),
         DeclareLaunchArgument('dropout_after_cycles', default_value='0'),
         OpaqueFunction(function=setup),

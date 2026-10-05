@@ -18,6 +18,7 @@ from linglong_control_tools.health import HealthMonitor, JOINT_NAMES
 from linglong_control_tools.acceptance import HoldWindow
 from linglong_control_tools.trajectory_demo import observe_hold, wait
 from linglong_control_tools.interfaces import MANAGER, TRAJECTORY_CONTROLLER, DYNAMIC_STATES, DIAGNOSTICS
+from linglong_control_tools.system_client import transition
 
 CONTROLLER = TRAJECTORY_CONTROLLER
 
@@ -41,13 +42,7 @@ def state(node):
 
 
 def switch(node, activate):
-    request = SwitchController.Request()
-    request.strictness = SwitchController.Request.STRICT
-    request.activate_controllers = [CONTROLLER] if activate else []
-    request.deactivate_controllers = [] if activate else [CONTROLLER]
-    request.timeout.sec = 5
-    if not service(node, SwitchController, 'switch_controller', request).ok:
-        raise RuntimeError('strict controller switch failed')
+    transition(node, 'enable' if activate else 'disable')
     expected = 'active' if activate else 'inactive'
     if state(node) != expected:
         raise RuntimeError(f'controller did not reach {expected}')
@@ -102,7 +97,7 @@ def run(node, scenario, fault_log=None, expected_code=6):
             reference = before['reference']
             hold_guard[0] = HoldWindow(reference)
             switch(node, False)
-            inactive = observe_hold(node, monitor, reference=reference)
+            inactive = observe_hold(node, monitor, reference=reference, active=False)
             switch(node, True)
             reactivated = observe_hold(node, monitor, reference=reference)
             if hold_errors:

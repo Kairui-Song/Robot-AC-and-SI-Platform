@@ -168,7 +168,7 @@ class SystemManager(Node):
             HardwareState(health['hardware_state'])
             if health['commands_enabled'] not in (0, 1):
                 raise ValueError('invalid commands_enabled')
-        except ValueError:
+        except (ValueError, TypeError):
             return health, False, 'invalid hardware state-machine telemetry'
         level, reason = self.monitor.status(now)
         if self.monitor.last_progress is None or now - self.monitor.last_progress > self.stale_timeout:

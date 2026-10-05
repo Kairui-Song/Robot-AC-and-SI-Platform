@@ -33,4 +33,4 @@ def test_description_matches_controller_interfaces(tmp_path):
         assert float(joint.find("param[@name='max_velocity']").text) == float(physical.attrib['velocity'])
     period = float(hardware.find("hardware/param[@name='nominal_period']").text)
     assert period * controller['controller_manager']['ros__parameters']['update_rate'] == 1
-    assert len(hardware.find('sensor').findall('state_interface')) == 8
+    assert len(hardware.find('sensor').findall('state_interface')) == 11

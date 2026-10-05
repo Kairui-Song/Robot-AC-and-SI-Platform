@@ -30,7 +30,8 @@ hardware_interface::HardwareInfo description()
   sensor.name = "control_health";
   sensor.type = "sensor";
   for (const auto & name : {"mock", "active", "fault_code", "cycles", "period_seconds",
-    "max_period_seconds", "deadline_misses", "feedback_age_seconds"})
+    "max_period_seconds", "deadline_misses", "feedback_age_seconds", "hardware_state",
+    "transition_sequence", "commands_enabled"})
   {
     hardware_interface::InterfaceInfo state;
     state.name = name;
@@ -62,7 +63,7 @@ TEST(SimPlugin, InterfacesActivationAndFaultLatch)
   ASSERT_EQ(system.on_init(description()), hardware_interface::CallbackReturn::SUCCESS);
   auto states = system.export_state_interfaces();
   auto commands = system.export_command_interfaces();
-  ASSERT_EQ(states.size(), 16u);
+  ASSERT_EQ(states.size(), 19u);
   ASSERT_EQ(commands.size(), 4u);
   const rclcpp_lifecycle::State previous;
   ASSERT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
@@ -81,7 +82,8 @@ TEST(SimPlugin, InterfacesActivationAndFaultLatch)
   EXPECT_TRUE(std::isnan(states[0].get_value()));
   EXPECT_EQ(system.on_error(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::FAILURE);
-  EXPECT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::FAILURE);
+  // MOCK reconfiguration resets the fault but remains inactive until explicit enable.
+  EXPECT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_cleanup(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_configure(previous), hardware_interface::CallbackReturn::SUCCESS);
   EXPECT_EQ(system.on_activate(previous), hardware_interface::CallbackReturn::SUCCESS);
