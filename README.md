@@ -5,6 +5,8 @@ Web/CAN/IMU 测试作为配套工具；四关节左臂是当前整臂控制对�
 
 ## 从这里开始
 
+- [Web → 状态机 → ros2_control 接入与启动](ros2_ws/WEB_CONTROL.md)：网页整臂控制、主控网关、使能/停用、Action 轨迹与新鲜反馈。
+
 - [EtherCAT 专题与代码入口](docs/ethercat/README.md)：Master/Slave、ESI、CoE、PDO/SDO、AL、WKC、DC/Sync0、CiA402、CSP、周期任务和恢复。
 - [系统分层与接口约定](docs/ethercat/ARCHITECTURE.md)：ROS 轨迹如何到达各关节，谁管理总线、谁处理故障。
 - [能力清单与证据边界](docs/ethercat/CAPABILITIES.md)：已有代码、已有验证和待完成项分别记录。
@@ -15,7 +17,7 @@ Web/CAN/IMU 测试作为配套工具；四关节左臂是当前整臂控制对�
 
 ## 当前控制主线
 
-应用提交四关节轨迹 → `arm_trajectory_controller` → `SystemInterface` → 后端 → 关节反馈与诊断。
+Web 应用 → 主控网关 → `system_manager` 管理使能与停用 → 四关节 Action → `arm_trajectory_controller` → `SystemInterface` → 后端 → 关节反馈与诊断。
 
 `linglong_control/SimSystem` 用于模拟；可选 `linglong_control/LeftArmSystem` 面向 EYOU 左臂 p1/p2/p3/p5 的 IgH PDO 通信。
 两个后端沿用 `joint_1/2/3/5`、position 命令和 position/velocity 状态接口。

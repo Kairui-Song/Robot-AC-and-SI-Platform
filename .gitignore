@@ -2,6 +2,7 @@ venv/
 .venv/
 .venv_local/
 .pytest_cache/
+.test-deps/
 __pycache__/
 *.pyc
 *.pyo

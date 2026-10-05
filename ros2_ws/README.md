@@ -2,6 +2,8 @@
 
 当前主线为 Ubuntu 24.04 / Jazzy 的 `linglong_control` 标准控制链：
 
+- [Web、系统状态机与 ros2_control 接入](WEB_CONTROL.md)：当前启动默认 READY，显式使能后发送轨迹。
+
 - [四关节运行入口](LEFT_ARM_MULTI_JOINT.md)
 - [系统接口、QoS、参数、时间与并发约定](SYSTEM_CONTRACT.md)
 - [rosbag2 自动录制、归档、分析与回放验收](BAG_WORKFLOW.md)
