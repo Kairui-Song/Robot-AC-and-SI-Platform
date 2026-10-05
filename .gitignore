@@ -1,5 +1,7 @@
 venv/
-\.venv/
+.venv/
+.venv_local/
+.pytest_cache/
 __pycache__/
 *.pyc
 *.pyo
@@ -11,3 +13,12 @@ node_modules/
 .env
 .vscode/
 logs/node_modules
+
+delivery/linglong-jazzy-20261001-fault-stop-v1/ros2_ws/build-release/
+**/build/
+**/build-*/
+**/install/
+**/install-*/
+**/log/
+**/log-*/
+**/.cmake/

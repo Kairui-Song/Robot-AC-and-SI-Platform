@@ -39,5 +39,5 @@ Web/CAN/IMU 测试作为配套工具；四关节左臂是当前整臂控制对�
 - `tests/`、`ros2_ws/src/*/test/`、`ros2_ws/verification/`：不同层级的测试与历史证据。
 - `app.py`、`templates/`、`static/`：Web 测试界面；CAN/IMU、报告存储为配套功能。
 
-现有 `_1/_2/_3` 副本暂保留，不把文件后缀当作版本号，也不作为新功能的默认入口。
-本轮仅整理工程入口与文档，不移动控制源码、不更改部署路径、不新增测试通过结论。
+工程只维护无编号的当前入口；无引用的 `_1/_2/_3` 历史副本已清理，历史版本可通过 Git 查询。
+Web 启动使用 `app.py` 或 `run_gui.py`，依赖使用 `requirements.txt`；ROS 2 构建使用 `ros2_ws/src/`。
